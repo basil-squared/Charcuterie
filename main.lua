@@ -37,6 +37,13 @@ local enhancementatlas = SMODS.Atlas {
     px = 71,
     py = 95,
 }
+
+local ritualatlas = SMODS.Atlas {
+    key = "ritual_atlas",
+    path = "ritualatlas.png",
+    px = 71,
+    py = 95,
+}
 SMODS.DeckSkin {
     key = "chronophobia",
     suit = "Hearts",
@@ -205,7 +212,7 @@ SMODS.Enhancement {
     key = "galactical",
     loc_txt = {
         name = "Galactical Card",
-        text = {"{C:green}#1# in #2# chance{} to upgrade", "he hand this card is played in."},
+        text = {"{C:green}#1# in #2# chance{} to upgrade", "the hand this card is played in."},
     },
     config = {extra = {odds = 20}},
     atlas = enhancementatlas.key,
@@ -227,4 +234,110 @@ SMODS.Enhancement {
 }
 
 
+SMODS.ConsumableType {
+    key = "ritual",
+    primary_colour = HEX("140100"),
+    secondary_colour = HEX("570803"),
+    loc_txt =  	{
+        name = 'Ritual Card', -- used on card type badges
+        collection = 'Ritual Cards', -- label for the button to access the collection
+        undiscovered = { -- description for undiscovered cards in the collection
+            name = '???',
+            text = { 'An undiscovered Ritual Card.', 'Keep your eyes peeled for these powerful, yet costly cards...' },
+        },
+    }
+}
 
+SMODS.Consumable {
+    key = "ritual_bloodpact",
+    set = "ritual",
+    atlas = ritualatlas.key,
+    pos = {x=0,y=0},
+    loc_txt = {
+        name = "Blood Pact",
+        text = {"Spawn a random {C:red} Eternal Rare{} Joker."}
+    },
+    use = function(self,card,area,copier)
+        local tempjok = SMODS.add_card({set= "Joker", rarity=1, stickers={"eternal"}})
+
+        tempjok:set_eternal(true)
+    end,
+    can_use = function(self, card)
+        if #G.jokers.cards >= G.jokers.config.card_limit then
+            return false
+        else return true
+
+        end
+
+    end
+}
+
+SMODS.Consumable {
+    key = "ritual_sever",
+    set = "ritual",
+    atlas = ritualatlas.key,
+    pos = {x=1,y=0},
+    loc_txt = {
+        name = "Sever",
+        text = {"{C:red}Destroy{} a random Joker.", "Summon 2 {C:red}Ritual Cards{}."},
+    },
+    use = function(self, card, area, copier)
+        local potential_victims = {}
+        for i =1, #G.jokers.cards do
+            if G.jokers.cards[i]:can_calculate(true) then
+                table.insert(potential_victims, G.jokers.cards[i])
+        end
+
+
+        end
+        print(#potential_victims)
+        victim = pseudorandom_element(potential_victims, pseudoseed("I LOVE AMONG US"))
+        print(type(victim))
+        victim.getting_sliced = true
+        G.GAME.joker_buffer = G.GAME.joker_buffer - 1
+        G.E_MANAGER:add_event(Event({
+            trigger = 'immediate',
+
+
+
+            blockable = false,
+
+
+            func = function()
+                victim.start_dissolve()
+                G.GAME.joker_buffer = 0
+
+
+                return true;
+            end
+
+        }))
+        if G.consumeables.config.card_limit - #G.consumeables.cards == 1 then
+            SMODS.add_card({
+                set="ritual"
+            })
+
+            else SMODS.add_card({set="ritual"}) SMODS.add_card({ set="ritual" })
+
+        end
+
+
+    end,
+    can_use = function(self, card)
+        local potential_victims = {}
+        for i =1, #G.jokers.cards do
+            if G.jokers.cards[i]:can_calculate(true) then
+                table.insert(potential_victims, G.jokers.cards[i])
+            end
+
+        end
+        if #potential_victims == 0 or #G.consumeables.cards >= G.consumeables.config.card_limit + 1 then
+            return false
+
+            else
+                return true
+
+
+        end
+    end
+}
