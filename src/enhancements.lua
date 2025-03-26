@@ -1,0 +1,34 @@
+local enhancementatlas = SMODS.Atlas {
+    key = "enhancement_atlas",
+    path = "enhancementatlas.png",
+    px = 71,
+    py = 95,
+}
+
+
+
+
+SMODS.Enhancement {
+    key = "galactical",
+    loc_txt = {
+        name = "Galactical Card",
+        text = {"{C:green}#1# in #2# chance{} to upgrade", "the hand this card is played in."},
+    },
+    config = {extra = {odds = 20}},
+    atlas = enhancementatlas.key,
+    pos = {x=0,y=0},
+    loc_vars = function(self, info_queue, card)
+        return { vars = {(G.GAME.probabilities.normal or 1), card.ability.extra.odds}}
+    end,
+
+
+    calculate = function(self, card, context)
+        if context.main_scoring and context.cardarea == G.play then
+            if pseudorandom('galactical') < G.GAME.probabilities.normal / card.ability.extra.odds then
+                return {level_up = 1, message = "Upgrade!"}
+            end
+        end
+    end
+
+
+}
