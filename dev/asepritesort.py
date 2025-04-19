@@ -29,7 +29,7 @@ for filename in progress_bar:
             "aseprite",
             "-b",
             "--sheet",
-            f"../assets/1x/{name}.png",
+            f"assets/1x/{name}.png",
             f"./spritesheets/{filename}",
         ],
         stdout=subprocess.DEVNULL,  # Suppress stdout
@@ -42,7 +42,7 @@ for filename in progress_bar:
             "aseprite",
             "-b",
             "--sheet",
-            f"../assets/2x/{name}.png",
+            f"assets/2x/{name}.png",
             f"./spritesheets/{filename}",
             "--scale",
             "2",
