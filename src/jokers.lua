@@ -99,7 +99,7 @@ SMODS.Joker {
 SMODS.Joker {
   key = "alien_joker",
   loc_txt = {
-    name = "Alien Joker",
+    name = "U.F.O",
     text = { "Turns any face card played into a {C:purple}Galactical{} Card. " }
   },
   rarity = 3,
@@ -164,32 +164,63 @@ SMODS.Joker {
   end
 }
 
-SMODS.Joker {
-  key = "c_t_j",
-  loc_txt = {
-    name = "cursed_test_joker",
-    text = { "tests to make cursed cards. " }
 
+SMODS.Joker {
+  key = "juxt",
+  loc_txt = {
+    name = "Juxtaposition",
+    text = { "Remove {C:dark_edition}Negative{} from all Jokers you have,",
+      "{C:attention}+1{} Joker Slot every time {C:dark_edition}Negative{} is removed.",
+      "{S:0.6,C:inactive}Currently +#1# Joker Slots.{}" },
   },
-  rarity = 3,
   atlas = jokeratlas.key,
-  pos = { x = 6, y = 0 },
-  cost = 999,
-  discovered = true,
+  config = {
+    extra = { jokplus = 0 }
+  },
+  pos = { x = 9, y = 0 },
+  rarity = 4,
+  loc_vars = function(self, info_queue, card)
+    return {
+      vars = { card.ability.extra.jokplus }
+    }
+  end,
+
   calculate = function(self, card, context)
-    if context.individual and context.cardarea == G.play then
-      context.other_card:juice_up(0.3, 3)
-      context.other_card:set_ability("m_astropulvis_cursed")
-      return {
-        message = "Cursed!"
-      }
+    if context.card_added and context.card.ability.set == "Joker" and context.card.edition and context.card.edition.negative then
+      context.card:set_edition(nil)
+      card.ability.extra.jokplus = card.ability.extra.jokplus + 1
+    end
+  end,
+  remove_from_deck = function(self, card, from_debuff)
+    G.jokers.config.card_limit = G.jokers.config.card_limit - card.ability.extra.jokplus
+  end,
+  add_to_deck = function(self, card, from_debuff)
+    jokers = G.jokers.cards
+    for i = 1, #jokers do
+      if jokers[i].edition and jokers[i].edition == jokers[i].edition.negative then
+        jokers[i]:set_edition(nil)
+        card.ability.extra.jokplus = card.ability.extra.jokplus + 1
+      end
     end
   end
+
+
 }
 
+
 SMODS.Joker {
-  key = "margret_joker",
+  key = "virtuous",
+  atlas = jokeratlas.key,
+  pos = { x = 10, y = 0 },
   loc_txt = {
-    name = "Margret Joker"
-  }
+    name = "Virutous Joker",
+    text = { "Awards {C:attention}$1{} per {C:astropulvis_purified}Purified{} card",
+      "in your full deck.",
+      "{S:0.7,C:inactive}(currently{}{S:0.7,C:attention}$#1#{}{S:0.7,C;inactive}.)" }
+  },
+
+  rarity = 3,
+  cost = 5,
+  calculate = function(self, card, context)
+  end
 }
