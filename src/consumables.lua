@@ -57,9 +57,6 @@ SMODS.Consumable({
 		local tempjok = SMODS.add_card({ set = "Joker", rarity = 1, stickers = { "eternal" } })
 
 		tempjok:set_eternal(true)
-		ease_risk(50, false)
-		print(Risk)
-		print(Risk_manip_table.disp_risk)
 	end,
 	can_use = function(self, card)
 		if #G.jokers.cards >= G.jokers.config.card_limit then
