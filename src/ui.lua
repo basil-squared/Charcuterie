@@ -3,9 +3,15 @@ Risk is a mechanic for astropulvis that I want to add, but problem is, I have no
 
 
   ]]
-
+difficulty_atlas = SMODS.Atlas({
+	key = "diff_atlas",
+	path = "diff_atlas.png",
+	px = 128,
+	py = 128,
+})
+diff_atlas_vanilla = G.ASSET_ATLAS["astropulvia_diff_atlas"]
 local original_hud = create_UIBox_HUD
-
+local original_blind_hud = create_UIBox_blind_choice
 -- ALSOOOOO... make globals start with uppercase letters. Good practice or whatever.
 Percentage_Risk = 100 * Risk
 Risk_manip_table = { risk = Risk, disp_risk = Percentage_Risk .. "%" }
@@ -95,10 +101,59 @@ function risk_menu_test_func()
 		},
 	}
 end
-
+function diff_test_func()
+	local spacing = 0.13
+	return {
+		n = G.UIT.R,
+		config = { align = "cm" },
+		nodes = {
+			{
+				n = G.UIT.C,
+				config = {
+					align = "cm",
+					padding = 0.05,
+					minw = 1.45 * 2 + spacing,
+					minh = 0.75,
+					colour = G.C.DYN_UI.BOSS_MAIN,
+					emboss = 0.05,
+					r = 0.1,
+				},
+				nodes = {
+					{
+						n = G.UIT.T,
+						config = {
+							text = "test",
+							scale = 0.2,
+							colour = G.C.UI.TEXT_LIGHT,
+							id = "astropulvis_test_blind_txt",
+						},
+					},
+					{
+						n = G.UIT.T,
+						config = {
+							text = "test 2",
+							scale = 0.2,
+							colour = G.C.UI.TEXT_LIGHT,
+							id = "astropulvis_test_blind_txt2",
+						},
+					},
+				},
+			},
+		},
+	}
+end
 function create_UIBox_HUD()
 	local contents = original_hud()
 
 	table.insert(contents.nodes[1].nodes[1].nodes[5].nodes[2].nodes, risk_menu_test_func())
+	return contents
+end
+
+function create_UIBox_blind_choice(type, run_info, ...)
+	local contents = original_blind_hud(type, run_info, ...)
+	if type == "Small" or type == "Big" then
+	else
+		table.insert(contents.nodes[1].nodes, 4, diff_test_func())
+	end
 	return contents
 end
