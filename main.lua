@@ -51,15 +51,3 @@ ASPL.FUNC.RequireFolder("modules/init/")
 ASPL.FUNC.RequireFolderRecursive("modules/content")
 
 
---[[
-assert(SMODS.load_file("src/jokers.lua"))()
-assert(SMODS.load_file("src/enhancements.lua"))()
-assert(SMODS.load_file("src/consumables.lua"))()
-assert(SMODS.load_file("src/blinds.lua"))()
-assert(SMODS.load_file("src/utils.lua"))()
-assert(SMODS.load_file("src/risk.lua"))()
-assert(SMODS.load_file("src/ui.lua"))()
-assert(SMODS.load_file("src/backs.lua"))()
-
-
-]]
