@@ -17,7 +17,7 @@ SMODS.Gradient({
 
 function SMODS.get_id(self)
 	local ofr = smods_get_id_ref(self)
-	if next(SMODS.find_card("j_astropulvis_estrogen")) and ofr == 11 or ofr ==  12 or ofr == 13 then
+	if next(SMODS.find_card("j_astropulvis_estrogen")) and ofr == 11 or ofr == 12 or ofr == 13 then
 		return 12 -- 11 is Jack, 12 is Queen, 13 is King and 14 is Ace.
 	else
 		return smods_get_id_ref(self)
@@ -26,7 +26,7 @@ end
 
 -- Globals dont require declaration? what the fuck?
 --
-function ease_risk(mod, instant)
+function ASPL.FUNC.ease_risk(mod, instant)
 	local risk_UI = G.HUD:get_UIE_by_ID("astropulvis_risk_UI_shit")
 	local function _mod(mod)
 		if Risk + (mod / 100) > 1 then
@@ -101,4 +101,38 @@ function ease_risk(mod, instant)
 			end,
 		}))
 	end
+end
+
+function get_key_for_value(t, value)
+	for k, v in pairs(t) do
+		if v == value then
+			return k
+		end
+	end
+	return nil
+end
+function ASPL.FUNC.fetch_most_played()
+	local played_tab = {}
+	local most_played = {}
+	local max_val = -math.huge
+	for k, v in pairs(G.GAME.hands) do
+		played_tab[k] = v.played
+	end -- This fetches a table that should be {"HAND" = INTEGER_THAT_REPRESENTS_AMNT_PLAYED}
+	for _, v in pairs(played_tab) do
+		if v > max_val then
+			max_val = v
+		end
+	end
+
+
+	for k, v in pairs(played_tab) do
+		if v == max_val then
+
+
+			most_played[k] = v
+		end
+	end
+	mp_raw = get_key_for_value(most_played,max_val)
+
+	return mp_raw
 end
