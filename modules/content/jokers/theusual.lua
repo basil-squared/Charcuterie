@@ -1,0 +1,29 @@
+SMODS.Joker {
+	key = "the_usual",
+	atlas = ASPL.G.jokeratlas.key,
+	pos ={x=12,y=0},
+	rarity = 2,
+	loc_txt = {
+		name = "The Usual",
+		text = {"{X:mult,C:white}X#1#{} Mult when playing", "Your most played hand.","{S:0.7,C:inactive}Currently #2#.{}"}
+	},
+	config = {extra = {xmult = 2}},
+	loc_vars = function(self,info_queue,card)
+		return {
+			vars = {self.config.extra.xmult, ASPL.FUNC.fetch_most_played()}
+		}
+	end,
+	calculate = function(self,card,context)
+		if context.joker_main then
+			print(context.scoring_name)
+			print(ASPL.FUNC.fetch_most_played())
+			if context.scoring_name == ASPL.FUNC.fetch_most_played() then
+				return {
+					xmult = card.ability.extra.xmult
+				}
+			end
+		end
+	end
+
+}
+
