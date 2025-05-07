@@ -51,6 +51,7 @@ function ASPL.FUNC.ease_risk(mod, instant)
 				align = "cm",
 			})
 			play_sound("chips2")
+			G.GAME.Risk = Risk
 			return
 		end
 
@@ -70,6 +71,7 @@ function ASPL.FUNC.ease_risk(mod, instant)
 				align = "cm",
 			})
 			play_sound("chips2")
+			G.GAME.Risk = Risk
 			return
 		end
 
@@ -94,6 +96,7 @@ function ASPL.FUNC.ease_risk(mod, instant)
 			cover_colour = col,
 			align = "cm",
 		})
+		G.GAME.Risk = Risk
 		play_sound("chips2")
 	end
 	if instant then
@@ -146,9 +149,9 @@ end
 
 function ASPL.FUNC.negative_event_proc(riskv)
 	if riskv >= pseudorandom("wagabagabobo") then
-		return true
+		return false
 
 	else
-		return false
+		return true
 	end
 end
