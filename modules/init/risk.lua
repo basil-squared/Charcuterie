@@ -1,4 +1,5 @@
 Risk = 0.00
+
 --[[
 
 function calculate_diff_on_risk(ante)
