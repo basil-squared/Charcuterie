@@ -13,8 +13,8 @@ diff_atlas_vanilla = G.ASSET_ATLAS["astropulvis_diffatlas"]
 local original_hud = create_UIBox_HUD
 local original_blind_hud = create_UIBox_blind_choice
 -- ALSOOOOO... make globals start with uppercase letters. Good practice or whatever.
-Percentage_Risk = 100 * Risk
-Risk_manip_table = { risk = Risk, disp_risk = Percentage_Risk .. "%" }
+local Percentage_Risk = (G and G.GAME and G.GAME.Risk or 0) * 100
+Risk_manip_table = { risk = G and G.GAME and G.GAME.Risk or 0, disp_risk = Percentage_Risk .. "%" }
 --Some kind of UI element? gotta figure out how to do that.
 
 --[[
