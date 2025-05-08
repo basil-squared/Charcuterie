@@ -6,8 +6,10 @@ SMODS.Joker {
 	},
 	atlas = ASPL.G.jokeratlas.key,
 	pos = {x = 17,y=0},
-	config = {extra = {xchips = 0.1, totalxchips = 1.0}},
+	config = {extra = {xchips = 0.3, totalxchips = 1.0}},
 	loc_vars = function(self,info_queue)
 		return {vars={self.config.extra.xchips, self.config.extra.totalxchips}}
 	end,
+	rarity = 2,
+
 }
