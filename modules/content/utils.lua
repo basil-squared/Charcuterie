@@ -15,7 +15,11 @@ SMODS.Gradient({
 	colours = { HEX("98f8fa"), HEX("7affd3"), HEX("7aff93") },
 	cycle = 5,
 })
-
+SMODS.Gradient({
+	key = "unstable",
+	colours = { HEX("1aff00"), HEX("7bdb70"), HEX("064000") },
+	cycle = 5,
+})
 function SMODS.get_id(self)
 	local ofr = smods_get_id_ref(self)
 	if next(SMODS.find_card("j_astropulvis_estrogen")) and ofr == 11 or ofr == 12 or ofr == 13 then

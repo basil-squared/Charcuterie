@@ -11,13 +11,27 @@ SMODS.Consumable {
 		return { vars = { tostring((1 - (G.GAME.Risk or 0) ) * 100), tostring((G.GAME.Risk or 0) * 100) } }
 	end,
     use = function(self,card,area,copier)
-        local random_joker = pseudorandom_element(G.jokers.cards, pseudoseed("I shit my pants"))
+
+        local uneditioned_jokers = {}
+        local editioned_jokers = {}
+
+        for i=1, #G.jokers.cards do
+            if G.jokers.cards[i].edition == false then
+                uneditioned_jokers[i] = G.jokers.cards[i]
+            else
+                editioned_jokers[i] = G.jokers.cards[i]
+            end
+        end
+
+        local r_e_joker = pseudorandom_element(editioned_jokers, pseudoseed("edition joker"))
+        local r_u_joker = pseudorandom_element(uneditioned_jokers,pseudoseed("unedition joker"))
+        print(uneditioned_jokers)
         if ASPL.FUNC.negative_event_proc(G.GAME.Risk or 0) == false  then
-            random_joker:set_edition("")
+            r_e_joker:set_edition("")
         else
             local poss_editions = {"e_negative", "e_polychrome", "e_foil", "e_holographic"}
-            random_joker:set_edition(pseudorandom_element(poss_editions,pseudoseed("I pissed myself")))
-            random_joker:juice_up()
+            r_u_joker:set_edition(pseudorandom_element(poss_editions,pseudoseed("I pissed myself")))
+            r_u_joker:juice_up()
         end
     end,
     can_use = function(self,area)
