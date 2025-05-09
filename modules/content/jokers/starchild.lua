@@ -4,7 +4,7 @@ SMODS.Joker {
     pos= {x=12,y=0},
     loc_txt = {
         name = "Starchild",
-        text = {"{C:chips}+#1#{} Chips and {C:mult}+#2#{} for every {C:astropulvis_galactical}Galactical{} Face card played."},
+        text = {"{C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult for every {C:astropulvis_galactical}Galactical{} Face card played."},
     },
     config = {extra =  {chips = 10, mult = 4 }},
     loc_vars = function(self,info_queue,card)
@@ -13,8 +13,8 @@ SMODS.Joker {
     calculate = function(self,card,context)
         if context.individual and context.cardarea == G.play and context.other_card:is_face() and SMODS.has_enhancement(context.other_card, "m_astropulvis_galactical") then
             return {
-                chips = card.ability.chips,
-                mult = card.ability.mult
+                chips = card.ability.extra.chips,
+                mult = card.ability.extra.mult
             }
         end
    end
