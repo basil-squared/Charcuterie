@@ -19,8 +19,13 @@ SMODS.Joker {
 				for i=1, card.ability.extra.amt_create do 
 				_card =  create_playing_card({})
 				SMODS.debuff_card(_card,true,'perma_debuff_do_not_remove_or_I_will_kill_you_0-49583074569034576908374598')
+				G.hand:emplace(_card)
 				end
 			end
+			return {
+				xchips = card.ability.extra.xchips_and_mult,
+				xmult = card.ability.extra.xchips_and_mult
+			}
 		end
 	end	
 }
