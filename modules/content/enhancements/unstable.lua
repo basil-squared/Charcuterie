@@ -11,4 +11,18 @@ SMODS.Enhancement {
 		return { vars = { card.ability.extra.xmult, (G.GAME.probabilities.normal or 1), card.ability.extra.odds } }
 	end,
 
+	calculate = function(self,card,context)
+		if context.main_scoring and context.cardarea == G.play then
+			if pseudorandom('radioactive') < G.GAME.probabilities.normal / card.ability.extra.odds then
+				local _card = create_playing_card({
+
+				})
+			end
+			return {
+				xmult = card.ability.extra.xmult
+
+			}
+		end
+	end
+
 }
