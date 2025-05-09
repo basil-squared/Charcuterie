@@ -27,7 +27,9 @@ SMODS.Enhancement {
 
 
 
+
 				end
+				SMODS.calculate_context({unstable_proc = true})
 				return {
 					xmult = card.ability.extra.xmult,
 					message = "Zzzt!"
