@@ -9,5 +9,13 @@ SMODS.Joker {
     rarity = 4,
     cost = 10,
 
+    calculate = function(self,context,card)
+        if context.gc_proc then
+            return {
+                message = "Doubled!"
+            }
+        end
+    end
+
 
 }

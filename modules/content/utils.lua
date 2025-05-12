@@ -2,7 +2,7 @@ local smods_has_no_suit_ref = SMODS.has_no_suit
 local smods_get_id_ref = SMODS.get_id
 local start_run_ref = Game.start_run
 local ease_ante_ref = ease_ante
-
+local ease_dollars_ref = ease_dollars
 function SMODS.has_no_suit(card)
 	if G.GAME.blind then
 		if G.GAME.blind.config.blind.key == "bl_astropulvis_the_dip" then
@@ -186,4 +186,14 @@ end
 function ease_ante(mod)
 	ASPL.FUNC.ease_risk(mod * 10)
 	return ease_ante_ref(mod)
+end
+
+function ease_dollars(mod)
+	if next(SMODS.find_card("j_astropulvis_golden_cheese")) then
+		if mod >= 0 then
+			mod = mod*2
+			SMODS.calculate_context({gc_proc = true})
+		end
+	end
+	return ease_dollars_ref(mod)
 end
