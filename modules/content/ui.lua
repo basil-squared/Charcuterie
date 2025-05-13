@@ -12,6 +12,7 @@ difficulty_atlas = SMODS.Atlas({
 diff_atlas_vanilla = G.ASSET_ATLAS["astropulvis_diffatlas"]
 local original_hud = create_UIBox_HUD
 local original_blind_hud = create_UIBox_blind_choice
+local original_blind_hud_select = create_UIBox_blind_select
 -- ALSOOOOO... make globals start with uppercase letters. Good practice or whatever.
 local Percentage_Risk = (G and G.GAME and G.GAME.Risk or 0) * 100
 Risk_manip_table = { risk = G and G.GAME and G.GAME.Risk or 0, disp_risk = Percentage_Risk .. "%" }
@@ -24,7 +25,28 @@ G.UIT.ROOT: Root node. Every UI element needs a root node.
 It's, generally speaking, good practice to alternate between rows and columns. 
 --]]
 --
+function blind_tier_func()
+	local spacing = 0.13
 
+	local scale = 0.4
+	return {
+		n = G.UIT.C,
+		config = {align = "cm"},
+		nodes = {
+			{
+				n = G.UIT.R,
+				align =  "cm",
+				padding = 0.05,
+				minw = 2 * 2 + spacing,
+				minh = 1,
+				colour = G.C.DYN_UI.BOSS_MAIN,
+				emboss = 0.05,
+				r = 0.1
+
+			},
+		},
+	}
+end
 function risk_menu_test_func()
 	local spacing = 0.13
 	local scale = 0.4
@@ -139,15 +161,59 @@ function diff_test_func()
 		},
 	}
 end
+
+function T2_test_func()
+	local spacing = 0.13
+	return {
+		n = G.UIT.R,
+		config = { align = "cm" },
+		nodes = {
+			{
+				n = G.UIT.C,
+				config = {
+					align = "cm",
+					padding = 0.05,
+					minw = 1.45 + spacing,
+					minh = 0.75,
+					colour = G.C.DYN_UI.BOSS_MAIN,
+					emboss = 0.05,
+					r = 0.1,
+				},
+				nodes = {
+					{
+						n = G.UIT.T,
+						config = {
+
+						},
+					},
+					{
+						n = G.UIT.O,
+						config = {
+							object = DynaText({string = {"Test"},
+											   font = G.LANGUAGES["en-us"].font,
+											   colours = { G.C.GREEN},
+											   shadow = true,
+											   scale = 1 * 0.3,}),
+							id = "astropulvis_tier_test",
+							align = "cm"
+						},
+					},
+				},
+			},
+		},
+	}
+end
 function create_UIBox_HUD()
 	local contents = original_hud()
 
 	table.insert(contents.nodes[1].nodes[1].nodes[5].nodes[2].nodes, risk_menu_test_func())
+
 	return contents
 end
 
 function create_UIBox_blind_choice(type, run_info, ...)
 	local contents = original_blind_hud(type, run_info, ...)
+	table.insert(contents.nodes[1].nodes,4,T2_test_func())
 	if type == "Small" or type == "Big" then
 	else
 		table.insert(contents.nodes[1].nodes, 4, diff_test_func())
