@@ -1,13 +1,8 @@
-deckatlass = SMODS.Atlas({
-    key = "deck_atlas",
-    px = 71,
-    py = 95,
-    path = "joker_atlas.png"
-})
+
 
 SMODS.Back {
     key = "deflation_deck",
-    atlas = deckatlass.key,
+    atlas = ASPL.G.deckatlas.key,
     pos = {x = 0, y = 0},
     loc_txt =  {
         name = "Deflation Deck",
