@@ -12,7 +12,8 @@ SMODS.Joker {
     calculate = function(self,context,card)
         if context.gc_proc then
             return {
-                message = "Doubled!"
+                message = "Doubled!",
+
             }
         end
     end

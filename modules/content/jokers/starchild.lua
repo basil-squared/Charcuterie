@@ -1,12 +1,13 @@
 SMODS.Joker {
     key = "starchild",
     atlas = ASPL.G.jokeratlas.key,
-    pos= {x=12,y=0},
+    pos= {x=28,y=0},
     loc_txt = {
         name = "Starchild",
         text = {"{C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult for every {C:astropulvis_galactical}Galactical{} Face card played."},
     },
-    config = {extra =  {chips = 10, mult = 4 }},
+    config = {extra =  {chips = 19, mult = 7.3 }},
+    rarity = 2,
     loc_vars = function(self,info_queue,card)
         return {vars = {card.ability.extra.chips,card.ability.extra.mult}}
     end,
