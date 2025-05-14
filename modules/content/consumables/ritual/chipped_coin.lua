@@ -14,7 +14,7 @@ SMODS.Consumable({
 
 	use = function(self,card,area,copier)
 		if ASPL.FUNC.negative_event_proc(G.GAME.Risk or 0) == false  then
-			ease_dollars(-G.GAME.dollars)
+			ease_dollars(-to_big(G.GAME.dollars))
 			-- #TODO: put the logic here
 		else
 			ease_dollars(G.GAME.dollars or 0)
