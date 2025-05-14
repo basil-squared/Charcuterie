@@ -8,7 +8,7 @@ SMODS.Joker {
     },
     rarity = 4,
     cost = 10,
-
+    blueprint_compat = false,
     calculate = function(self,context,card)
         if context.gc_proc then
             return {

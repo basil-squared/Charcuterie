@@ -9,6 +9,7 @@ SMODS.Joker {
 	config = { extra = {xchips_and_mult = 3, odds = 10, amt_create = 2}},
 	rarity = 2,
 	cost = 5,
+	blueprint_compat = true
 	loc_vars = function(self,info_queue,card)
 		return {vars = {card.ability.extra.xchips_and_mult, (G.GAME.probabilities.normal or 1),card.ability.extra.odds,card.ability.extra.amt_create}}
 

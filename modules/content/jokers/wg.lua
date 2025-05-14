@@ -10,6 +10,7 @@ SMODS.Joker {
 	loc_vars = function(self,info_queue,card)
 		return {vars = {card.ability.extra.xmult, card.ability.extra.curr_xmult}}
 	end,
+	blueprint_compat = true,
 
 	calculate = function(self,card,context)
 
