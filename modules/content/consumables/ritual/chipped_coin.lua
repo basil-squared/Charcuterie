@@ -17,7 +17,7 @@ SMODS.Consumable({
 			ease_dollars(-to_big(G.GAME.dollars))
 			-- #TODO: put the logic here
 		else
-			ease_dollars(G.GAME.dollars or 0)
+			ease_dollars(to_big((G.GAME.dollars or 0)))
 		end
 	end,
 	can_use = function(self,card)
