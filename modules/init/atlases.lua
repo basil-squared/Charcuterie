@@ -49,3 +49,9 @@ ASPL.G.voucheratlas = SMODS.Atlas {
 	px=71,
 	py=95,
 }
+ASPL.G.elementatlas =  SMODS.Atlas {
+	key = "element_atlas",
+	path = "elementatlas.png",
+	px =71,
+	py=95
+}
