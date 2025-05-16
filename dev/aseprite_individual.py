@@ -3,6 +3,7 @@ import sys
 from pathlib import Path
 from tqdm import tqdm
 
+
 def main():
     # Setup paths
     ss_path = Path("./spritesheets/")
@@ -15,12 +16,16 @@ def main():
 
     # Verify Aseprite is available
     try:
-        subprocess.run(["aseprite", "--version"],
-                      check=True,
-                      stdout=subprocess.DEVNULL,
-                      stderr=subprocess.DEVNULL)
+        subprocess.run(
+            ["aseprite", "--version"],
+            check=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
     except (subprocess.CalledProcessError, FileNotFoundError):
-        print("ERROR: Aseprite not found. Please install Aseprite and ensure it's in your PATH")
+        print(
+            "ERROR: Aseprite not found. Please install Aseprite and ensure it's in your PATH"
+        )
         sys.exit(1)
 
     # Get Aseprite files
@@ -47,7 +52,7 @@ def main():
                 "-b",
                 str(filepath),  # Source document
                 "--save-as",
-                str(output_dir / f"frame_{{frame4}}.png")  # Output pattern
+                str(output_dir / f"frame_{{frame4}}.png"),  # Output pattern
             ]
 
             if scale > 1:
@@ -57,11 +62,7 @@ def main():
             print(f"Exporting to: {output_dir}")  # Debug output
 
             try:
-                result = subprocess.run(
-                    cmd,
-                    capture_output=True,
-                    text=True
-                )
+                result = subprocess.run(cmd, capture_output=True, text=True)
 
                 if result.returncode != 0:
                     print(f"\nERROR processing {sprite_name} at {scale}x:")
@@ -78,10 +79,13 @@ def main():
         print("\nERROR: No files exported. Please check:")
         print("1. Your Aseprite files contain frames")
         print("2. Try running this command manually:")
-        print(f"aseprite -b ./spritesheets/example.aseprite --save-as ./exports/individual/example/1x/frame_{{frame4}}.png")
+        print(
+            f"aseprite -b ./spritesheets/example.aseprite --save-as ./exports/individual/example/1x/frame_{{frame4}}.png"
+        )
     else:
         print(f"\nSuccess! Exported {len(exported_files)} frames")
         print(f"Files organized in: {export_base.resolve()}")
+
 
 if __name__ == "__main__":
     main()

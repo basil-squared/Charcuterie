@@ -1,12 +1,9 @@
 SMODS.Consumable({
-	key = "ritual_bloodpact",
+	key = "bloodpact",
 	set = "ritual",
 	atlas = ASPL.G.ritualatlas.key,
 	pos = { x = 0, y = 0 },
-	loc_txt = {
-		name = "Blood Pact",
-		text = { "Spawn a random {C:red}Eternal Rare{} Joker." },
-	},
+
 	use = function(self, card, area, copier)
 		local tempjok = SMODS.add_card({ set = "Joker", rarity = 1, stickers = { "eternal" } })
 

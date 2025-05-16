@@ -31,11 +31,11 @@ function blind_tier_func()
 	local scale = 0.4
 	return {
 		n = G.UIT.C,
-		config = {align = "cm"},
+		config = { align = "cm" },
 		nodes = {
 			{
 				n = G.UIT.R,
-				align =  "cm",
+				align = "cm",
 				padding = 0.05,
 				minw = 2 * 2 + spacing,
 				minh = 1,
@@ -189,11 +189,11 @@ function T2_test_func()
 					{
 						n = G.UIT.O,
 						config = {
-							object = DynaText({string = {"Test"},
-											   font = G.LANGUAGES["en-us"].font,
-											   colours = { G.C.GREEN},
-											   shadow = true,
-											   scale = 1 * 0.3,}),
+							object = DynaText({ string = { "Test" },
+							                    font = G.LANGUAGES["en-us"].font,
+							                    colours = { G.C.GREEN },
+							                    shadow = true,
+							                    scale = 1 * 0.3, }),
 							id = "astropulvis_tier_test",
 							align = "cm"
 						},

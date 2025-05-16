@@ -3,10 +3,7 @@ SMODS.Consumable({
 	set = "ritual",
 	atlas = ASPL.G.ritualatlas.key,
 	pos = { x = 1, y = 0 },
-	loc_txt = {
-		name = "Sever",
-		text = { "{C:red}Destroy{} a random Joker.", "Summon 2 {C:red}Ritual Cards{}." },
-	},
+
 	use = function(self, card, area, copier)
 		local potential_victims = {}
 		for i = 1, #G.jokers.cards do
