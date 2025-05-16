@@ -1,11 +1,8 @@
 SMODS.Joker {
-	key = "system_of_messages",
+	key = "systemofmessages",
 	atlas = ASPL.G.jokeratlas.key,
 	pos = {x=18,y=0},
-	loc_txt = {
-		name = "System of Messages",
-		text = {"{X:mult,C:white}X#1#{} Mult for each {C:astropulvis_unstable}Unstable{} card in your {C:attention}full deck.{}","{S:0.5,C:inactive}(Currently {}{S:0.5,X:mult,C:white}X#2#{}{S:0.5,C:inactive}.)"}
-	},
+
 	rarity = 2,
 	blueprint_compat = true,
 	

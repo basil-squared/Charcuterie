@@ -1,9 +1,6 @@
 SMODS.Joker {
-	key = "aspl_hazardsign",
-	loc_txt = {
-		name = "Hazard Sign",
-		text = {"Gains {X:chips,C:white}X#1#{} Chips every time", "an {C:astropulvis_unstable}Unstable{} card activates.","{C:inactive,S:0.5}(currently {}{X:chips,C:white,S:0.5}X#2# {}{C:inactive,S:0.5}.)"}
-	},
+	key = "hazardsign",
+
 	atlas = ASPL.G.jokeratlas.key,
 	pos = {x = 17,y=0},
 	config = {extra = {xchips = 0.3, totalxchips = 1.0}},

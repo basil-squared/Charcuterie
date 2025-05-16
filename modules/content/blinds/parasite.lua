@@ -1,9 +1,6 @@
 SMODS.Blind({
-	key = "the_parasite",
-	loc_txt = {
-		name = "The Parasite",
-		text = { "0.75x mult and chips after calculation." },
-	},
+	key = "parasite",
+
 	atlas = ASPL.G.blindatlas.key,
 	pos = { x = 0, y = 2 },
 	boss_colour = HEX("883131"),

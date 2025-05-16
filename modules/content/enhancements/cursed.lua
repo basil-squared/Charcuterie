@@ -1,9 +1,5 @@
 SMODS.Enhancement {
 	key = "cursed",
-	loc_txt = {
-		name = "Cursed Card",
-		text = { "After being played 3 times, {C:red}Debuffs itself.{}", "{s:0.7,C:inactive}#1# plays left.{}" }
-	},
 	config = { extra = { ttk = 3 } },
 	atlas = ASPL.G.enhancementatlas.key,
 	pos = { x = 1, y = 0 },

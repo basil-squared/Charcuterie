@@ -2,14 +2,7 @@ SMODS.Joker({
 	key = "virtuous",
 	atlas = ASPL.G.jokeratlas.key,
 	pos = { x = 11, y = 0 },
-	loc_txt = {
-		name = "Virtuous Joker",
-		text = {
-			"Awards {C:attention}$1{} per {C:astropulvis_purified}Purified{} card",
-			"in your full deck at end of round.",
-			"{S:0.7,C:inactive}(currently{}{S:0.7,C:attention} $#1#{}{S:0.7,C;inactive}.)",
-		},
-	},
+
 	config = { extra = {given_dollars = 0}},
 	blueprint_compat = false,
 	loc_vars = function(self,info_queue,card)

@@ -1,13 +1,6 @@
 SMODS.Joker({
-	key = "juxt",
-	loc_txt = {
-		name = "Juxtaposition",
-		text = {
-			"Remove {C:dark_edition}Negative{} from all Jokers you have,",
-			"{C:attention}+1{} Joker Slot every time {C:dark_edition}Negative{} is removed.",
-			"{S:0.6,C:inactive}Currently +#1# Joker Slots.{}",
-		},
-	},
+	key = "juxtaposition",
+
 	atlas = ASPL.G.jokeratlas.key,
 	blueprint_compat = false,
 	config = {

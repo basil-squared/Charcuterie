@@ -1,13 +1,6 @@
 -- Thanks to @gelopsys on discord for the art and code for this joker.
 SMODS.Joker({
-	loc_txt = {
-		name = "Subplot",
-		text = {
-			"If a single {C:attention}played card{} does",
-			"not score it permanently",
-			"gains {X:mult,C:white}X#1#{} Mult",
-		},
-	},
+
 	key = "subplot",
 	atlas = ASPL.G.jokeratlas.key,
 	pos = {

@@ -1,9 +1,6 @@
 SMODS.Blind({
-	key = "the_ocean",
-	loc_txt = {
-		name = "The Ocean",
-		text = { "Strips away attributes from played cards." },
-	},
+	key = "ocean",
+
 	atlas = ASPL.G.blindatlas.key,
 	pos = { x = 0, y = 0 },
 

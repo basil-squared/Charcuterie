@@ -2,11 +2,7 @@ SMODS.Joker {
     key = "mothership",
     atlas = ASPL.G.jokeratlas.key,
     pos = {x=12,y=0},
-    loc_txt = {
-        name = "Mothership",
-        text = {"{X:mult,C:white}X#1#{} Mult for each","{C:astropulvis_galactical}Galactical{} Card in your {C:attention}Full Deck{}","{S:0.5,C:inactive}(Currently{} {X:mult,C:white,S:0.5}X#2#{}{S:0.5,C:inactive} Mult){}"}
 
-    },
     rarity = 2,
     
     config = {extra = {xmult = 0.2, curr_xmult = 1.0}},

@@ -2,10 +2,7 @@ SMODS.Joker {
 	key = "interstellar",
 	atlas = ASPL.G.jokeratlas.key,
 	pos = {x=29,y=0},
-	loc_txt = {
-		name = "Interstellar",
-		text = {"{C:astropulvis_galactical}Galactical{} cards give {C:mult}+#1#{} Mult."}
-	},
+
 	rarity = 1,
 	cost = 4,
 	config = {extra = {mult = 5}},

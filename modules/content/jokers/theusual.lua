@@ -1,12 +1,9 @@
 SMODS.Joker {
-	key = "the_usual",
+	key = "theusual",
 	atlas = ASPL.G.jokeratlas.key,
 	pos ={x=12,y=0},
 	rarity = 2,
-	loc_txt = {
-		name = "The Usual",
-		text = {"{X:mult,C:white}X#1#{} Mult when playing", "Your most played hand.","{S:0.7,C:inactive}Currently #2#.{}"}
-	},
+
 	config = {extra = {xmult = 2}},
 	blueprint_compat = true,
 	loc_vars = function(self,info_queue,card)
