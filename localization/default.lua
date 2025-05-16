@@ -1,11 +1,9 @@
--- For all intents and purposes, default is identical to en-us
-
 return {
 	descriptions = {
 		Back = {
 			b_astropulvis_ichor = {
 				name = "Ichor Deck",
-				text = { "Find {C:astropulvis_ritual}Ritual Cards{}", "in the shop, start with one {C:attention}Phase{}" }
+				text = {"Find {C:astropulvis_ritual}Ritual Cards{}", "in the shop, start with one {C:attention}Phase{}"}
 			},
 			b_astropulvis_deflation = {
 				name = "Deflation Deck",
@@ -20,66 +18,66 @@ return {
 		Blind = {
 			bl_astropulvis_castle = {
 				name = "The Castle",
-				text = { "Super large blind" }
+				text = {"Super large blind"}
 			},
 			bl_astropulvis_fortress = {
 				name = "The Fortress",
-				text = { "Absurdly large blind" }
+				text = {"Absurdly large blind"}
 			},
 			bl_astropulvis_seer = {
 				name = "The Seer",
-				text = { "Curse all played cards." }
+				text = {"Curse all played cards."}
 			},
 			bl_astropulvis_ocean = {
 				name = "The Ocean",
-				text = { "Resets played cards back to base form." }
+				text = {"Resets played cards back to base form."}
 			},
 			bl_astropulvis_debtcollector = {
 				name = "The Debt Collector",
-				text = { "Lose $1 per card played. If money is less than $0, double blind requirement" }
+				text = {"Lose $1 per card played. If money is less than $0, double blind requirement"}
 			},
 			bl_astropulvis_dip = {
 				name = "The Dip",
-				text = { "Cards have no suits" }
+				text = {"Cards have no suits"}
 			},
 			bl_astropulvis_parasite = {
 				name = "The Parasite",
-				text = { "X0.75 Mult and Chips after calculation is complete." }
+				text = {"X0.75 Mult and Chips after calculation is complete."}
 			},
 			bl_astropulvis_commander = {
 				name = "The Commander",
-				text = { "Disable a random suit every hand." }
+				text = {"Disable a random suit every hand."}
 			},
 			bl_astropulvis_tempest = {
 				name = "The Tempest",
-				text = { "Unplayed cards get shuffled back into the deck." }
+				text = {"Unplayed cards get shuffled back into the deck."}
 			},
 			bl_astropulvis_equalizer = {
 				name = "The Equalizer",
-				text = { "All hands start at 1 Mult and 30 Chips." }
+				text = {"All hands start at 1 Mult and 30 Chips."}
 			},
 			bl_astropulvis_ricochet = {
 				name = "The Ricochet",
-				text = { "25% of scored hand added to blind requirement." }
+				text = {"25% of scored hand added to blind requirement."}
 			},
 			bl_astropulvis_superglue = {
 				name = "The Superglue",
-				text = { "-2 Hand Size" }
+				text = {"-2 Hand Size"}
 			},
 			bl_astropulvis_assailant = {
 				name = "Amethyst Assailant",
-				text = { "Stupendously large blind" }
+				text = {"Stupendously large blind"}
 			},
 			bl_astropulvis_orchidoverlord = {
 				name = "Orchid Overlord",
-				text = { "For when you think you're too big to fail..." }
+				text = {"For when you think you're too big to fail..."}
 			}
 		},
 		Edition = {},
 		Enhanced = {
 			m_astropulvis_cursed = {
 				name = "Cursed Card",
-				text = { "After being played 3 times, {C:red}Debuffs itself.{}", "{s:0.7,C:inactive}#1# plays left.{}" }
+				text = {"After being played 3 times, {C:red}Debuffs itself.{}", "{s:0.7,C:inactive}#1# plays left.{}"}
 			},
 			m_astropulvis_unstable = {
 				name = "Unstable Card",
@@ -98,17 +96,17 @@ return {
 			},
 			m_astropulvis_galactical = {
 				name = "Galactical Card",
-				text = { "{C:green}#1# in #2# chance{} to upgrade", "the hand this card is played in." }
+				text = {"{C:green}#1# in #2# chance{} to upgrade", "the hand this card is played in."}
 			}
 		},
 		Joker = {
 			j_astropulvis_goldencheese = {
 				name = "Golden Cheese Cookie",
-				text = { "Earn {X:attention,C:white}X2{} dollars", "{S:0.5,C:inactive}'Divine Radiance!'" }
+				text = {"Earn {X:attention,C:white}X2{} dollars", "{S:0.5,C:inactive}'Divine Radiance!'"}
 			},
 			j_astropulvis_whitelily = {
 				name = "White Lily Cookie",
-				text = { "" }
+				text = {""}
 			},
 			j_astropulvis_bloatware = {
 				name = "Bloatware",
@@ -119,11 +117,11 @@ return {
 			},
 			j_astropulvis_crazyeight = {
 				name = "Crazy 8",
-				text = { "For every {C:attention}8{} Played,", "grants {C:white,X:mult}x#1#{} Mult." }
+				text = {"For every {C:attention}8{} Played,", "grants {C:white,X:mult}x#1#{} Mult."}
 			},
 			j_astropulvis_estrogen = {
 				name = "Estrogen",
-				text = { "Played face cards have a {C:green}#1# in #2#{} chance to become {C:attention}Queens{}" }
+				text = {"Played face cards have a {C:green}#1# in #2#{} chance to become {C:attention}Queens{}"}
 			},
 			j_astropulvis_halley = {
 				name = "Halley's Comet",
@@ -144,7 +142,7 @@ return {
 			},
 			j_astropulvis_interstellar = {
 				name = "Interstellar",
-				text = { "{C:astropulvis_galactical}Galactical{} cards give {C:mult}+#1#{} Mult." }
+				text = {"{C:astropulvis_galactical}Galactical{} cards give {C:mult}+#1#{} Mult."}
 			},
 			j_astropulvis_juxtaposition = {
 				name = "Juxtaposition",
@@ -164,7 +162,7 @@ return {
 			},
 			j_astropulvis_pcb = {
 				name = "PCB",
-				text = { "Copies ability of leftmost", "and rightmost Jokers." }
+				text = {"Copies ability of leftmost", "and rightmost Jokers."}
 			},
 			j_astropulvis_reactorrod = {
 				name = "Reactor Rod",
@@ -175,7 +173,7 @@ return {
 			},
 			j_astropulvis_schematic = {
 				name = "Schematic",
-				text = { "Copies ability of", "{C:attention}Joker{} to the left" }
+				text = {"Copies ability of", "{C:attention}Joker{} to the left"}
 			},
 			j_astropulvis_starchild = {
 				name = "Starchild",
@@ -200,7 +198,7 @@ return {
 			},
 			j_astropulvis_thej = {
 				name = "The J",
-				text = { "For every joker, gain {X:mult,C:white}X#1#{} Mult." }
+				text = {"For every joker, gain {X:mult,C:white}X#1#{} Mult."}
 			},
 			j_astropulvis_theusual = {
 				name = "The Usual",
@@ -229,7 +227,7 @@ return {
 			},
 			j_astropulvis_ufo = {
 				name = "U.F.O",
-				text = { "Turns any face card played into a {C:astropulvis_galactical}Galactical{} Card. " }
+				text = {"Turns any face card played into a {C:astropulvis_galactical}Galactical{} Card. "}
 			}
 		},
 		Other = {},
@@ -239,37 +237,81 @@ return {
 		Tag = {},
 		Tarot = {},
 		Voucher = {
-			v_astropulvis_brimstone = {name = "Brimstone",
-			                           text = {"Converts one random card","In your {C:attention}full deck{} into","a {C:cursed}Cursed Card every round."}},
-			v_astropulvis_divine = {name = "Divine Light",
-			                        text = {"{C:astropulvis_purified}Purifies{} all played {C:astropulvis_cursed}Cursed Cards{}"}},
+			v_astropulvis_brimstone = {
+				name = "Brimstone",
+				text = {
+					"Converts one random card",
+					"In your {C:attention}full deck{} into",
+					"a {C:cursed}Cursed Card every round."
+				}
+			},
+			v_astropulvis_divine = {
+				name = "Divine Light",
+				text = {"{C:astropulvis_purified}Purifies{} all played {C:astropulvis_cursed}Cursed Cards{}"}
+			}
 		},
 		ritual = {
-			c_astropulvis_peer = { name = "Peer",
-			                       text = {
-				                       "{C:red}Destroy{} a random joker.",
-				                       "{C:astropulvis_purified}Purify{} 2 selected {C:red}Cursed{} cards.", }, },
-			c_astropulvis_bloodpact = { name = "Blood Pact",
-			                            text = { "Spawn a random {C:red}Eternal Rare{} Joker." }, },
-			c_astropulvis_chippedcoin = { name = "Chipped Coin",
-			                              text = { "{C:green}#1#%{} chance to {C:attention}double{} money.", "{C:red}#2#%{} Chance to backfire and set money to {C:money}$0{} instead." }  },
-			c_astropulvis_phase = {name = "Phase",
-			                       text = {
-				                       "{C:mult} Destroy{} the {C:attention}Leftmost{} or {C:attention}Rightmost{} Joker.",
-				                       "Add {C:dark_edition}Negative{} to the other.",
-			                       },},
+			c_astropulvis_peer = {
+				name = "Peer",
+				text = {
+					"{C:red}Destroy{} a random joker.",
+					"{C:astropulvis_purified}Purify{} 2 selected {C:red}Cursed{} cards."
+				}
+			},
+			c_astropulvis_bloodpact = {
+				name = "Blood Pact",
+				text = {"Spawn a random {C:red}Eternal Rare{} Joker."}
+			},
+			c_astropulvis_chippedcoin = {
+				name = "Chipped Coin",
+				text = {
+					"{C:green}#1#%{} chance to {C:attention}double{} money.",
+					"{C:red}#2#%{} Chance to backfire and set money to {C:money}$0{} instead."
+				}
+			},
+			c_astropulvis_phase = {
+				name = "Phase",
+				text = {
+					"{C:mult} Destroy{} the {C:attention}Leftmost{} or {C:attention}Rightmost{} Joker.",
+					"Add {C:dark_edition}Negative{} to the other."
+				}
+			},
 			c_astropulvis_roulette = {
 				name = "Roulette",
-				text = {"{C:green}#1#%{} chance to apply"," An {C:enhanced}Edition{} to a random joker,","{C:red}#2#%{} chance to backfire,","{C:red}removing{} an edition from a random joker."},
+				text = {
+					"{C:green}#1#%{} chance to apply",
+					" An {C:enhanced}Edition{} to a random joker,",
+					"{C:red}#2#%{} chance to backfire,",
+					"{C:red}removing{} an edition from a random joker."
+				}
 			},
-			c_astropulvis_sever = {	name = "Sever",
-			                         text = { "{C:red}Destroy{} a random Joker.", "Summon 2 {C:red}Ritual Cards{}." },},
-			c_astropulvis_strike = {name = "Strike",
-			                        text = { "{C:red}Curse{} your hand.", "Earn {C:attention}$5{} for every card Cursed." },}
+			c_astropulvis_sever = {
+				name = "Sever",
+				text = {"{C:red}Destroy{} a random Joker.", "Summon 2 {C:red}Ritual Cards{}."}
+			},
+			c_astropulvis_strike = {
+				name = "Strike",
+				text = {"{C:red}Curse{} your hand.", "Earn {C:attention}$5{} for every card Cursed."}
+			}
 		},
 		Element = {
-			c_astropulvis_titanium = {name = "Titanium",
-			                          text = {"Converts up to {C:attention}3{}"," selected cards into {C:enhanced}Steel{} Cards"}},
+			c_astropulvis_titanium = {
+				name = "Titanium",
+				text = {"Converts up to {C:attention}3{}", " selected cards into {C:enhanced}Steel{} Cards"}
+			},
+			c_astropulvis_plutonium = {
+				name = "Plutonium",
+				text = {"{C:green}#1#%{} Chance to add {C:astropulvis_unstable}Unstable{}","to up to {C:attention}2{} selected cards,","but {C:red}#2#%{} chance to destroy","selected cards instead."}
+			},
+			c_astropulvis_neodymium = {
+				name = "Neodymium",
+				text = {"Make a selected {C:enhanced}Steel Card{} {C:dark_edition}Negative{}"},
+
+			},
+			c_astropulvis_zinc = {
+				name = "Zinc",
+				text = {"Adds {C:attention}Brilliant Seal{} to a ","selected {C:enhanced}Steel Card{}"}
+			}
 		}
 	},
 	misc = {
