@@ -14,15 +14,17 @@ SMODS.Consumable {
 				table.insert(potential_victims, G.jokers.cards[i])
 			end
 		end
+		local stupid_list = {a=1,b=2,c=3}
         local victims = {}
         for i=1,3 do
-            table.insert(potential_victims, pseudorandom_element)
+            victims[i] = pseudorandom_element(potential_victims,pseudoseed("OEUIFGUNHWEOUFN"))
+			victims[i].getting_sliced = true
 		end
 		if not victims then
 			return
 		end -- Safety check
 
-		victims.getting_sliced = true
+		
 		G.GAME.joker_buffer = G.GAME.joker_buffer - 3
 
 		-- Store reference in local variable for closure
@@ -48,7 +50,7 @@ SMODS.Consumable {
                 colour = G.C.purple
             }
         else 
-            SMODS.add_card({set = 'Joker',rarity =4})
+            SMODS.add_card({set = 'Joker',legendary=true})
         end
 
     end,
