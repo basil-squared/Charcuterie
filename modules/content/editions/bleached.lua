@@ -1,4 +1,4 @@
 SMODS.Edition {
   key = "bleached",
-  shader = "astropulvis_bleached"
+  shader = "bleached"
 }

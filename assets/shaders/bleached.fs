@@ -49,21 +49,72 @@ vec4 dissolve_mask(vec4 tex, vec2 texture_coords, vec2 uv) {
 
     return vec4(shadow ? vec3(0., 0., 0.) : tex.xyz, res > adjusted_dissolve ? (shadow ? tex.a * 0.3 : tex.a) : .0);
 }
-
-vec4 effect(vec4 colour, Image texture, vec2 texture_coords, vec2 screen_coords) {
-   vec2 uv = (((texture_coords) * (image_details)) - texture_details.xy * texture_details.ba) / texture_details.ba;
-   vec4 tex = Texel(texture,texture_coords);
-    // Sample input texture
-    vec3 color = texture2D(texture, uv).rgb;
-    
-    // Convert to grayscale using luminance formula
-    float gray = dot(color, vec3(0.299, 0.587, 0.114));
-    
-    // Output grayscale color
-    vec4 final_color = vec4(vec3(gray),clamp(bleached.x,1.0,1.0));
-    return dissolve_mask(tex * final_color,texture_coords,uv);
+mat3 brightnessMatrix( float brightness )
+{
+    return mat3( 1, 0, 0,
+                 0, 1, 0,
+                 0, 0, 1);
 }
 
+mat3 contrastMatrix( float contrast )
+{
+	float t = ( 1.0 - contrast ) / 2.0;
+    
+    return mat3( contrast, 0, 0,
+                 0, contrast, 0,
+                 0, 0, contrast);
+
+
+}
+
+mat3 saturationMatrix( float saturation )
+{
+    vec3 luminance = vec3( 0.3086, 0.6094, 0.0820 );
+    
+    float oneMinusSat = 1.0 - saturation;
+    
+    vec3 red = vec3( luminance.x * oneMinusSat );
+    red+= vec3( saturation, 0, 0 );
+    
+    vec3 green = vec3( luminance.y * oneMinusSat );
+    green += vec3( 0, saturation, 0 );
+    
+    vec3 blue = vec3( luminance.z * oneMinusSat );
+    blue += vec3( 0, 0, saturation );
+    
+    return mat3( red,
+                 green,
+                 blue);
+}
+
+const float brightness = 0.15;
+const float contrast = 0.5;
+const float saturation = 1.5;
+
+/*void mainImage( out vec4 fragColor, in vec2 fragCoord )
+{
+    vec4 color = texture( iChannel0, fragCoord/iResolution.xy );
+    
+	fragColor = brightnessMatrix( brightness ) *
+        		contrastMatrix( contrast ) * 
+        		saturationMatrix( saturation ) *
+        		color;
+} */
+vec4 effect(vec4 colour, Image texture, vec2 texture_coords, vec2 screen_coords) {
+
+    vec2 uv = (((texture_coords)*(image_details)) - texture_details.xy*texture_details.ba)/texture_details.ba;
+    vec4 tex = Texel(texture, texture_coords);
+    vec3 color = tex.rgb;
+    vec4 final_color = vec4(
+                  contrastMatrix(1.5) *
+                  saturationMatrix(0.3) *
+                  color, clamp(bleached.x,0.7,tex.a));
+
+   
+
+
+    return dissolve_mask(final_color, texture_coords, uv);
+}
 extern MY_HIGHP_OR_MEDIUMP vec2 mouse_screen_pos;
 extern MY_HIGHP_OR_MEDIUMP float hovering;
 extern MY_HIGHP_OR_MEDIUMP float screen_scale;
