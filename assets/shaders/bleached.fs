@@ -107,7 +107,7 @@ vec4 effect(vec4 colour, Image texture, vec2 texture_coords, vec2 screen_coords)
     vec3 color = tex.rgb;
     vec4 final_color = vec4(
                   contrastMatrix(1.5) *
-                  saturationMatrix(0.3) *
+                  saturationMatrix(0.2) *
                   color, clamp(bleached.x,0.7,tex.a));
 
    
