@@ -1,4 +1,5 @@
 local smods_has_no_suit_ref = SMODS.has_no_suit
+local smods_has_no_rank_ref = SMODS.has_no_rank
 local smods_get_id_ref = SMODS.get_id
 local start_run_ref = Game.start_run
 local ease_ante_ref = ease_ante
@@ -208,4 +209,10 @@ ASPL.FUNC.level_up_hand = function(card, hand_key, instant, amount)
     update_hand_text({ sound = 'button', volume = 0.7, pitch = 1.1, delay = 0 },
         { mult = 0, chips = 0, handname = '', level = '' })
   end
+end
+function SMODS.has_no_rank(card)
+  if card.seal and card.seal == 'astropulvis_obscure' then
+    return true
+  end
+  return smods_has_no_rank_ref(card)
 end

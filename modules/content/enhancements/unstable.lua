@@ -17,8 +17,9 @@ SMODS.Enhancement {
 			if pseudorandom('radioactive') < G.GAME.probabilities.normal / card.ability.extra.odds then
 				for i=1, card.ability.extra.card_num do
 					_card = create_playing_card({
-						center = G.P_CENTERS.m_astropulvis_unstable
+
 					})
+					_card:set_seal("astropulvis_lime")
 					G.deck:emplace(_card)
 					G.deck.config.card_limit = G.deck.config.card_limit + 1
 
