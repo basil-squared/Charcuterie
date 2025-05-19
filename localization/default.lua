@@ -76,7 +76,7 @@ return {
     Edition = {
       e_astropulvis_bleached = {
         name = "Bleached",
-        text = { "Card has{C:attention} no{} suit." }
+        text = { "Card is {C:attention}Suitless{}"}
       }
     },
     Enhanced = {
@@ -102,6 +102,10 @@ return {
       m_astropulvis_galactical = {
         name = "Galactical Card",
         text = { "{C:green}#1# in #2# chance{} to upgrade", "the hand this card is played in." }
+      },
+      m_stone = {
+        name = "Stone Card",
+        text = {"{C:chips}+50{} Chips","{C:inactive}Suitless{} and {C:attention}Rankless{}"}
       }
     },
     Joker = {
@@ -264,8 +268,34 @@ return {
           "not truly random"
         }
       },
+      astropulvis_obscured_seal = {
+        name = "Obscured Seal",
+        text = {"The card this is applied to","is {C:attention}Rankless{}"}
+      },
+      astropulvis_lime_seal = {
+        name = "Lime Seal",
+        text = {"{C:green}#1# in #2#{} chance to","create an {C:astropulvis_unstable}Unstable{} card when scored"}
+      },
+      astropulvis_brilliant_seal = {
+        name = "Brilliant Seal",
+        text = {"Prevents the enhancement of this card","from being changed {C:attention}once{}"}
+      }
+
     },
-    Planet = {},
+    Planet = {
+      c_astropulvis_arrakis = {
+        name = "Arrakis",
+        text = {"Placeholder"}
+      },
+      c_astropulvis_abafar = {
+        name = "Abafar",
+        text = {"Placeholder"}
+      },
+      c_astropulvis_theia = {
+        name = "Theia",
+        text = {"Placeholder"}
+      }
+    },
     Spectral = {},
     Stake = {},
     Tag = {},
@@ -334,7 +364,7 @@ return {
       c_astropulvis_alchemy = {
         name = "Alchemy",
         text = { "{C:green}#1#%{} chance to make entire hand {C:attention}Gold{}",
-          "{C:red}#2#%{} chance to debuff entire hand instead." }
+                 "{C:red}#2#%{} chance to debuff entire hand instead." }
       }
     },
     Element = {
@@ -371,15 +401,27 @@ return {
     },
     high_scores = {},
     labels = {
-      astropulvis_bleached = "Bleached"
+      astropulvis_bleached = "Bleached",
+      astropulvis_brilliant_seal = "Brilliant Seal",
+      astropulvis_lime_seal = "Lime Seal",
+      astropulvis_obscured_seal = "Obscured Seal"
     },
     poker_hands = {
-      ['astropulvis_greyflush'] = "Greyscale Flush",
+      ['astropulvis_grayflush'] = "Grayscale Flush",
+      ['astropulvis_graystraight'] = "Grayscale Straight",
+      ['astropulvis_grayhouse'] = "Grayscale House"
     },
     poker_hand_descriptions = {
-      ['astropulvis_greyflush'] = {
+      ['astropulvis_grayflush'] = {
         "5 Suitless cards",
       },
+      ['astropulvis_graystraight'] = {
+        "5 Suitless cards (consecutive ranks)"
+      },
+      ['astropulvis_grayhouse'] = {
+        'a Suitless Three of a Kind',
+        'and a Suitless Pair.'
+      }
     },
 
     quips = {},

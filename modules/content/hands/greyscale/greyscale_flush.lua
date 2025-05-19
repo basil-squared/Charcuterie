@@ -1,5 +1,5 @@
 SMODS.PokerHand {
-  key = "greyflush",
+  key = "grayflush",
   mult = 7,
   chips = 50,
   l_mult = 3,

@@ -14,7 +14,7 @@ SMODS.Consumable({
 	end,
 
 	can_use = function(self, card)
-		if G.STATE == G.STATES.SELECTING_HAND then
+		if G.STATE == G.STATES.SELECTING_HAND or G.STATES.SMODS_BOOSTER_OPENED then
 			return true
 		else
 			return false
