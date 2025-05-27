@@ -2,6 +2,7 @@ SMODS.Booster {
     key  = "jumbo_ritual_booster",
     atlas = CHAR.G.boosteratlas.key,
     pos = {x = 0, y = 0},
+    cost = 6,
     loc_txt = {
         name = "Ritual Pack",
         text = {"Choose {C:attention}1{} of {C:attention}5{}","{C:red}Ritual Cards{} to be used immediately"}, 
@@ -21,6 +22,7 @@ SMODS.Booster {
 
 SMODS.Booster {
     key  = "mega_ritual_booster",
+    cost = 8,
     atlas = CHAR.G.boosteratlas.key,
     pos = {x = 1, y = 0},
     loc_txt = {
@@ -54,9 +56,7 @@ SMODS.Booster {
         new_card = SMODS.create_card({ set = "ritual" })
         return new_card
     end,
-    particles = function(self)
-        return
-    end
+
 
 }
 SMODS.Booster {
@@ -74,8 +74,6 @@ SMODS.Booster {
         new_card = SMODS.create_card({ set = "ritual" })
         return new_card
     end,
-    particles = function(self)
-        return
-    end
+
 
 }

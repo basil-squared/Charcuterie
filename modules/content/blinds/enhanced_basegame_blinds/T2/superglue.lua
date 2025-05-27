@@ -1,13 +1,15 @@
 sg = SMODS.Blind {
-    key = "superglue",
+    key = "bigmanacle",
 
     boss = {min = 8, max =16},
     boss_colour = HEX("ffff96"),
+    atlas = CHAR.G.blindatlas.key,
+    pos = {x=0,y=16}
 
 }
 
 sg.set_blind = function(self)
-    print("test")
+
     G.hand:change_size(-2)
 end
 sg.disable = function(self)

@@ -1,5 +1,5 @@
 SMODS.Blind {
-    key = "debtcollector",
+    key = "bigtooth",
 
     boss_colour = HEX("8c4a08"),
     boss = {min = 8, max = 16},

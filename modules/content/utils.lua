@@ -216,3 +216,45 @@ function SMODS.has_no_rank(card)
   end
   return smods_has_no_rank_ref(card)
 end
+
+local gnb = get_new_boss
+function get_new_boss()
+  --Fix an issue with adding bosses mid-run
+  for k, v in pairs(G.P_BLINDS) do
+    if not G.GAME.bosses_used[k] then
+      G.GAME.bosses_used[k] = 0
+    end
+  end
+  --This is how nostalgic deck replaces the boss blinds with Nostalgic versions
+  local bl = gnb()
+  local bl_key = string.sub(bl, 4)
+  local tier2blinds = {
+    tooth = true,
+    manacle =true,
+    wall = true,
+    hook = true,
+    arm = true,
+
+  }
+  local tier3blinds = {
+    wall = true,
+    tooth = true,
+    manacle = true,
+    hook = true,
+    arm = true,
+  }
+  if G and G.GAME and G.GAME.round_resets.ante > 8  then
+    if G and G.GAME and G.GAME.round_resets.ante > 16 then
+      if tier3blinds[bl_key] then
+        return "bl_charcuterie_bigger" .. bl_key
+      end
+    end
+    if tier2blinds[bl_key] then
+      return "bl_charcuterie_big" .. bl_key
+    end
+
+
+
+  end
+  return bl
+end

@@ -21,8 +21,12 @@ SMODS.Sound {
 	sync = false,
 	select_music_track = function()
 		if G and G.GAME and G.GAME.blind then
-			return G.GAME.blind.config.blind.key == "bl_charcuterie_debtcollector" and next(find_joker("j_charcuterie_mafioso"))
+			return G.GAME.blind.config.blind.key == "bl_charcuterie_bigtooth" and next(find_joker("j_charcuterie_mafioso"))
 		end
 
 	end,
+}
+SMODS.Sound {
+	key = "melty_sound",
+	path = "e_melty.mp3"
 }
