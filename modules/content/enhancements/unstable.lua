@@ -1,7 +1,7 @@
 SMODS.Enhancement {
 	key = "unstable",
 
-	atlas = ASPL.G.enhancementatlas.key,
+	atlas = CHAR.G.enhancementatlas.key,
 	config = { extra = { odds = 4, xmult = 4, card_num = 2} },
 	pos = {x=3,y=0},
 	loc_vars = function(self, info_queue, card)
@@ -9,7 +9,7 @@ SMODS.Enhancement {
 	end,
 
 	calculate = function(self,card,context)
-		if next(SMODS.find_card("j_astropulvis_reactor_rod")) then
+		if next(SMODS.find_card("j_charcuterie_reactor_rod")) then
 			card.ability.extra.xmult = 6
 			card.ability.extra.card_num = 4
 		end
@@ -19,7 +19,7 @@ SMODS.Enhancement {
 					_card = create_playing_card({
 
 					})
-					_card:set_seal("astropulvis_lime")
+					_card:set_seal("charcuterie_lime")
 					G.deck:emplace(_card)
 					G.deck.config.card_limit = G.deck.config.card_limit + 1
 

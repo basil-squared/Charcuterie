@@ -9,14 +9,14 @@ SMODS.Consumable {
         info_queue[#info_queue+1] = {set = 'Other', key = 'aspl_txt_risk'}
         return { vars = { tostring((1 - (G.GAME.Risk or 0) ) * 100), tostring((G.GAME.Risk or 0) * 100) } }
     end,
-    atlas = ASPL.G.ritualatlas.key,
+    atlas = CHAR.G.ritualatlas.key,
     pos = {x=6,y=0},
     use = function(self,area,card,copier)
         local random_joker = pseudorandom_element(G.jokers.cards, pseudoseed("Happy wheels"))
         random_joker.pinned = true
         random_joker:set_eternal(true)
         random_joker:juice_up()
-        ASPL.FUNC.ease_risk(-20)
+        CHAR.FUNC.ease_risk(-20)
 
     end,
     can_use = function(self,area)

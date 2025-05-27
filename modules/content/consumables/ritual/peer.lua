@@ -1,7 +1,7 @@
 SMODS.Consumable({
 	key = "peer",
 	set = "ritual",
-	atlas = ASPL.G.ritualatlas.key,
+	atlas = CHAR.G.ritualatlas.key,
 	pos = { x = 4, y = 0 },
 
 	use = function(self, card, area, copier)
@@ -36,17 +36,17 @@ SMODS.Consumable({
 		--[[ And Thus begins  the part where i purify the cards. I'm not worried for if they are cursed or not, thats checked in can_use...
     -- Now, in a perfect world only cursed cards will be selected, but I'll make sure that the cards are cursed before operating on them.--]]
 		for i = 1, #G.hand.highlighted do
-			if SMODS.has_enhancement(G.hand.highlighted[i], "m_astropulvis_cursed") then
+			if SMODS.has_enhancement(G.hand.highlighted[i], "m_charcuterie_cursed") then
 				G.hand.highlighted[i]:juice_up(0.3, 1)
-				G.hand.highlighted[i]:set_ability("m_astropulvis_purified")
+				G.hand.highlighted[i]:set_ability("m_charcuterie_purified")
 			end
 		end
 	end,
 	can_use = function(self, card)
 		if #G.hand.highlighted <= 2 then
 			if
-			(G.hand.highlighted[1] and SMODS.has_enhancement(G.hand.highlighted[2], "m_astropulvis_cursed"))
-							or (G.hand.highlighted[2] and SMODS.has_enhancement(G.hand.highlighted[i], "m_astropulvis_cursed"))
+			(G.hand.highlighted[1] and SMODS.has_enhancement(G.hand.highlighted[2], "m_charcuterie_cursed"))
+							or (G.hand.highlighted[2] and SMODS.has_enhancement(G.hand.highlighted[i], "m_charcuterie_cursed"))
 			then
 				return #G.jokers.cards > 0
 			end

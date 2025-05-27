@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "hazardsign",
 
-	atlas = ASPL.G.jokeratlas.key,
+	atlas = CHAR.G.jokeratlas.key,
 	pos = {x = 17,y=0},
 	config = {extra = {xchips = 0.3, totalxchips = 1.0}},
 	loc_vars = function(self,info_queue,card)

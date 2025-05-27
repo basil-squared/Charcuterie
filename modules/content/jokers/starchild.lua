@@ -1,6 +1,6 @@
 SMODS.Joker {
     key = "starchild",
-    atlas = ASPL.G.jokeratlas.key,
+    atlas = CHAR.G.jokeratlas.key,
     pos= {x=28,y=0},
     loc_txt = {
 
@@ -12,7 +12,7 @@ SMODS.Joker {
         return {vars = {card.ability.extra.chips,card.ability.extra.mult}}
     end,
     calculate = function(self,card,context)
-        if context.individual and context.cardarea == G.play and context.other_card:is_face() and SMODS.has_enhancement(context.other_card, "m_astropulvis_galactical") then
+        if context.individual and context.cardarea == G.play and context.other_card:is_face() and SMODS.has_enhancement(context.other_card, "m_charcuterie_galactical") then
             return {
                 chips = card.ability.extra.chips,
                 mult = card.ability.extra.mult

@@ -1,7 +1,7 @@
 SMODS.Blind({
 	key = "parasite",
 
-	atlas = ASPL.G.blindatlas.key,
+	atlas = CHAR.G.blindatlas.key,
 	pos = { x = 0, y = 2 },
 	boss_colour = HEX("883131"),
 	boss = { min = 2, max = 20 },

@@ -1,6 +1,6 @@
 SMODS.Booster {
     key  = "jumbo_ritual_booster",
-    atlas = ASPL.G.boosteratlas.key,
+    atlas = CHAR.G.boosteratlas.key,
     pos = {x = 0, y = 0},
     loc_txt = {
         name = "Ritual Pack",
@@ -21,7 +21,7 @@ SMODS.Booster {
 
 SMODS.Booster {
     key  = "mega_ritual_booster",
-    atlas = ASPL.G.boosteratlas.key,
+    atlas = CHAR.G.boosteratlas.key,
     pos = {x = 1, y = 0},
     loc_txt = {
         name = "Ritual Pack",
@@ -41,7 +41,7 @@ SMODS.Booster {
 }
 SMODS.Booster {
     key  = "ritual_booster_1",
-    atlas = ASPL.G.boosteratlas.key,
+    atlas = CHAR.G.boosteratlas.key,
     pos = {x = 2, y = 0},
     loc_txt = {
         name = "Ritual Pack",
@@ -61,7 +61,7 @@ SMODS.Booster {
 }
 SMODS.Booster {
     key  = "ritual_booster_2",
-    atlas = ASPL.G.boosteratlas.key,
+    atlas = CHAR.G.boosteratlas.key,
     pos = {x = 3, y = 0},
     loc_txt = {
         name = "Ritual Pack",

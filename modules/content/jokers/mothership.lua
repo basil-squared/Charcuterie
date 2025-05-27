@@ -1,6 +1,6 @@
 SMODS.Joker {
     key = "mothership",
-    atlas = ASPL.G.jokeratlas.key,
+    atlas = CHAR.G.jokeratlas.key,
     pos = {x=12,y=0},
 
     rarity = 2,
@@ -10,7 +10,7 @@ SMODS.Joker {
         return {vars = {card.ability.extra.xmult,card.ability.extra.curr_xmult}}
     end,
     calculate =  function(self,card,context)
-		card.ability.extra.curr_xmult = (ASPL.FUNC.check_enhancement_deck("m_astropulvis_galactical") * card.ability.extra.xmult) + 1.0
+		card.ability.extra.curr_xmult = (CHAR.FUNC.check_enhancement_deck("m_charcuterie_galactical") * card.ability.extra.xmult) + 1.0
 		if context.joker_main then
 			return {
 				xmult = card.ability.extra.curr_xmult

@@ -1,7 +1,7 @@
 SMODS.Blind {
     key = "castle",
 
-    atlas = ASPL.G.blindatlas.key,
+    atlas = CHAR.G.blindatlas.key,
     pos = {x = 0,y =8},
     boss_colour = HEX("8b14db"),
 	boss = { min = 8, max = 10 },

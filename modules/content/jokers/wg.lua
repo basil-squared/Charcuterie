@@ -1,6 +1,6 @@
 SMODS.Joker {
-	key = "aspl_wargames",
-	atlas = ASPL.G.jokeratlas.key,
+	key = "wargames",
+	atlas = CHAR.G.jokeratlas.key,
 	pos = {x=16,y=0},
 
 	config = { extra = {xmult = 0.5, curr_xmult = 1.0}},
@@ -15,7 +15,7 @@ SMODS.Joker {
 			print("reached")
 			local fh = context.full_hand
 			for i=1, #fh do
-				if SMODS.has_enhancement(fh[i],"m_astropulvis_unstable")then
+				if SMODS.has_enhancement(fh[i],"m_charcuterie_unstable")then
 					card.ability.extra.curr_xmult = 1.0
 					return {
 						message = "Reset"

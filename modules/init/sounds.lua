@@ -1,0 +1,28 @@
+SMODS.Sound {
+	key = "coolkid_miss",
+	path = "coolkid_miss.ogg"
+}
+SMODS.Sound {
+	key = "coolkid_hit",
+	path = "coolkid_hit.ogg"
+}
+SMODS.Sound {
+	key = "coolkid_wo_hit",
+	path = "coolkid_walkspeed_hit.ogg"
+}
+SMODS.Sound {
+	key = "mafioso_summon",
+	path = "soldiers.wav"
+}
+SMODS.Sound {
+	key = "music_debito_di_sonno",
+	path = "debito_di_sonno.ogg",
+	pitch = 1.0,
+	sync = false,
+	select_music_track = function()
+		if G and G.GAME and G.GAME.blind then
+			return G.GAME.blind.config.blind.key == "bl_charcuterie_debtcollector" and next(find_joker("j_charcuterie_mafioso"))
+		end
+
+	end,
+}

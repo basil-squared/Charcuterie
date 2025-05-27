@@ -1,7 +1,7 @@
 SMODS.Enhancement {
 	key = "cursed",
 	config = { extra = { ttk = 3 } },
-	atlas = ASPL.G.enhancementatlas.key,
+	atlas = CHAR.G.enhancementatlas.key,
 	pos = { x = 1, y = 0 },
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.ttk } }

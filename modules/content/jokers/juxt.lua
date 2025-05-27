@@ -1,7 +1,7 @@
 SMODS.Joker({
 	key = "juxtaposition",
 
-	atlas = ASPL.G.jokeratlas.key,
+	atlas = CHAR.G.jokeratlas.key,
 	blueprint_compat = false,
 	config = {
 		extra = { jokplus = 0 },

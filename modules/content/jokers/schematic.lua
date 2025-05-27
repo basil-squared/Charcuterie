@@ -15,7 +15,7 @@ end
 
 SMODS.Joker {
 	key = "schematic",
-	atlas = ASPL.G.jokeratlas.key,
+	atlas = CHAR.G.jokeratlas.key,
 	pos = {x = 30,y=0},
 	blueprint_compat = true,
 

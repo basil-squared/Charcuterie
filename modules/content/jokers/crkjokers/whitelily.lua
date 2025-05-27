@@ -1,4 +1,0 @@
-SMODS.Joker {
-    key = "whitelily",
-
-}

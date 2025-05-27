@@ -1,11 +1,11 @@
 return {
   descriptions = {
     Back = {
-      b_astropulvis_ichor = {
+      b_charcuterie_ichor = {
         name = "Ichor Deck",
-        text = { "Find {C:astropulvis_ritual}Ritual Cards{}", "in the shop, start with one {C:attention}Phase{}" }
+        text = { "Find {C:charcuterie_ritual}Ritual Cards{}", "in the shop, start with one {C:attention}Phase{}" }
       },
-      b_astropulvis_deflation = {
+      b_charcuterie_deflation = {
         name = "Deflation Deck",
         text = {
           "Start with {C:attention}$#1#{}.",
@@ -16,90 +16,94 @@ return {
       }
     },
     Blind = {
-      bl_astropulvis_castle = {
+      bl_charcuterie_castle = {
         name = "The Castle",
         text = { "Super large blind" }
       },
-      bl_astropulvis_fortress = {
+      bl_charcuterie_fortress = {
         name = "The Fortress",
         text = { "Absurdly large blind" }
       },
-      bl_astropulvis_seer = {
+      bl_charcuterie_seer = {
         name = "The Seer",
         text = { "Curse all played cards." }
       },
-      bl_astropulvis_ocean = {
+      bl_charcuterie_ocean = {
         name = "The Ocean",
         text = { "Resets played cards back to base form." }
       },
-      bl_astropulvis_debtcollector = {
+      bl_charcuterie_debtcollector = {
         name = "The Debt Collector",
         text = { "Lose $1 per card played. If money is less than $0, double blind requirement" }
       },
-      bl_astropulvis_dip = {
+      bl_charcuterie_dip = {
         name = "The Dip",
         text = { "Cards have no suits" }
       },
-      bl_astropulvis_parasite = {
+      bl_charcuterie_parasite = {
         name = "The Parasite",
         text = { "X0.75 Mult and Chips after calculation is complete." }
       },
-      bl_astropulvis_commander = {
+      bl_charcuterie_commander = {
         name = "The Commander",
         text = { "Disable a random suit every hand." }
       },
-      bl_astropulvis_tempest = {
+      bl_charcuterie_tempest = {
         name = "The Tempest",
         text = { "Unplayed cards get shuffled back into the deck." }
       },
-      bl_astropulvis_equalizer = {
+      bl_charcuterie_equalizer = {
         name = "The Equalizer",
         text = { "All hands start at 1 Mult and 30 Chips." }
       },
-      bl_astropulvis_ricochet = {
+      bl_charcuterie_ricochet = {
         name = "The Ricochet",
         text = { "25% of scored hand added to blind requirement." }
       },
-      bl_astropulvis_superglue = {
+      bl_charcuterie_superglue = {
         name = "The Superglue",
         text = { "-2 Hand Size" }
       },
-      bl_astropulvis_assailant = {
+      bl_charcuterie_assailant = {
         name = "Amethyst Assailant",
         text = { "Stupendously large blind" }
       },
-      bl_astropulvis_orchidoverlord = {
+      bl_charcuterie_orchidoverlord = {
         name = "Orchid Overlord",
         text = { "For when you think you're too big to fail..." }
       }
     },
     Edition = {
-      e_astropulvis_bleached = {
+      e_charcuterie_bleached = {
         name = "Bleached",
         text = { "Card is {C:attention}Suitless{}"}
+      },
+      e_charcuterie_melty = {
+        name = "Melty",
+        text = {"{C:green}#1#%{} chance to give ","{X:mult,C:white}X#2#{} mult","{C:red}#3#%{}chance to destroy itself instead."}
       }
     },
     Enhanced = {
-      m_astropulvis_cursed = {
+      m_charcuterie_cursed = {
         name = "Cursed Card",
         text = { "After being played 3 times, {C:red}Debuffs itself.{}", "{s:0.7,C:inactive}#1# plays left.{}" }
       },
-      m_astropulvis_unstable = {
+      m_charcuterie_unstable = {
         name = "Unstable Card",
         text = {
           "{X:mult,C:white}X#1#{} Mult.",
           "{C:green}#2# in #3# {}chance to add #4# more",
-          " {C:astropulvis_unstable}Unstable{} cards to the deck."
+          " {C:charcuterie_unstable}Unstable{} cards to the deck."
         }
       },
-      m_astropulvis_purified = {
+      m_charcuterie_purified = {
         name = "Purified Card",
         text = {
           "{C:chips}+#1#{} Chips, {C:mult}+#2#{} Mult,",
           "{X:mult,C:white}x#3#{} Mult while held in hand."
         }
       },
-      m_astropulvis_galactical = {
+      m_charcuterie_galactical = {
         name = "Galactical Card",
         text = { "{C:green}#1# in #2# chance{} to upgrade", "the hand this card is played in." }
       },
@@ -109,30 +113,30 @@ return {
       }
     },
     Joker = {
-      j_astropulvis_goldencheese = {
+      j_charcuterie_goldencheese = {
         name = "Golden Cheese Cookie",
         text = { "Earn {X:attention,C:white}X2{} dollars", "{S:0.5,C:inactive}'Divine Radiance!'" }
       },
-      j_astropulvis_whitelily = {
+      j_charcuterie_whitelily = {
         name = "White Lily Cookie",
         text = { "" }
       },
-      j_astropulvis_bloatware = {
+      j_charcuterie_bloatware = {
         name = "Bloatware",
         text = {
           "{X:purple,C:white}X#1#{} {C:chips}Chips{} and {C:mult}Mult{}.",
           "{C:green}#2# in #3#{} chance to spawn #4# {C:red}Debuffed{} cards into your hand."
         }
       },
-      j_astropulvis_crazyeight = {
+      j_charcuterie_crazyeight = {
         name = "Crazy 8",
         text = { "For every {C:attention}8{} Played,", "grants {C:white,X:mult}x#1#{} Mult." }
       },
-      j_astropulvis_estrogen = {
+      j_charcuterie_estrogen = {
         name = "Estrogen",
         text = { "Played face cards have a {C:green}#1# in #2#{} chance to become {C:attention}Queens{}" }
       },
-      j_astropulvis_halley = {
+      j_charcuterie_halley = {
         name = "Halley's Comet",
         text = {
           "For every {C:attention}5{} Hands played,",
@@ -141,19 +145,19 @@ return {
           "{S:0.7,C:inactive}(currently #1#){}"
         }
       },
-      j_astropulvis_hazardsign = {
+      j_charcuterie_hazardsign = {
         name = "Hazard Sign",
         text = {
           "Gains {X:chips,C:white}X#1#{} Chips every time",
-          "an {C:astropulvis_unstable}Unstable{} card activates.",
+          "an {C:charcuterie_unstable}Unstable{} card activates.",
           "{C:inactive,S:0.5}(currently {}{X:chips,C:white,S:0.5}X#2# {}{C:inactive,S:0.5}.)"
         }
       },
-      j_astropulvis_interstellar = {
+      j_charcuterie_interstellar = {
         name = "Interstellar",
-        text = { "{C:astropulvis_galactical}Galactical{} cards give {C:mult}+#1#{} Mult." }
+        text = { "{C:charcuterie_galactical}Galactical{} cards give {C:mult}+#1#{} Mult." }
       },
-      j_astropulvis_juxtaposition = {
+      j_charcuterie_juxtaposition = {
         name = "Juxtaposition",
         text = {
           "Remove {C:dark_edition}Negative{} from all Jokers you have,",
@@ -161,36 +165,36 @@ return {
           "{S:0.6,C:inactive}Currently +#1# Joker Slots.{}"
         }
       },
-      j_astropulvis_mothership = {
+      j_charcuterie_mothership = {
         name = "Mothership",
         text = {
           "{X:mult,C:white}X#1#{} Mult for each",
-          "{C:astropulvis_galactical}Galactical{} Card in your {C:attention}Full Deck{}",
+          "{C:charcuterie_galactical}Galactical{} Card in your {C:attention}Full Deck{}",
           "{S:0.5,C:inactive}(Currently{} {X:mult,C:white,S:0.5}X#2#{}{S:0.5,C:inactive} Mult){}"
         }
       },
-      j_astropulvis_pcb = {
+      j_charcuterie_pcb = {
         name = "PCB",
         text = { "Copies ability of leftmost", "and rightmost Jokers." }
       },
-      j_astropulvis_reactorrod = {
+      j_charcuterie_reactorrod = {
         name = "Reactor Rod",
         text = {
-          "{C:astropulvis_unstable}Unstable{} cards now grant {X:mult,C:white}X6{} Mult,",
+          "{C:charcuterie_unstable}Unstable{} cards now grant {X:mult,C:white}X6{} Mult,",
           "but will now create {C:attention}four{} cards when the effect activates."
         }
       },
-      j_astropulvis_schematic = {
+      j_charcuterie_schematic = {
         name = "Schematic",
         text = { "Copies ability of", "{C:attention}Joker{} to the left" }
       },
-      j_astropulvis_starchild = {
+      j_charcuterie_starchild = {
         name = "Starchild",
         text = {
-          "{C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult for every {C:astropulvis_galactical}Galactical{} Face card played."
+          "{C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult for every {C:charcuterie_galactical}Galactical{} Face card played."
         }
       },
-      j_astropulvis_subplot = {
+      j_charcuterie_subplot = {
         name = "Subplot",
         text = {
           "If a single {C:attention}played card{} does",
@@ -198,18 +202,18 @@ return {
           "gains {X:mult,C:white}X#1#{} Mult"
         }
       },
-      j_astropulvis_systemofmessages = {
+      j_charcuterie_systemofmessages = {
         name = "System of Messages",
         text = {
-          "{X:mult,C:white}X#1#{} Mult for each {C:astropulvis_unstable}Unstable{} card in your {C:attention}full deck.{}",
+          "{X:mult,C:white}X#1#{} Mult for each {C:charcuterie_unstable}Unstable{} card in your {C:attention}full deck.{}",
           "{S:0.5,C:inactive}(Currently {}{S:0.5,X:mult,C:white}X#2#{}{S:0.5,C:inactive}.)"
         }
       },
-      j_astropulvis_thej = {
+      j_charcuterie_thej = {
         name = "The J",
         text = { "For every joker, gain {X:mult,C:white}X#1#{} Mult." }
       },
-      j_astropulvis_theusual = {
+      j_charcuterie_theusual = {
         name = "The Usual",
         text = {
           "{X:mult,C:white}X#1#{} Mult when playing",
@@ -217,46 +221,98 @@ return {
           "{S:0.7,C:inactive}Currently #2#.{}"
         }
       },
-      j_astropulvis_virtuous = {
+      j_charcuterie_virtuous = {
         name = "Virtuous Joker",
         text = {
-          "Awards {C:attention}$1{} per {C:astropulvis_purified}Purified{} card",
+          "Awards {C:attention}$1{} per {C:charcuterie_purified}Purified{} card",
           "in your full deck at end of round.",
           "{S:0.7,C:inactive}(currently{}{S:0.7,C:attention} $#1#{}{S:0.7,C;inactive}.)"
         }
       },
-      j_astropulvis_wargames = {
+      j_charcuterie_wargames = {
         name = "War Games",
         text = {
           "Gains {X:mult,C:white}X#1#{} Mult for every hand played",
-          "not containing an {C:astropulvis_unstable}Unstable{}  card.",
+          "not containing an {C:charcuterie_unstable}Unstable{}  card.",
           "{S:0.5,C:inactive}(deck must contain at least 5 unstable cards.){}",
           "{S:0.5,C:inactive}(Currently {}{X:mult,C:white}X#2#{}{S:0.5,C:inactive}.)"
         }
       },
-      j_astropulvis_ufo = {
+      j_charcuterie_ufo = {
         name = "U.F.O",
-        text = { "Turns any face card played into a {C:astropulvis_galactical}Galactical{} Card. " }
+        text = { "Turns any face card played into a {C:charcuterie_galactical}Galactical{} Card. " }
       },
-      j_astropulvis_boredjoker = {
+      j_charcuterie_boredjoker = {
         name = "Bored Joker",
-        text = { "{C:mult}+7{} Mult when hand contains a", "{C:attention}Greyscale Flush{}" }
+        text = { "{C:mult}+#1#{} Mult when hand contains a", "{C:attention}#2#{}" }
       },
-      j_astropulvis_concretemixer = {
+      j_charcuterie_concretemixer = {
         name = "Concrete Mixer",
         text = { "{C:green}#1# in #2#{} chance to turn a card ", "into a {C:enhanced}Stone Card{}" }
       },
-      j_astropulvis_apatheticjoker = {
+      j_charcuterie_apatheticjoker = {
         name = "Apathetic Joker",
-        text = { "{C:chips}+70{} Chips when hand contains a", "{C:attention}Greyscale Flush{}" }
+        text = { "{C:chips}+#1#{} Chips when hand contains a", "{C:attention}#2#{}" }
       },
-      j_astropulvis_ninetofive = {
+      j_charcuterie_ninetofive = {
         name = "9 to 5",
         text = { "{C:chips}+15{} Chips for every {C:inactive}Suitless{} card", "in your {C:attention}Full Deck.{}" }
       },
-      j_astropulvis_porridge = {
+      j_charcuterie_porridge = {
         name = "Porridge",
         text = { "{C:inactive}Suitless{} cards give {X:mult,C:white}X2{} Mult", "for {C:attention}#1#{} hands.", "{C:inactive,S:0.5}(#2# hands remaining){}" }
+      },
+      j_charcuterie_aura = {
+        name = "Hype Moments and Aura",
+        text = {"Gain {C:attention}$#1#{} at end of round","when score {C:attention}catches aflame{}"}
+      },
+      j_charcuterie_caption = {
+        name = "Caption",
+        text = {"Gains {X:mult,C:white}X#1#{} Mult for every","Joker slot {C:attention}above{} 5.","{S:0.7,C:inactive}(currently {}{S:0.7,C:white,X:mult} X#2#{}{S:0.7,C:inactive}.)"}
+      },
+      j_charcuterie_ambrosia = {
+        name = "Ambrosia",
+        text = {"Removes {C:red}Cursed{} from scored cards","for {C:attention}#1#{} hands","{C:inactive,S:0.7}( #2# remaining){}"}
+      },
+      j_charcuterie_potion = {
+        name = "Mysterious Potion",
+        text = {"When sold, {C:green}#1#%{} chance to duplicate a random {C:attention}Joker{},","{C:red}#2#%{} chance to do {C:attention}nothing{}","{C:inactive,S:0.7}( Removes {}{C:dark_edition,S:0.7}Negative{}{C:inactive,S:0.7} from copy.){}"}
+      },
+      j_charcuterie_twotime = {
+        name = "Two Time",
+        text = {"When {C:attention}Blind{} is selected, {C:red}destroy{} Joker to the {C:attention}left{}","and gain {X:black,C:white}x#1#{} Oblation.","If this card has over {X:black,C:white}x#2#{} Oblation, prevents {C:attention}Death{}.","When death is prevented, convert all {X:black,C:white}Oblation{} into {X:mult,C:white}XMult{} and","prevent further {X:black,C:white}Oblation{} gain.","{C:inactive,S:0.7}(Current Oblation: {X:black,C:white}x#3#{C:inactive,S:0.7}.)","{C:inactive,S:0.7}(Current Mult: {X:red,C:white}x#4#{C:inactive,S:0.7}.)"}
+      },
+      j_charcuterie_ripped = {
+        name = "Ripped Joker",
+        text = {"Gain {X:mult,C:white}X#1#{} Mult every time","a card is {C:attention}destroyed.{}","{C:inactive,S:0.7}(Currently {X:mult,C:white,S:0.7}X#2#{C:inactive,S:0.7}.)"}
+      },
+      j_charcuterie_007n7 = {
+        name = "007n7",
+        text = {"Create a {C:attention}Perishable{} copy of a random Joker","every {C:attention}#1#{} rounds","{C:inactive,S:0.7}({C:attention,S:0.7}#2#{C:inactive,S:0.7} remaining.)"}
+      },
+      j_charcuterie_c00lkid = {
+        name = "C00lkid",
+        text = {"Destroy all {C:attention}Perishable{} Jokers when{C:attention} blind{} selected.","Gain {X:chips,C:white}X#1#{} for each Perishable Joker destroyed.","{C:inactive,S:0.7}(Currently {X:chips,C:white,S:0.7}X#2#{C:inactive,S:0.7}.)"}
+      },
+      j_charcuterie_mafioso = {
+        name = "Mafioso",
+        text = {"If no {C:attention}Mafia Members{} are present","create #1# {C:attention}Mafia Members{}. {C:inactive,S:0.4}(excludes Mafioso)","Gains {X:mult,C:white}X#2#{} Mult for each {C:attention}Mafia Member{} present.","{C:inactive,S:0.7}(Currently {X:mult,C:white,S:0.7}X#3#{C:inactive,S:0.7}.)"}
+      },
+      j_charcuterie_made_man = {
+        name = "Made Man",
+        text = {"{C:inactive}no effect quite yet!"}
+      },
+      j_charcuterie_britalian = {
+        name = "Britalian",
+        text = {"Stone Cards give {C:attention}$1{} when scored"}
+      },
+      j_charcuterie_debt_collector = {
+        name = "Debt Collector",
+        text = {"Gives {C:attention}10%{} of every {C:attention}Joker{}'s sell value combined","at the {C:attention} end of the round."}
+      },
+      j_charcuterie_bunny = {
+        name = "Bunny",
+        text = {"Sell for a {C:green}#1# in #2#{} chance to","create #3# {C:dark_edition}Negative{} Bunnies."}
       }
     },
     Other = {
@@ -268,22 +324,31 @@ return {
           "not truly random"
         }
       },
-      astropulvis_obscure_seal = {
+      char_txt_mafia = {
+        name = "Mafia Member",
+        text = {
+          "This card's effects are {C:red}nullified",
+          "If your {C:attention}dollars{} are less than 0."
+        }
+      },
+
+
+      charcuterie_obscure_seal = {
         name = "Obscured Seal",
         text = {"The card this is applied to","is {C:attention}Rankless{}"}
       },
-      astropulvis_lime_seal = {
+      charcuterie_lime_seal = {
         name = "Lime Seal",
-        text = {"{C:green}#1# in #2#{} chance to","create an {C:astropulvis_unstable}Unstable{} card when scored"}
+        text = {"{C:green}#1# in #2#{} chance to","create an {C:charcuterie_unstable}Unstable{} card when scored"}
       },
-      astropulvis_brilliant_seal = {
+      charcuterie_brilliant_seal = {
         name = "Brilliant Seal",
         text = {"{C:white,X:chips}X#1#{} Chips if card is {C:enhanced}Enhanced{}."}
       }
 
     },
     Planet = {
-      c_astropulvis_arrakis = {
+      c_charcuterie_arrakis = {
         name = "Arrakis",
         text = {"(lvl. #1#) Level up",
                 "{C:attention}#2#{}",
@@ -291,7 +356,7 @@ return {
                 "{C:chips}+#4#{} chips"
         }
       },
-      c_astropulvis_abafar = {
+      c_charcuterie_abafar = {
         name = "Abafar",
         text = {"(lvl. #1#) Level up",
                 "{C:attention}#2#{}",
@@ -299,7 +364,7 @@ return {
                 "{C:chips}+#4#{} chips"
         }
       },
-      c_astropulvis_theia = {
+      c_charcuterie_theia = {
         name = "Theia",
         text = {"(lvl. #1#) Level up",
                 "{C:attention}#2#{}",
@@ -313,7 +378,7 @@ return {
     Tag = {},
     Tarot = {},
     Voucher = {
-      v_astropulvis_brimstone = {
+      v_charcuterie_brimstone = {
         name = "Brimstone",
         text = {
           "Converts one random card",
@@ -321,38 +386,38 @@ return {
           "a {C:cursed}Cursed Card every round."
         }
       },
-      v_astropulvis_divine = {
+      v_charcuterie_divine = {
         name = "Divine Light",
-        text = { "{C:astropulvis_purified}Purifies{} all played {C:astropulvis_cursed}Cursed Cards{}" }
+        text = { "{C:charcuterie_purified}Purifies{} all played {C:charcuterie_cursed}Cursed Cards{}" }
       }
     },
     ritual = {
-      c_astropulvis_peer = {
+      c_charcuterie_peer = {
         name = "Peer",
         text = {
           "{C:red}Destroy{} a random joker.",
-          "{C:astropulvis_purified}Purify{} 2 selected {C:red}Cursed{} cards."
+          "{C:charcuterie_purified}Purify{} 2 selected {C:red}Cursed{} cards."
         }
       },
-      c_astropulvis_bloodpact = {
+      c_charcuterie_bloodpact = {
         name = "Blood Pact",
         text = { "Spawn a random {C:red}Eternal Rare{} Joker." }
       },
-      c_astropulvis_chippedcoin = {
+      c_charcuterie_chippedcoin = {
         name = "Chipped Coin",
         text = {
           "{C:green}#1#%{} chance to {C:attention}double{} money.",
           "{C:red}#2#%{} Chance to backfire and set money to {C:money}$0{} instead."
         }
       },
-      c_astropulvis_phase = {
+      c_charcuterie_phase = {
         name = "Phase",
         text = {
           "{C:mult} Destroy{} the {C:attention}Leftmost{} or {C:attention}Rightmost{} Joker.",
           "Add {C:dark_edition}Negative{} to the other."
         }
       },
-      c_astropulvis_roulette = {
+      c_charcuterie_roulette = {
         name = "Roulette",
         text = {
           "{C:green}#1#%{} chance to apply",
@@ -361,39 +426,43 @@ return {
           "{C:red}removing{} an edition from a random joker."
         }
       },
-      c_astropulvis_sever = {
+      c_charcuterie_sever = {
         name = "Sever",
         text = { "{C:red}Destroy{} a random Joker.", "Summon 2 {C:red}Ritual Cards{}." }
       },
-      c_astropulvis_strike = {
+      c_charcuterie_strike = {
         name = "Strike",
         text = { "{C:red}Curse{} your hand.", "Earn {C:attention}$5{} for every card Cursed." }
       },
-      c_astropulvis_summon = {
+      c_charcuterie_summon = {
         name = "Summon",
         text = { "{C:red}Destroy{} 2 random {C:attention}Jokers{}", "{C:green}#1#%{} to create a {C:purple}Legendary{} Joker." }
       },
-      c_astropulvis_alchemy = {
+      c_charcuterie_alchemy = {
         name = "Alchemy",
         text = { "{C:green}#1#%{} chance to make entire hand {C:attention}Gold{}",
                  "{C:red}#2#%{} chance to debuff entire hand instead." }
+      },
+      c_charcuterie_premonition = {
+        name = "Premonition",
+        text = {"Ante {C:attention}-1{}","Next Boss Blind is a {C:attention}Showdown{} Blind"}
       }
     },
     Element = {
-      c_astropulvis_titanium = {
+      c_charcuterie_titanium = {
         name = "Titanium",
         text = { "Converts up to {C:attention}3{}", " selected cards into {C:enhanced}Steel{} Cards" }
       },
-      c_astropulvis_plutonium = {
+      c_charcuterie_plutonium = {
         name = "Plutonium",
-        text = { "{C:green}#1#%{} Chance to add {C:astropulvis_unstable}Unstable{}", "to up to {C:attention}2{} selected cards,", "but {C:red}#2#%{} chance to destroy", "selected cards instead." }
+        text = { "{C:green}#1#%{} Chance to add {C:charcuterie_unstable}Unstable{}", "to up to {C:attention}2{} selected cards,", "but {C:red}#2#%{} chance to destroy", "selected cards instead." }
       },
-      c_astropulvis_neodymium = {
+      c_charcuterie_neodymium = {
         name = "Neodymium",
         text = { "Make a selected {C:enhanced}Steel Card{} {C:dark_edition}Negative{}" },
 
       },
-      c_astropulvis_zinc = {
+      c_charcuterie_zinc = {
         name = "Zinc",
         text = { "Adds {C:attention}Brilliant Seal{} to a ", "selected {C:enhanced}Steel Card{}" }
       }
@@ -409,28 +478,29 @@ return {
     challenge_names = {},
     collabs = {},
     dictionary = {
-
+      ph_two_time = "Saved by Two Time"
     },
     high_scores = {},
     labels = {
-      astropulvis_bleached = "Bleached",
-      astropulvis_brilliant_seal = "Brilliant Seal",
-      astropulvis_lime_seal = "Lime Seal",
-      astropulvis_obscure_seal = "Obscured Seal"
+      charcuterie_bleached = "Bleached",
+      charcuterie_melty = "Melty",
+      charcuterie_brilliant_seal = "Brilliant Seal",
+      charcuterie_lime_seal = "Lime Seal",
+      charcuterie_obscure_seal = "Obscured Seal"
     },
     poker_hands = {
-      ['astropulvis_grayflush'] = "Grayscale Flush",
-      ['astropulvis_graystraight'] = "Grayscale Straight",
-      ['astropulvis_grayhouse'] = "Grayscale House"
+      ['charcuterie_grayflush'] = "Grayscale Flush",
+      ['charcuterie_graystraight'] = "Grayscale Straight",
+      ['charcuterie_grayhouse'] = "Grayscale House"
     },
     poker_hand_descriptions = {
-      ['astropulvis_grayflush'] = {
+      ['charcuterie_grayflush'] = {
         "5 Suitless cards",
       },
-      ['astropulvis_graystraight'] = {
+      ['charcuterie_graystraight'] = {
         "5 Suitless cards (consecutive ranks)"
       },
-      ['astropulvis_grayhouse'] = {
+      ['charcuterie_grayhouse'] = {
         'a Suitless Three of a Kind',
         'and a Suitless Pair.'
       }

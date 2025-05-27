@@ -1,7 +1,7 @@
 SMODS.Blind({
 	key = "ocean",
 
-	atlas = ASPL.G.blindatlas.key,
+	atlas = CHAR.G.blindatlas.key,
 	pos = { x = 0, y = 0 },
 
 	boss_colour = HEX("3e59ab"),

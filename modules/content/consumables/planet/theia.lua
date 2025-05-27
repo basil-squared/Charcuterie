@@ -1,11 +1,11 @@
 SMODS.Consumable {
 	key = 'theia',
 	set = "Planet",
-	atlas = ASPL.G.planetatlas.key,
+	atlas = CHAR.G.planetatlas.key,
 	pos = {x=2,y=0},
-	config = {hand_type = 'astropulvis_grayhouse'},
+	config = {hand_type = 'charcuterie_grayhouse'},
 	use = function(self,card,area,copier)
-		ASPL.FUNC.level_up_hand(card,'astropulvis_grayhouse',false,1)
+		CHAR.FUNC.level_up_hand(card,'charcuterie_grayhouse',false,1)
 	end,
 	loc_vars = function(self,info_queue,card)
 		-- Snatched this code from the Spectrum Framework mod. check them out at https://github.com/wingedcatgirl/SpectrumFramework !

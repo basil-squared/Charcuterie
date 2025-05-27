@@ -5,6 +5,6 @@ SMODS.Seal {
 		return {vars = {(G.GAME.probabilities.normal or 1), self.config.extra.chance}}
 	end,
 	badge_colour = HEX('7dd75a'),
-	atlas = ASPL.G.sealatlas.key,
+	atlas = CHAR.G.sealatlas.key,
 	pos = {x=1,y=0}
 }

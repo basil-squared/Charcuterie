@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "pcb",
 
-	atlas = ASPL.G.jokeratlas.key,
+	atlas = CHAR.G.jokeratlas.key,
 	pos = {x = 33,y=0},
 	rarity = 3,
 	cost = 15,

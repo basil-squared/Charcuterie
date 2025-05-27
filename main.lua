@@ -5,15 +5,22 @@ SMODS.current_mod.optional_features = {
   },
 }
 to_big = to_big or function(x) return x end -- NOTE: Talisman Compatibility
-ASPL = {}
-ASPL.FUNC = {}
-ASPL.G = {}
+CHAR = {}
+CHAR.FUNC = {}
+CHAR.G = {}
 
-ASPL.G.MODPATH = SMODS.current_mod.path
+CHAR.G.MODPATH = SMODS.current_mod.path
+
+SMODS.Atlas {
+  key = "modicon",
+  path = "modicon.png",
+  px = 34,
+  py = 34
+}
 local NFS = require("nativefs")
 
-function ASPL.FUNC.RequireFolder(path)
-  local files = NFS.getDirectoryItemsInfo(ASPL.G.MODPATH .. "/" .. path)
+function CHAR.FUNC.RequireFolder(path)
+  local files = NFS.getDirectoryItemsInfo(CHAR.G.MODPATH .. "/" .. path)
   for i = 1, #files do
     local file_name = files[i].name
     if file_name:sub(-4) == ".lua" then
@@ -23,9 +30,9 @@ function ASPL.FUNC.RequireFolder(path)
   end
 end
 
-function ASPL.FUNC.RequireFolderRecursive(path)
+function CHAR.FUNC.RequireFolderRecursive(path)
   local function scan(currentPath)
-    local fullPath = ASPL.G.MODPATH .. "/" .. currentPath
+    local fullPath = CHAR.G.MODPATH .. "/" .. currentPath
     local files = NFS.getDirectoryItemsInfo(fullPath)
 
     for _, fileInfo in ipairs(files) do
@@ -47,5 +54,6 @@ function ASPL.FUNC.RequireFolderRecursive(path)
   scan(path) -- Start scanning from initial path
 end
 
-ASPL.FUNC.RequireFolderRecursive("modules/init/")
-ASPL.FUNC.RequireFolderRecursive("modules/content")
+CHAR.FUNC.RequireFolderRecursive("modules/init/")
+CHAR.FUNC.RequireFolderRecursive("modules/content")
+
