@@ -56,4 +56,6 @@ end
 
 CHAR.FUNC.RequireFolderRecursive("modules/init/")
 CHAR.FUNC.RequireFolderRecursive("modules/content")
-
+if next(SMODS.find_mod("partner")) then
+  CHAR.FUNC.RequireFolder("modules/crossmod/partners/")
+end

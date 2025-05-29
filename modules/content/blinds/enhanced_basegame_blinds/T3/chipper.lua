@@ -6,7 +6,8 @@ local bm = SMODS.Blind {
 	boss = {min = 16, max =16},
 	boss_colour = HEX("ffff96"),
 	atlas = CHAR.G.blindatlas.key,
-	pos = {x=0,y=17}
+	pos = {x=0,y=17},
+	mult=5
 
 }
 

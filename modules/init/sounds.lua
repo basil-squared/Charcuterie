@@ -30,3 +30,8 @@ SMODS.Sound {
 	key = "melty_sound",
 	path = "e_melty.mp3"
 }
+
+SMODS.Sound {
+	key = "bad_sound",
+	path = "bad_sound.wav"
+}

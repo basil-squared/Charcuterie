@@ -71,4 +71,11 @@ CHAR.G.tagatlas = SMODS.Atlas {
 	path = "tagatlas.png",
 	px = 32,
 	py = 32,
+
+}
+CHAR.G.crossmod_partneratlas = SMODS.Atlas {
+	key = "partneratlas",
+	path = "crossmod_partneratlas.png",
+	px = 46,
+	py = 58
 }
