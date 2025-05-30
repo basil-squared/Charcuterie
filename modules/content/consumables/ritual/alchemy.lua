@@ -34,6 +34,7 @@ SMODS.Consumable {
             }))
         else
             for i=1,#G.hand.cards do
+
                 G.hand.cards[i]:set_ability("m_gold")
                 G.hand.cards[i]:juice_up(0.1,0.1)
             end
