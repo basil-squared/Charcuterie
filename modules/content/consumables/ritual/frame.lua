@@ -12,7 +12,7 @@ SMODS.Consumable {
     atlas = CHAR.G.ritualatlas.key,
     pos = {x=6,y=0},
     use = function(self,area,card,copier)
-        local random_joker = pseudorandom_element(G.jokers.cards, pseudoseed("Happy wheels"))
+        local random_joker = assert(pseudorandom_element(G.jokers.cards, pseudoseed("Happy wheels")))
         random_joker.pinned = true
         random_joker:set_eternal(true)
         random_joker:juice_up()

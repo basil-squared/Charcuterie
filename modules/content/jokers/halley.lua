@@ -20,6 +20,7 @@ SMODS.Joker({
 			end
 			if self.config.extra.to_generation == 1 then
 				for i = 1, card.ability.extra.cards_generated do
+---@diagnostic disable-next-line: assign-type-mismatch
 					SMODS.add_card({key = shitting_planet_name, edition = "e_negative"})
 				end
 				

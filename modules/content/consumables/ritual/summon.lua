@@ -45,10 +45,7 @@ SMODS.Consumable {
 			end,
 		}))
         if CHAR.FUNC.negative_event_proc(G.GAME.Risk or 0) == false  then
-            return {
-                message = "Nope!",
-                colour = G.C.purple
-            }
+            
         else 
             SMODS.add_card({set = 'Joker',legendary=true})
         end
