@@ -393,7 +393,7 @@ return {
       },
       j_charcuterie_debt_collector = {
         name = "Debt Collector",
-        text = {"Gives {C:attention}10%{} of every {C:attention}Joker{}'s sell value combined","at the {C:attention} end of the round."}
+        text = {"Gives {C:attention}50%{} of every {C:attention}Joker{}'s sell value combined","at the {C:attention} end of the round.","{C:inactive,S:0.7}(Currently {C:attention,S:0.7}$#1#{C:inactive,S:0.7}.)"}
       },
       j_charcuterie_bunny = {
         name = "Bunny",

@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "theusual",
 	atlas = CHAR.G.jokeratlas.key,
-	pos ={x=12,y=0},
+	pos ={x=52,y=0},
 	rarity = 2,
 
 	config = {extra = {xmult = 2}},
@@ -13,8 +13,7 @@ SMODS.Joker {
 	end,
 	calculate = function(self,card,context)
 		if context.joker_main then
-			print(context.scoring_name)
-			print(CHAR.FUNC.fetch_most_played())
+			
 			if context.scoring_name == CHAR.FUNC.fetch_most_played() then
 				return {
 					xmult = card.ability.extra.xmult
