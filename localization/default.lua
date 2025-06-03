@@ -3,7 +3,7 @@ return {
     Back = {
       b_charcuterie_ichor = {
         name = "Ichor Deck",
-        text = { "Find {C:charcuterie_ritual}Ritual Cards{}", "in the shop, start with one {C:attention}Phase{}" }
+        text = { "Find {C:charcuterie_ritual}Ritual Cards{}", "in the shop"}
       },
       b_charcuterie_deflation = {
         name = "Deflation Deck",
@@ -42,7 +42,7 @@ return {
       },
       bl_charcuterie_parasite = {
         name = "The Parasite",
-        text = { "X0.75 Mult and Chips after calculation is complete." }
+        text = { "X0.75 Mult and Chips","after calculation is complete." }
       },
       bl_charcuterie_commander = {
         name = "The Commander",
@@ -74,11 +74,11 @@ return {
       },
       bl_charcuterie_bighook = {
         name = "The Line",
-        text = {"Discards 3 random cards held in hand after every played hand"}
+        text = {"Discards 3 random cards","held in hand after every played hand"}
       },
       bl_charcuterie_biggerhook = {
         name = "The Sinker",
-        text = {"Discards every card not played after every played hand"}
+        text = {"Discards every card","not played after every played hand"}
       },
       bl_charcuterie_bigarm = {
         name = "The Body",
@@ -106,7 +106,7 @@ return {
       },
       bl_charcuterie_bighead = {
         name = "The Arrhythmia",
-        text = {"Cannot play a hand","containing Hearts"}
+        text = {"Permanently debuff","played Hearts"}
       },
       bl_charcuterie_biggerhead = {
         name = "The Asystole",
@@ -114,7 +114,7 @@ return {
       },
       bl_charcuterie_bigwindow = {
         name = "The Gate",
-        text = {"Cannot play a hand","containing Diamonds"}
+        text = {"Permanently debuff","played Diamonds"}
       },
       bl_charcuterie_biggerwindow = {
         name = "The Skylight",
