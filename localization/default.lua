@@ -412,6 +412,18 @@ return {
       j_charcuterie_chance = {
         name = "Chance",
         text = {"{C:green}#1# in #2#{} chance to give {C:attention}$#3#{}","{C:green}#1# in #4#{} chance to {C:red}remove{} {C:chips}#5#{} Chips","{C:green}#1# in #6#{} chance to give {X:mult,C:white}X#6#{} Mult","and {C:attention}$#6#{}"}
+      },
+      j_charcuterie_buckshot = {
+        name = "Buckshot",
+        text = {"{C:green}#1# in #2#{} chance to","retrigger every scored card {C:attention}twice{}"}
+      },
+      j_charcuterie_paranoia = {
+        name = "Paranoia",
+        text = {"{C:green}#1# in #2#{} chance of","creating a {C:dark_edition}Negative {C:attention}Spectral{} Card when","booster pack opened"}
+      },
+      j_charcuterie_prank = {
+        name = "Innocent Prank",
+        text = {"{X:mult,C:white}X#1#{} Mult when","an {C:enhanced}Arc Card{} is scored"}
       }
     },
     Other = {
