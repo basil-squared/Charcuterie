@@ -27,8 +27,8 @@ function get_new_boss()
     arm = true,
     needle = true,
   }
-  if G and G.GAME and G.GAME.round_resets.ante >= 8  then
-    if G and G.GAME and G.GAME.round_resets.ante >= 16 then
+  if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante >= 8  then
+    if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante >= 16 then
       if tier3blinds[bl_key] then
         return "bl_charcuterie_bigger" .. bl_key
       end
@@ -45,11 +45,11 @@ end
 
 function get_new_small()
 
-  if G and G.GAME and G.GAME.round_resets.ante > 8  then
+  if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante > 8  then
 
 
 
-    if G and G.GAME and G.GAME.round_resets.ante > 16 then
+    if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante > 16 then
       return 'bl_charcuterie_small_t3'
     end
     return 'bl_charcuterie_small_t2'
@@ -65,11 +65,11 @@ function get_new_small()
 end
 
 function get_new_big()
-  if G and G.GAME and G.GAME.round_resets.ante > 8  then
+  if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante > 8  then
 
 
 
-    if G and G.GAME and G.GAME.round_resets.ante > 16 then
+    if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante > 16 then
       return 'bl_charcuterie_big_t3'
     end
     return 'bl_charcuterie_big_t2'

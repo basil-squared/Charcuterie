@@ -9,9 +9,15 @@ return {
         name = "Deflation Deck",
         text = {
           "Start with {C:attention}$#1#{}.",
-          "You are {C:red}unable{}",
-          "to earn any more",
-          "through the course of the run"
+          "{C:red}no blind rewards"
+          
+        }
+      },
+      b_charcuterie_hardcore = {
+        name = "Hardcore Deck",
+        text = {
+          "Start with {C:attention}$#1#{}",
+          "All blinds are {C:red}Tier 3{}"
         }
       }
     },
@@ -424,6 +430,18 @@ return {
       j_charcuterie_prank = {
         name = "Innocent Prank",
         text = {"{X:mult,C:white}X#1#{} Mult when","an {C:enhanced}Arc Card{} is scored"}
+      },
+      j_charcuterie_redqueen = {
+        name = "Red Queen",
+        text = {"{C:white,X:mult}X#1#{} Mult on last scored card","{C:attention}increases{} by {C:white,X:mult}X#2#{} Mult for","every card scored prior","{C:inactive}(Resets after hand played)"}
+      },
+      j_charcuterie_aphantasia = {
+        name = "Aphantasia",
+        text = {"Applies {C:enhanced}Obscured Seal{} to","scored {C:attention}Face Cards{}"}
+      },
+      j_charcuterie_thinner = {
+        name = "Paint Thinner",
+        text = {"All {C:enhanced}Wild Cards{}","are considered {C:attention}Suitless{}"}
       }
     },
     Other = {
@@ -492,7 +510,17 @@ return {
       c_charcuterie_obscura = {
         name = "Obscura",
         text = {"Add a {C:dark_edition}Obscured Seal{}","to {C:attention}#1#{} selected","card in your hand"}
-      }
+      },
+      c_charcuterie_roulette = {
+        name = "Roulette",
+        text = {
+          "{C:green}#1#%{} chance to apply",
+          " An {C:enhanced}Edition{} to a random joker,",
+          "{C:red}#2#%{} chance to backfire,",
+          "{C:red}removing{} an edition from a random joker."
+        }
+      },
+      c_charcuterie_radiance = {}
     },
     Stake = {},
     Tag = {
@@ -551,15 +579,7 @@ return {
           "Add {C:dark_edition}Negative{} to the other."
         }
       },
-      c_charcuterie_roulette = {
-        name = "Roulette",
-        text = {
-          "{C:green}#1#%{} chance to apply",
-          " An {C:enhanced}Edition{} to a random joker,",
-          "{C:red}#2#%{} chance to backfire,",
-          "{C:red}removing{} an edition from a random joker."
-        }
-      },
+      
       c_charcuterie_sever = {
         name = "Sever",
         text = { "{C:red}Destroy{} a random Joker.", "Summon 2 {C:red}Ritual Cards{}." }

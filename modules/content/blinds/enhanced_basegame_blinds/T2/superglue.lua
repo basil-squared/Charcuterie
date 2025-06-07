@@ -1,3 +1,4 @@
+---@diagnostic disable: duplicate-set-field
 sg = SMODS.Blind {
     key = "bigmanacle",
 

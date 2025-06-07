@@ -1,8 +1,8 @@
 SMODS.Consumable {
-    set = "ritual",
+    set = "Spectral",
     key = "roulette",
-    atlas = CHAR.G.ritualatlas.key,
-    pos = {x = 6, y=0 },
+    atlas = CHAR.G.tarotatlas.key,
+    pos = {x = 5, y=0 },
 
     loc_vars = function(self,info_queue,card)
         info_queue[#info_queue+1] = {set = 'Other', key = 'aspl_txt_risk'}
@@ -24,12 +24,12 @@ SMODS.Consumable {
         local r_u_joker = (#uneditioned_jokers > 0) and pseudorandom_element(uneditioned_jokers, pseudoseed("unedition joker")) or nil
     
         if CHAR.FUNC.negative_event_proc(G.GAME.Risk or 0) == false then
-            if r_e_joker then
+            if r_e_joker and r_e_joker.edition then
                 r_e_joker:set_edition(nil)
             end
         else
-            if r_u_joker then
-                local poss_editions = {"e_negative", "e_polychrome", "e_foil", "e_holographic"}
+            if r_u_joker and not r_u_joker.edition then
+                local poss_editions = {"e_negative", "e_polychrome", "e_foil", "e_holographic","e_charcuterie_melty"}
                 r_u_joker:set_edition(pseudorandom_element(poss_editions, pseudoseed("I pissed myself")))
                 r_u_joker:juice_up()
             end

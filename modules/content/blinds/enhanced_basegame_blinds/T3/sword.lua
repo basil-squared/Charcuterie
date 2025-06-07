@@ -6,7 +6,7 @@ SMODS.Blind {
 	pos = {x=0,y=19},
 	mult = 6,
 	set_blind = function(self)
-		ease_hands_played(-G.GAME.current_round.hands_left + 1, nil, true)
+		ease_hands_played(-G.GAME.current_round.hands_left + 1, nil)
 		ease_discard(-G.GAME.current_round.discards_left, nil, true)
 	end
 }

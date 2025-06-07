@@ -9,5 +9,8 @@ function SMODS.has_no_suit(card)
       return true
     end
   end
+  if SMODS.has_enhancement(card, "m_wild") and next(SMODS.find_card('j_charcuterie_thinner')) then
+    return true
+  end
   return smods_has_no_suit_ref(card)
 end -- Function hooking is very handy to get something to do what you want.
