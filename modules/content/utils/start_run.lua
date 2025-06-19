@@ -5,6 +5,7 @@ function Game:start_run(args)
   G.GAME.Risk = 0.00
   G.GAME.in_run = true
   G.GAME.RISK_LOCK = false
+  G.GAME.RISK_RATE = 1
   Risk_manip_table.disp_risk = 0 .. "%"
   Risk_manip_table.risk = 0
   return start_run_ref(self, args)

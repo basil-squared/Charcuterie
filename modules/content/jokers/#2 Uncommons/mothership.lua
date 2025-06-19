@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "mothership",
     atlas = CHAR.G.jokeratlas.key,
-    pos = {x=12,y=0},
+    pos = {x=76,y=0},
 
     rarity = 2,
     

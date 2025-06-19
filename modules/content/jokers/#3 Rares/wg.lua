@@ -2,6 +2,7 @@ SMODS.Joker {
 	key = "wargames",
 	atlas = CHAR.G.jokeratlas.key,
 	pos = {x=16,y=0},
+	rarity = 3,
 
 	config = { extra = {xmult = 0.5, curr_xmult = 1.0}},
 	loc_vars = function(self,info_queue,card)

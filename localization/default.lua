@@ -2,7 +2,7 @@ return {
   descriptions = {
     Back = {
       b_charcuterie_ichor = {
-        name = "Ichor Deck",
+        name = "Clover Deck",
         text = { "Find {C:charcuterie_ritual}Ritual Cards{}", "in the shop"}
       },
       b_charcuterie_deflation = {
@@ -442,7 +442,55 @@ return {
       j_charcuterie_thinner = {
         name = "Paint Thinner",
         text = {"All {C:enhanced}Wild Cards{}","are considered {C:attention}Suitless{}"}
+      },
+      j_charcuterie_doubleagent = {
+        name = "Double Agent",
+        text = {"Copies the ability of","the Joker to the {C:attention}left{} or {C:attention}right{}","{C:red}debuffs{} the other"}
+      },
+      j_charcuterie_usm = {
+        name = "ULTRA SYNERGY MATRIX",
+        text = {"{C:white,X:mult}X#1#{} Mult for", "every {C:attention}mod{} currently installed","{C:inactive,S:0.7}(Currently {X:mult,C:white,S:0.7}X#2#{C:inactive,S:0.7}.)"}
+      },
+      j_charcuterie_overclock = {
+        name = "Overclock",
+        text = {"{C:attention}doubles{} values of","Jokers that are {C:attention}not{} itself","{C:green}#1# in #2#{} chance to","{C:red}destroy{} affected Joker","when {C:attention}triggered{}"}
+      },
+      j_charcuterie_snake_eyes = {
+        name = "Snake Eyes",
+        text = {"Halves all {C:attention}listed",
+                "{C:green,E:1,S:1.1}probabilities",
+                "{C:inactive}(ex: {C:green}1 in 4{C:inactive} -> {C:green}0.5 in 4{C:inactive})","but {C:attention}halves{} {C:red}Risk{} gain"}
+      },
+      j_charcuterie_incomprehensible = {
+        name = "Incomprehensible",
+        text = {"Does...","{C:attention}Something{}"}
+      },
+
+      j_charcuterie_tuesday = {
+        name = "Tuesday",
+        text = {"{C:white,X:mult}X#1#{} Mult,","but only on {C:attention}Tuesdays{}"}
+      },
+      j_charcuterie_sketch = {
+        name = "Police Sketch",
+        text = {"{C:green}#1# in #2#{} chance to","give {C:white,X:mult}X#3#{} Mult when","face card scored"}
+      },
+      j_charcuterie_rusty_razor = {
+        name = "Rusty Razor",
+        text = {"when entering blind,","{C:red}destroy{} the jokers to","the {C:attention}left and right{} of this card","and add {C:attention}triple{} their sell value to {C:mult}Mult{}","{C:green}#2# in #3#{} chance of {C:red}destroying{} itself instead","{C:inactive,S:0.7}(Currently {C:mult,S:0.7}+#4#{C:inactive,S:0.7}.)"}
+      },
+      j_charcuterie_magic_bullet = {
+        name = "Magic Bullet",
+        text = {"{C:white,X:mult}X#1#{} Mult","loses {X:mult,C:white}X#2#{} Mult when {C:tarot}Tarot{} card used","loses {X:mult,C:white}X#3#{} Mult when {C:spectral}Spectral{} card used","{C:inactive,S:0.7}(Currently {X:mult,C:white,S:0.7}X#4#{C:inactive,S:0.7}.)"}
+      },
+      j_charcuterie_search_engine = {
+        name = "Search Engine",
+        text = {"{C:chips}+#1#{} chips for each","{C:atttention}unique{} suit in your {C:attention}full deck{}","{C:inactive,S:0.7}(Currently {C:chips,S:0.7}+#2#{C:inactive,S:0.7} Chips.)"}
+      },
+      j_charcuterie_dubious_merchant = {
+        name = "Con Artist",
+        text = {"Gives anywhere from ","{C:attention}#1#{} to {C:attention}#2#{}","card slots in shop","{C:inactive}Resets before shop{}","{C:inactive,S:0.7}(Currently {C:attention,S:0.7}#3#{C:inactive,S:0.7}.)"}
       }
+
     },
     Other = {
       aspl_txt_risk = {
@@ -459,6 +507,10 @@ return {
           "This card's effects are {C:red}nullified",
           "If your {C:attention}dollars{} are less than 0."
         }
+      },
+      char_txt_immobile = {
+        name = "Immobile",
+        text = {"This card is unaffected by","{C:attention}any{} changes to its values","{C:inactive,S:0.5}(Charcuterie Only){}"}
       },
 
 

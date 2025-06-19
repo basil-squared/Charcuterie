@@ -10,7 +10,7 @@ SMODS.Joker {
 	end,
 	pools = { ["mafia"] = true},
 	calculate = function(self,card,context)
-		if context.individual and context.cardarea == G.play and G and G.GAME and G.GAME.dollars > 0 then
+		if context.individual and context.cardarea == G.play and G and G.GAME and to_big(G.GAME.dollars) > to_big(0) then
 			if SMODS.has_enhancement(context.other_card, 'm_stone') then
 					return {
 						dollars = 1
