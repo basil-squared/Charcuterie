@@ -141,7 +141,112 @@ return {
       bl_charcuterie_big_t3 = {
         name = "Big Blind"
 
-      }
+      },
+      bl_charcuterie_bigeye = {
+        name = "The Camera",
+        text = {"#1# cannot be played"}
+      },
+      bl_charcuterie_biggereye = {
+        name = "The Panopticon",
+        text = {"No repeat hands","this ante"}
+      },
+      bl_charcuterie_biggoad = {
+        name = "The Prod",
+        text = {"Permanently debuff","played Spades"}
+      },
+      bl_charcuterie_biggergoad = {
+        name = "The Drill",
+        text = {"Permanently debuff all played cards", "if hand contains Spades"}
+      },
+      bl_charcuterie_bigclub = {
+        name = "The Mace",
+        text = {"Permanently debuff","played Clubs"},
+
+      },
+      bl_charcuterie_biggerclub = {
+        name = "The Bola",
+        text = {"Permanently debuff all played cards","if hand contains Clubs"}
+      },
+      bl_charcuterie_bigox = {
+        name = "The Bison",
+        text = {"Playing #1# or #2#","sets money to $0"}
+      },
+      bl_charcuterie_biggerox = {
+        name = "The Bull",
+        text = {"Playing any hand except","for #1# sets money to $0"}
+      },
+      bl_charcuterie_bighouse = {
+        name = "The Mansion",
+        text  = {"First hand is drawn face down","discarding a card also discards","all cards of same suit and rank held in hand"}
+      },
+      bl_charcuterie_biggerhouse = {
+        name = "The Complex",
+        text = {"First hand is drawn face down","discarding a card discards","every card of the same suit","in your full deck"}
+      },
+      bl_charcuterie_bigwheel = {
+        name = "The Tread",
+        text = {"#1# in #2# cards drawn face down","face down cards have a #3# in #4# chance of","changing suit when played"}
+      },
+      bl_charcuterie_biggerwheel = {
+        name = "The Motor",
+        text = {"#1# in #2# cards drawn face down","face down cards have a #3# in #4# chance of","changing suit and rank when played"}
+      },
+      bl_charcuterie_bigplant = {
+        name = "The Underdog",
+        text = {"All ranks above 6","are debuffed"}
+      },
+      bl_charcuterie_biggerplant = {
+        name = "The Sleeve",
+        text = {"All ranks above 2","are debuffed"}
+      },
+      bl_charcuterie_bigfish  = {
+        name = "The Net",
+        text = {"Only draw half of your deck"}
+      },
+      bl_charcuterie_biggerfish = {
+        name = "The School",
+        text = {"Only draw 8 cards"}
+      },
+      bl_charcuterie_bigwater = {
+        name = "The Whirlpool",
+        text = {"Start with 0 discards","if you've discarded over 5 times this ante","double blind requirement"}
+      },
+      bl_charcuterie_biggerwater = {
+        name = "The Hurricane",
+        text = {"Start with 0 discards","if you've discarded once this ante","square blind requirement"}
+      },
+      bl_charcuterie_bigpsychic = {
+        name = "The Limiter",
+        text = {"Must play 4 cards","no more, no less"}
+      },
+      bl_charcuterie_biggerpsychic = {
+        name = "The Shackle",
+        text = {"Must score 3 cards","no more, no less"}
+      },
+      bl_charcuterie_bigserpent = {
+        name = "The Eel",
+        text = {"Always draw 2 cards after","play or discard"}
+      },
+      bl_charcuterie_biggerserpent = {
+        name = "The Escalator",
+        text = {"Always draw 1 card after","play or discard"}
+      },
+      bl_charcuterie_bigmouth = {
+        name = "The Tongue",
+        text = {"Only play #1#"}
+      },
+      bl_charcuterie_biggermouth = {
+        name = "The Jaw",
+        text = {"Only play #1#"}
+      },
+      bl_charcuterie_bigpillar = {
+        name = "The Column",
+        text = {"All ranks used this ante are debuffed"}
+      },
+      bl_charcuterie_biggerpillar = {
+        name = "The Monument",
+        text = {"All suits used this ante are debuffed"}
+      },
     },
     Partner = {
       pnr_charcuterie_mini_pcb = {

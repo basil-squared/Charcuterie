@@ -17,6 +17,8 @@ function get_new_boss()
     hook = true,
     arm = true,
     needle = true,
+    window = true,
+    head = true,
 
   }
   local tier3blinds = {
@@ -26,6 +28,8 @@ function get_new_boss()
     hook = true,
     arm = true,
     needle = true,
+    window = true,
+    head = true,
   }
   if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante >= 8  then
     if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante >= 16 then
