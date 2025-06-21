@@ -36,7 +36,7 @@ function CHAR.FUNC.change_card_values(card,mod,operation,reset)
 	then finally tack it back onto the card.
 	]]
 	local old_table
-	if card then
+	if card and card.ability and card.ability.extra then
 		old_table = card.ability
 
 	else
