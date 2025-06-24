@@ -29,3 +29,9 @@ ASPL.G.enhancementatlas = SMODS.Atlas {
 	py = 95,
 }
 
+ASPL.G.deckatlas = SMODS.Atlas {
+	key = "deck_atlas",
+	path = "deckatlas.png",
+	px= 71,
+	py = 95,
+}
