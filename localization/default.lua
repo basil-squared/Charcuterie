@@ -16,11 +16,11 @@ return {
       }
     },
     Blind = {
-      bl_charcuterie_castle = {
+      bl_charcuterie_bigwall = {
         name = "The Castle",
         text = { "Super large blind" }
       },
-      bl_charcuterie_fortress = {
+      bl_charcuterie_biggerwall = {
         name = "The Fortress",
         text = { "Absurdly large blind" }
       },
@@ -32,7 +32,7 @@ return {
         name = "The Ocean",
         text = { "Resets played cards back to base form." }
       },
-      bl_charcuterie_debtcollector = {
+      bl_charcuterie_bigtooth = {
         name = "The Debt Collector",
         text = { "Lose $1 per card played. If money is less than $0, double blind requirement" }
       },
@@ -60,7 +60,7 @@ return {
         name = "The Ricochet",
         text = { "25% of scored hand added to blind requirement." }
       },
-      bl_charcuterie_superglue = {
+      bl_charcuterie_bigmanacle = {
         name = "The Superglue",
         text = { "-2 Hand Size" }
       },
@@ -71,7 +71,31 @@ return {
       bl_charcuterie_orchidoverlord = {
         name = "Orchid Overlord",
         text = { "For when you think you're too big to fail..." }
-      }
+      },
+      bl_charcuterie_bighook = {
+        name = "The Line",
+        text = {"Discards 3 random cards held in hand after every played hand"}
+      },
+      bl_charcuterie_biggerhook = {
+        name = "The Sinker",
+        text = {"Discards every card not played after every played hand"}
+      },
+      bl_charcuterie_bigarm = {
+        name = "The Body",
+        text = {"Decrease level of played poker hand by 2"}
+      },
+      bl_charcuterie_biggerarm = {
+        name = "The Genesis",
+        text = {"Set level of played poker hand to 1"}
+      },
+      bl_charcuterie_biggertooth = {
+        name = "The Loan Shark",
+        text = {"Lose $2 per hand played. If money is less than 0, Square blind requirement."}
+      },
+      bl_charcuterie_biggermanacle = {
+        name = "The Chipper",
+        text = { "-5 Hand Size" }
+      },
     },
     Edition = {
       e_charcuterie_bleached = {
@@ -300,7 +324,7 @@ return {
       },
       j_charcuterie_made_man = {
         name = "Made Man",
-        text = {"{C:inactive}no effect quite yet!"}
+        text = {"Creates an {C:attention}Investment Tag{}","when boss blind {C:attention}defeated{}"}
       },
       j_charcuterie_britalian = {
         name = "Britalian",
@@ -375,7 +399,12 @@ return {
     },
     Spectral = {},
     Stake = {},
-    Tag = {},
+    Tag = {
+      tag_charcuterie_meltytag = {
+        name = "Melty Tag",
+        text = {"Next base edition shop","Joker is free and","becomes {C:dark_edition}Melty{}"}
+      }
+    },
     Tarot = {},
     Voucher = {
       v_charcuterie_brimstone = {

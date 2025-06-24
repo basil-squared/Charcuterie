@@ -1,5 +1,5 @@
 SMODS.Blind {
-    key = "fortress",
+    key = "biggerwall",
 
     atlas = CHAR.G.blindatlas.key,
     pos = {x = 0,y =9},

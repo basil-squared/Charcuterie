@@ -16,11 +16,11 @@ return {
       }
     },
     Blind = {
-      bl_charcuterie_castle = {
+      bl_charcuterie_bigwall = {
         name = "The Castle",
         text = { "Super large blind" }
       },
-      bl_charcuterie_fortress = {
+      bl_charcuterie_biggerwall = {
         name = "The Fortress",
         text = { "Absurdly large blind" }
       },
@@ -32,7 +32,7 @@ return {
         name = "The Ocean",
         text = { "Resets played cards back to base form." }
       },
-      bl_charcuterie_debtcollector = {
+      bl_charcuterie_bigtooth = {
         name = "The Debt Collector",
         text = { "Lose $1 per card played. If money is less than $0, double blind requirement" }
       },
@@ -60,7 +60,7 @@ return {
         name = "The Ricochet",
         text = { "25% of scored hand added to blind requirement." }
       },
-      bl_charcuterie_superglue = {
+      bl_charcuterie_bigmanacle = {
         name = "The Superglue",
         text = { "-2 Hand Size" }
       },

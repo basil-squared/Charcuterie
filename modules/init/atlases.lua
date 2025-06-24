@@ -66,3 +66,9 @@ CHAR.G.elementatlas =  SMODS.Atlas {
 	px =71,
 	py=95
 }
+CHAR.G.tagatlas = SMODS.Atlas {
+	key = "tagatlas",
+	path = "tagatlas.png",
+	px = 32,
+	py = 32,
+}
