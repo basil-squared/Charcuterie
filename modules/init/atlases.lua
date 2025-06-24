@@ -5,7 +5,18 @@ ASPL.G.jokeratlas = SMODS.Atlas({
 	py = 95,
 })
 
-
+ASPL.G.planetatlas = SMODS.Atlas({
+	key = "planetatlas",
+	path = "planetatlas.png",
+	px = 71,
+	py = 95,
+})
+ASPL.G.sealatlas = SMODS.Atlas({
+	key = "sealatlas",
+	path = "sealatlas.png",
+	px = 71,
+	py = 95,
+})
 ASPL.G.blindatlas = SMODS.Atlas({
 	px = 34,
 	py = 34,
