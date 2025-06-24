@@ -1,16 +1,4 @@
-local chrono_lc = SMODS.Atlas({
-	key = "chrono_lc",
-	path = "chrono_lc.png",
-	px = 71,
-	py = 95,
-})
 
-local chrono_hc = SMODS.Atlas({
-	key = "chrono_hc",
-	path = "chrono_hc.png",
-	px = 71,
-	py = 95,
-})
 
 local plg_lc = SMODS.Atlas({
 	key = "plg_lc",
@@ -26,28 +14,6 @@ local plg_hc = SMODS.Atlas({
 	py = 95,
 })
 
-SMODS.DeckSkin({
-	key = "chronophobia",
-	suit = "Hearts",
-	loc_txt = "Chronophobia",
-	palettes = {
-		{
-			key = "lc",
-			ranks = { "Jack", "Queen", "King" },
-			display_ranks = { "King", "Queen", "Jack" },
-			atlas = chrono_lc.key,
-			pos_style = "collab",
-		},
-		{
-			key = "hc",
-			ranks = { "Jack", "Queen", "King" },
-			display_ranks = { "King", "Queen", "Jack" },
-			atlas = chrono_hc.key,
-			pos_style = "collab",
-			colour = HEX("ff0000"),
-		},
-	},
-})
 
 SMODS.DeckSkin({
 	key = "perfectlightgaia",
