@@ -159,3 +159,10 @@ function ASPL.FUNC.negative_event_proc(riskv)
 		return true
 	end
 end
+
+function ASPL.FUNC.check_enhancement_deck(enhancement)
+	for i=1,#G.playing_cards do
+
+	end
+end
+

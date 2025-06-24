@@ -2,7 +2,7 @@ SMODS.Joker({
 	key = "the_j",
 	loc_txt = {
 		name = "The J",
-		text = { "For every joker, gain {C:mult}x#1#{} Mult." },
+		text = { "For every joker, gain {X:mult,C:white}X#1#{} Mult." },
 	},
 	config = { extra = { xmult = 1.5 } },
 	rarity = 3,

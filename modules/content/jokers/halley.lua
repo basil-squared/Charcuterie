@@ -30,7 +30,7 @@ SMODS.Joker({
 				SMODS.add_card({key = shitting_planet_name, edition = "e_negative"})
 				SMODS.add_card({key = shitting_planet_name, edition = "e_negative"})
 				SMODS.add_card({key = shitting_planet_name, edition = "e_negative"})
-
+				self.config.extra.to_generation = 5
 				return {
 					message = "Reset",
 				}
