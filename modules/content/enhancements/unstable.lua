@@ -22,7 +22,7 @@ SMODS.Enhancement {
 					_card = create_playing_card({
 						center = G.P_CENTERS.m_astropulvis_unstable
 					})
-					G.hand:emplace(_card)
+					G.deck:emplace(_card)
 					G.deck.config.card_limit = G.deck.config.card_limit + 1
 
 
