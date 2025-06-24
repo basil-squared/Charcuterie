@@ -302,7 +302,12 @@ return {
 			},
 			c_astropulvis_summon = {
 				name = "Summon",
-				text = {"{C:red}Destroy{} 3 random {C:attention}Jokers{}","{C:green}#1#%{} to create a {C:purple}Legendary{} Joker."}
+				text = {"{C:red}Destroy{} 2 random {C:attention}Jokers{}","{C:green}#1#%{} to create a {C:purple}Legendary{} Joker."}
+			},
+			c_astropulvis_alchemy = {
+				name = "Alchemy",
+				text = {"{C:green}#1#%{} chance to make entire hand {C:attention}Gold{}",
+						"{C:red}#2#%{} chance to debuff entire hand instead."}
 			}
 		},
 		Element = {
