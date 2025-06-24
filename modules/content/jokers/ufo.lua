@@ -6,6 +6,7 @@ SMODS.Joker({
 	},
 	rarity = 3,
 	atlas = ASPL.G.jokeratlas.key,
+	blueprint_compat = false,
 	pos = { x = 6, y = 0 },
 	cost = 5,
 	discovered = true,

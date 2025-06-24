@@ -10,7 +10,7 @@ SMODS.Joker({
 	pos = { x = 2, y = 0 },
 	cost = 5,
 	discovered = true,
-
+	blueprint_compat = true,
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.xmult } }
 	end,

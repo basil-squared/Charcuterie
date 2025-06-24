@@ -11,6 +11,7 @@ SMODS.Joker({
 		},
 	},
 	config = { extra = {given_dollars = 0}},
+	blueprint_compat = false,
 	loc_vars = function(self,info_queue,card)
 		return {vars = {card.ability.extra.given_dollars }}
 	end,

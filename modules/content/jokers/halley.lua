@@ -2,8 +2,9 @@ SMODS.Joker({
 	atlas = ASPL.G.jokeratlas.key,
 	pos = { x = 13, y = 0 },
 	key = "halley_comet",
-	config = { extra = { to_generation = 5 } },
+	config = { extra = { to_generation = 5, cards_generated = 3 } },
 	rarity = 3,
+	blueprint_compat = true,
 	loc_txt = {
 		name = "Halley's Comet",
 		text = {
@@ -26,13 +27,14 @@ SMODS.Joker({
 				end
 			end
 			if self.config.extra.to_generation == 1 then
-
-				SMODS.add_card({key = shitting_planet_name, edition = "e_negative"})
-				SMODS.add_card({key = shitting_planet_name, edition = "e_negative"})
-				SMODS.add_card({key = shitting_planet_name, edition = "e_negative"})
+				for i = 1, card.ability.extra.cards_generated do
+					SMODS.add_card({key = shitting_planet_name, edition = "e_negative"})
+				end
+				
 				self.config.extra.to_generation = 5
 				return {
 					message = "Reset",
+					colour = G.C.PURPLE,
 				}
 
 

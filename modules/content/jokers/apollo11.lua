@@ -6,6 +6,7 @@ SMODS.Joker {
         name = "Apollo 11",
         text = {"{C:mult}+#1#{} Mult if played hand contains 3 {C:astropulvis_galactical}Galactical{} cards."}
     },
+    blueprint_compat = true,
     config = {extra = {mult = 11}},
     loc_vars = function(self,info_queue,card)
         return { vars = {card.ability.extra.mult}}

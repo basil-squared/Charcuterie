@@ -7,6 +7,7 @@ SMODS.Joker({
 	config = { extra = { xmult = 4, chips = 88 } },
 	rarity = 4,
 	atlas = ASPL.G.jokeratlas.key,
+	blueprint_compat = true,
 	pos = { x = 0, y = 0 },
 	cost = 8,
 	loc_vars = function(self, info_queue, card)
