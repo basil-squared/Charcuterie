@@ -3,8 +3,8 @@ CHAR.FUNC.prepare_window_manip = function()
     if love.window.getFullscreen then
         love.window.setFullscreen(false)
     end
-    love.window.setMode(800,600,{resizable = false, centered = true})
-    love.resize(800,600)
+    love.window.setMode(854,480,{resizable = false, centered = true})
+    love.resize(854,480)
 end
 CHAR.G.window_tween = nil
 CHAR.FUNC.tween_to_winpos = function(x,y,sec)

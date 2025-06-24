@@ -4,7 +4,7 @@ SMODS.Joker {
     pos = {x =54,y=0},
     soul_pos = {x= 55, y=0},
     cost = 10,
-    rarity = 4 ,
+    rarity = "charcuterie_overclocked",
     config = {extra= {chance = 2}},
     loc_vars = function(self,info_queue,card)
         return {vars = {(G.GAME.probabilities.normal or 1), card.ability.extra.chance}}
