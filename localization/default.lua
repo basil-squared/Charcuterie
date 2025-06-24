@@ -230,7 +230,14 @@ return {
 				text = {"Turns any face card played into a {C:astropulvis_galactical}Galactical{} Card. "}
 			}
 		},
-		Other = {},
+		Other = {aspl_txt_risk = {
+			name = "Risk Based",
+			text = {
+			"This item is {C:attention}Risk Based", 
+			"chance events are",
+			"not truly random"
+		}
+		},},
 		Planet = {},
 		Spectral = {},
 		Stake = {},
@@ -292,6 +299,10 @@ return {
 			c_astropulvis_strike = {
 				name = "Strike",
 				text = {"{C:red}Curse{} your hand.", "Earn {C:attention}$5{} for every card Cursed."}
+			},
+			c_astropulvis_summon = {
+				name = "Summon",
+				text = {"{C:red}Destroy{} 3 random {C:attention}Jokers{}","{C:green}#1#%{} to create a {C:purple}Legendary{} Joker."}
 			}
 		},
 		Element = {
@@ -312,6 +323,9 @@ return {
 				name = "Zinc",
 				text = {"Adds {C:attention}Brilliant Seal{} to a ","selected {C:enhanced}Steel Card{}"}
 			}
+		},
+		tooltips = {
+			
 		}
 	},
 	misc = {
@@ -320,7 +334,9 @@ return {
 		blind_states = {},
 		challenge_names = {},
 		collabs = {},
-		dictionary = {},
+		dictionary = {
+			
+		},
 		high_scores = {},
 		labels = {},
 		poker_hand_descriptions = {},
