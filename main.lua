@@ -11,7 +11,7 @@ ASPL.G = {}
 
 ASPL.G.MODPATH = SMODS.current_mod.path
 local NFS = require("nativefs")
-SMODS.Shader({ key = "bleached", path = "bleached.fs" })
+
 function ASPL.FUNC.RequireFolder(path)
   local files = NFS.getDirectoryItemsInfo(ASPL.G.MODPATH .. "/" .. path)
   for i = 1, #files do

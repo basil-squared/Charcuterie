@@ -76,7 +76,7 @@ return {
     Edition = {
       e_astropulvis_bleached = {
         name = "Bleached",
-        text = { "{C:attention}no{} suit" }
+        text = { "Card has{C:attention} no{} suit." }
       }
     },
     Enhanced = {
@@ -233,6 +233,26 @@ return {
       j_astropulvis_ufo = {
         name = "U.F.O",
         text = { "Turns any face card played into a {C:astropulvis_galactical}Galactical{} Card. " }
+      },
+      j_astropulvis_boredjoker = {
+        name = "Bored Joker",
+        text = { "{C:mult}+7{} Mult when hand contains a", "{C:attention}Greyscale Flush{}" }
+      },
+      j_astropulvis_concretemixer = {
+        name = "Concrete Mixer",
+        text = { "{C:green}#1# in #2#{} chance to turn a card ", "into a {C:enhanced}Stone Card{}" }
+      },
+      j_astropulvis_apatheticjoker = {
+        name = "Apathetic Joker",
+        text = { "{C:chips}+70{} Chips when hand contains a", "{C:attention}Greyscale Flush{}" }
+      },
+      j_astropulvis_ninetofive = {
+        name = "9 to 5",
+        text = { "{C:chips}+15{} Chips for every {C:inactive}Suitless{} card", "in your {C:attention}Full Deck.{}" }
+      },
+      j_astropulvis_porridge = {
+        name = "Porridge",
+        text = { "{C:inactive}Suitless{} cards give {X:mult,C:white}X2{} Mult", "for {C:attention}#1#{} hands.", "{C:inactive,S:0.5}(#2# hands remaining){}" }
       }
     },
     Other = {
@@ -353,8 +373,15 @@ return {
     labels = {
       astropulvis_bleached = "Bleached"
     },
-    poker_hand_descriptions = {},
-    poker_hands = {},
+    poker_hands = {
+      ['astropulvis_greyflush'] = "Greyscale Flush",
+    },
+    poker_hand_descriptions = {
+      ['astropulvis_greyflush'] = {
+        "5 Suitless cards",
+      },
+    },
+
     quips = {},
     ranks = {},
     suits_plural = {},
