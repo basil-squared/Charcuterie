@@ -23,32 +23,64 @@ for filename in progress_bar:
         f"Current: {name}"
     )  # Show current file in progress bar
 
-    # 1x export (suppress stdout)
-    subprocess.run(
-        [
-            "aseprite",
-            "-b",
-            "--sheet",
-            f"../assets/1x/{name}.png",
-            f"./spritesheets/{filename}",
-        ],
-        stdout=subprocess.DEVNULL,  # Suppress stdout
-        stderr=subprocess.DEVNULL,  # Optionally suppress stderr too
-    )
-
-    # 2x export (suppress stdout)
-    subprocess.run(
-        [
-            "aseprite",
-            "-b",
-            "--sheet",
-            f"../assets/2x/{name}.png",
-            f"./spritesheets/{filename}",
-            "--scale",
-            "2",
-        ],
-        stdout=subprocess.DEVNULL,  # Suppress stdout
-        stderr=subprocess.DEVNULL,  # Optionally suppress stderr too
-    )
+    if filename == "blindatlas.aseprite":
+        # Special handling for blindatlas.aseprite with 21 frames per row
+        # 1x export
+        subprocess.run(
+            [
+                "aseprite",
+                "-b",
+                "--sheet",
+                f"../assets/1x/{name}.png",
+                f"./spritesheets/{filename}",
+                "--sheet-columns",
+                "21",
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        # 2x export
+        subprocess.run(
+            [
+                "aseprite",
+                "-b",
+                "--sheet",
+                f"../assets/2x/{name}.png",
+                f"./spritesheets/{filename}",
+                "--sheet-columns",
+                "21",
+                "--scale",
+                "2",
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+    else:
+        # Original 1x export
+        subprocess.run(
+            [
+                "aseprite",
+                "-b",
+                "--sheet",
+                f"../assets/1x/{name}.png",
+                f"./spritesheets/{filename}",
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        # Original 2x export
+        subprocess.run(
+            [
+                "aseprite",
+                "-b",
+                "--sheet",
+                f"../assets/2x/{name}.png",
+                f"./spritesheets/{filename}",
+                "--scale",
+                "2",
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
 
 progress_bar.close()
