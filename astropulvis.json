@@ -1,8 +1,8 @@
 {
     "id": "astropulvis",
     "name": "Astropulvis",
-    "author": ["basil-squared","HamIsntCool","Pixell","Gelopsys"],
-    "description": "Type of balatro mod you get in hell honestly",
+    "author": ["basil-squared","HamIsntCool","Pixell","Gelopsys","Grhu"],
+    "description": "Star Scraping Balatro Mod",
     "prefix": "astropulvis",
     "badge_colour": "fc8048",
     "dependencies": [
