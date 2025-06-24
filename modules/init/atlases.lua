@@ -79,3 +79,9 @@ CHAR.G.crossmod_partneratlas = SMODS.Atlas {
 	px = 46,
 	py = 58
 }
+CHAR.G.tarotatlas = SMODS.Atlas {
+	key = "tarotatlas",
+	path = "customtarotatlas.png",
+	px = 71,
+	py = 95
+}

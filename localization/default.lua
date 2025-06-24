@@ -157,8 +157,8 @@ return {
         name = "Unstable Card",
         text = {
           "{X:mult,C:white}X#1#{} Mult.",
-          "{C:green}#2# in #3# {}chance to add #4# more",
-          " {C:charcuterie_unstable}Unstable{} cards to the deck."
+          "{C:green}#2# in #3# {}chance to add #4#",
+          "cards with {C:attention}Lime Seal{} to the deck."
         }
       },
       m_charcuterie_purified = {
@@ -438,7 +438,16 @@ return {
         }
       }
     },
-    Spectral = {},
+    Spectral = {
+      c_charcuterie_purge = {
+        name = "Purge",
+        text = {"Adds {C:dark_edition}Bleached{} to","#1# selected","card in your hand"}
+      },
+      c_charcuterie_obscura = {
+        name = "Obscura",
+        text = {"Add a {C:dark_edition}Obscured Seal{}","to {C:attention}#1#{} selected","card in your hand"}
+      }
+    },
     Stake = {},
     Tag = {
       tag_charcuterie_meltytag = {
@@ -446,7 +455,16 @@ return {
         text = {"Next base edition shop","Joker is free and","becomes {C:dark_edition}Melty{}"}
       }
     },
-    Tarot = {},
+    Tarot = {
+      c_charcuterie_explorer = {
+        name = 'The Explorer',
+        text = {"Converts #1#","selected cards to","{C:charcuterie_galactical}#2#s{}"}
+      },
+      c_charcuterie_scientist = {
+        name = 'The Scientist',
+        text = {"Enhances #1# selected","card into a","{C:charcuterie_unstable}#2#{}"}
+      }
+    },
     Voucher = {
       v_charcuterie_brimstone = {
         name = "Brimstone",
