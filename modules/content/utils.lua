@@ -20,6 +20,11 @@ SMODS.Gradient({
 	colours = { HEX("1aff00"), HEX("7bdb70"), HEX("064000") },
 	cycle = 5,
 })
+SMODS.Gradient({
+	key = "galactical",
+	colours = {HEX("7c2de3"),HEX("4f068f"),HEX("834dbd"),HEX("b066ff")},
+	cycle = 5,
+})
 function SMODS.get_id(self)
 	local ofr = smods_get_id_ref(self)
 	if next(SMODS.find_card("j_astropulvis_estrogen")) and ofr == 11 or ofr == 12 or ofr == 13 then
@@ -161,8 +166,12 @@ function ASPL.FUNC.negative_event_proc(riskv)
 end
 
 function ASPL.FUNC.check_enhancement_deck(enhancement)
+	local tablerer={}
 	for i=1,#G.playing_cards do
-
+		if SMODS.has_enhancement(G.playing_cards[i],enhancement) then
+			table.insert(tablerer,G.playing_cards[i])
+		end
 	end
+	return #tablerer
 end
 
