@@ -2,14 +2,27 @@ SMODS.Joker {
 	key = "aspl_hazardsign",
 	loc_txt = {
 		name = "Hazard Sign",
-		text = {"Gains {X:chips,C:white}X#1#{} {C:chips}Chips{} every time", "an {C:astropulvis_unstable}Unstable{} card activates.","{C:inactive,S:0.5}(currently {}{X:chips,C:white,S:0.5}X#2# {}{C:inactive,S:0.5}.)"}
+		text = {"Gains {X:chips,C:white}X#1#{} Chips every time", "an {C:astropulvis_unstable}Unstable{} card activates.","{C:inactive,S:0.5}(currently {}{X:chips,C:white,S:0.5}X#2# {}{C:inactive,S:0.5}.)"}
 	},
 	atlas = ASPL.G.jokeratlas.key,
 	pos = {x = 17,y=0},
 	config = {extra = {xchips = 0.3, totalxchips = 1.0}},
-	loc_vars = function(self,info_queue)
-		return {vars={self.config.extra.xchips, self.config.extra.totalxchips}}
+	loc_vars = function(self,info_queue,card)
+		return {vars={self.config.extra.xchips, card.ability.extra.totalxchips}}
 	end,
 	rarity = 2,
+	calculate = function(self,card,context)
+		if context.unstable_proc  then
+			card.ability.extra.totalxchips = card.ability.extra.totalxchips + card.ability.extra.xchips
+			return {
+				message = "Upgrade!"
+			}
+		end
+		if context.joker_main then
+			return {
+				xchips = card.ability.extra.totalxchips
+			}
+		end
+	end
 
 }

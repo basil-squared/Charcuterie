@@ -1,6 +1,8 @@
 local smods_has_no_suit_ref = SMODS.has_no_suit
 local smods_get_id_ref = SMODS.get_id
 local start_run_ref = Game.start_run
+local ease_ante_ref = ease_ante
+
 function SMODS.has_no_suit(card)
 	if G.GAME.blind then
 		if G.GAME.blind.config.blind.key == "bl_astropulvis_the_dip" then
@@ -35,7 +37,9 @@ function SMODS.get_id(self)
 end
 function Game:start_run(args)
 	args = args or {}
-	G.GAME.Risk = 0.01
+	G.GAME.Risk = 0.00
+	Risk_manip_table.disp_risk = 0 .. "%"
+	Risk_manip_table.risk = 0
 	return start_run_ref(self,args)
 end
 -- Globals dont require declaration? what the fuck?
@@ -43,12 +47,14 @@ end
 function ASPL.FUNC.ease_risk(mod, instant)
 	local Risk = G.GAME.Risk or 0
 	local risk_UI = G.HUD:get_UIE_by_ID("astropulvis_risk_UI_shit")
+
 	local function _mod(mod)
-		if G and G.GAME and G.GAME.Risk or 0  + (mod / 100) > 1 then
+		-- Use the LOCAL Risk variable for calculations
+		if (Risk + (mod / 100)) > 1 then  -- Changed to use local Risk
 			Risk = 1
 			Percentage_Risk = 100
 			Risk_manip_table.disp_risk = Percentage_Risk .. "%"
-			Risk_manip_table.risk = G and G.GAME and G.GAME.Risk or 0
+			Risk_manip_table.risk = Risk  -- Use local Risk here
 			risk_UI.config.object:update()
 			G.HUD:recalculate()
 			attention_text({
@@ -60,15 +66,15 @@ function ASPL.FUNC.ease_risk(mod, instant)
 				align = "cm",
 			})
 			play_sound("chips2")
-			G.GAME.Risk = Risk
+			G.GAME.Risk = Risk  -- Update global Risk AFTER local calculations
 			return
 		end
 
-		if G and G.GAME and G.GAME.Risk or 0  + (mod / 100) < 0 then
+		if (Risk + (mod / 100)) < 0 then  -- Changed to use local Risk
 			Risk = 0
 			Percentage_Risk = 0
 			Risk_manip_table.disp_risk = Percentage_Risk .. "%"
-			Risk_manip_table.risk = Risk
+			Risk_manip_table.risk = Risk  -- Use local Risk here
 			risk_UI.config.object:update()
 			G.HUD:recalculate()
 			attention_text({
@@ -80,10 +86,11 @@ function ASPL.FUNC.ease_risk(mod, instant)
 				align = "cm",
 			})
 			play_sound("chips2")
-			G.GAME.Risk = Risk
+			G.GAME.Risk = Risk  -- Update global Risk AFTER local calculations
 			return
 		end
 
+		-- Normal case (no min/max reached)
 		mod = mod or 0
 		local text = "+"
 		local col = G.C.RED
@@ -91,7 +98,7 @@ function ASPL.FUNC.ease_risk(mod, instant)
 			text = "-"
 			col = G.C.GREEN
 		end
-		Risk = Risk + mod / 100
+		Risk = Risk + (mod / 100)  -- Update local Risk
 		Percentage_Risk = Risk * 100
 		Risk_manip_table.disp_risk = Percentage_Risk .. "%"
 		Risk_manip_table.risk = Risk
@@ -105,9 +112,10 @@ function ASPL.FUNC.ease_risk(mod, instant)
 			cover_colour = col,
 			align = "cm",
 		})
-		G.GAME.Risk = Risk
+		G.GAME.Risk = Risk  -- Update global Risk AFTER local calculations
 		play_sound("chips2")
 	end
+
 	if instant then
 		_mod(mod)
 	else
@@ -116,7 +124,7 @@ function ASPL.FUNC.ease_risk(mod, instant)
 			func = function()
 				_mod(mod)
 				return true
-			end,
+			end
 		}))
 	end
 end
@@ -175,3 +183,7 @@ function ASPL.FUNC.check_enhancement_deck(enhancement)
 	return #tablerer
 end
 
+function ease_ante(mod)
+	ASPL.FUNC.ease_risk(mod * 10)
+	return ease_ante_ref(mod)
+end
