@@ -39,3 +39,43 @@ SMODS.Booster {
     end
 
 }
+SMODS.Booster {
+    key  = "ritual_booster_1",
+    atlas = ASPL.G.boosteratlas.key,
+    pos = {x = 2, y = 0},
+    loc_txt = {
+        name = "Ritual Pack",
+        text = {"Choose {C:attention}1{} of {C:attention}3{}","{C:red}Ritual Cards{} to be used immediately"},
+        group_name = "Ritual Pack"
+    },
+    config = {extra = 3, choose = 1},
+    draw_hand = true,
+    create_card = function(self,card,i)
+        new_card = SMODS.create_card({ set = "ritual" })
+        return new_card
+    end,
+    particles = function(self)
+        return
+    end
+
+}
+SMODS.Booster {
+    key  = "ritual_booster_2",
+    atlas = ASPL.G.boosteratlas.key,
+    pos = {x = 3, y = 0},
+    loc_txt = {
+        name = "Ritual Pack",
+        text = {"Choose {C:attention}1{} of {C:attention}3{}","{C:red}Ritual Cards{} to be used immediately"},
+        group_name = "Ritual Pack"
+    },
+    config = {extra = 3, choose = 1},
+    draw_hand = true,
+    create_card = function(self,card,i)
+        new_card = SMODS.create_card({ set = "ritual" })
+        return new_card
+    end,
+    particles = function(self)
+        return
+    end
+
+}

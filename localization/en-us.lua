@@ -298,6 +298,19 @@ return {
 			c_astropulvis_titanium = {
 				name = "Titanium",
 				text = {"Converts up to {C:attention}3{}", " selected cards into {C:enhanced}Steel{} Cards"}
+			},
+			c_astropulvis_plutonium = {
+				name = "Plutonium",
+				text = {"{C:green}#1#%{} Chance to add {C:astropulvis_unstable}Unstable{}","to up to {C:attention}2{} selected cards,","but {C:red}#2#%{} chance to destroy","selected cards instead."}
+			},
+			c_astropulvis_neodymium = {
+				name = "Neodymium",
+				text = {"Make a selected {C:enhanced}Steel Card{} {C:dark_edition}Negative{}"},
+
+			},
+			c_astropulvis_zinc = {
+				name = "Zinc",
+				text = {"Adds {C:attention}Brilliant Seal{} to a ","selected {C:enhanced}Steel Card{}"}
 			}
 		}
 	},

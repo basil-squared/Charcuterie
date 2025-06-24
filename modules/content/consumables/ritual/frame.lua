@@ -1,6 +1,6 @@
 SMODS.Consumable {
     set = "ritual",
-    key = "ritual_frame",
+    key = "frame",
     loc_txt = {
         name = "Frame",
         text = {"{C:attention}Pin{} a random Joker, and make it {C:pink}Eternal{}.","Reduce {C:red}Risk{} by {C:green}20%{}"}

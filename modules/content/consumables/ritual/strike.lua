@@ -1,5 +1,5 @@
 SMODS.Consumable({
-	key = "ritual_strike",
+	key = "strike",
 	set = "ritual",
 	atlas = ASPL.G.ritualatlas.key,
 	pos = { x = 3, y = 0 },

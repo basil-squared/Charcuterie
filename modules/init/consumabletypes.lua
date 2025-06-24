@@ -14,8 +14,8 @@ SMODS.ConsumableType({
 
 SMODS.ConsumableType({
 	key = "Element",
-	primary_colour = HEX("000000"),
-	secondary_colour = HEX("000000"),
+	primary_colour = HEX("7dd75a"),
+	secondary_colour = HEX("436e47"),
 	loc_txt = {
 		name = "Element Card",
 		collection = "Element Cards",
