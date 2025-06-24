@@ -9,6 +9,7 @@ SMODS.Back {
 	apply = function(self,back)
 		G.GAME.dollars = 100
 		G.GAME.modifiers.no_blind_reward = {Small = true,Big = true, Boss= true,}
-	end
+	end,
+	
 }
 

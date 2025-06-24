@@ -3,5 +3,6 @@ SMODS.Blind {
 	atlas = CHAR.G.blindatlas.key,
 	pos = {x=0,y=21},
 	mult = 4,
+	
 
 }

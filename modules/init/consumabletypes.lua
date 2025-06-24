@@ -1,5 +1,6 @@
 SMODS.ConsumableType({
 	key = "ritual",
+	shop_rate = 0,
 	primary_colour = HEX("140100"),
 	secondary_colour = HEX("570803"),
 	loc_txt = {
