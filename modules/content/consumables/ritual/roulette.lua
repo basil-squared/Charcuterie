@@ -1,7 +1,7 @@
 SMODS.Consumable {
     set = "ritual",
     key = "roulette",
-    atlas = ASPL.G.ritualatlas.key,
+    atlas = CHAR.G.ritualatlas.key,
     pos = {x = 6, y=0 },
 
     loc_vars = function(self,info_queue,card)
@@ -23,7 +23,7 @@ SMODS.Consumable {
         local r_e_joker = (#editioned_jokers > 0) and pseudorandom_element(editioned_jokers, pseudoseed("edition joker")) or nil
         local r_u_joker = (#uneditioned_jokers > 0) and pseudorandom_element(uneditioned_jokers, pseudoseed("unedition joker")) or nil
     
-        if ASPL.FUNC.negative_event_proc(G.GAME.Risk or 0) == false then
+        if CHAR.FUNC.negative_event_proc(G.GAME.Risk or 0) == false then
             if r_e_joker then
                 r_e_joker:set_edition(nil)
             end

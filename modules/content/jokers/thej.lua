@@ -3,7 +3,7 @@ SMODS.Joker({
 
 	config = { extra = { xmult = 1.5 } },
 	rarity = 3,
-	atlas = ASPL.G.jokeratlas.key,
+	atlas = CHAR.G.jokeratlas.key,
 	pos = { x = 2, y = 0 },
 	cost = 5,
 	discovered = true,

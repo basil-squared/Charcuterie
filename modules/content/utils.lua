@@ -5,11 +5,11 @@ local start_run_ref = Game.start_run
 local ease_ante_ref = ease_ante
 local ease_dollars_ref = ease_dollars
 function SMODS.has_no_suit(card)
-  if card.edition and card.edition.type == "astropulvis_bleached" then
+  if card.edition and card.edition.type == "charcuterie_bleached" then
     return true
   end
   if G.GAME.blind then
-    if G.GAME.blind.config.blind.key == "bl_astropulvis_the_dip" then
+    if G.GAME.blind.config.blind.key == "bl_charcuterie_the_dip" then
       return true
     end
   end
@@ -43,9 +43,9 @@ end
 
 -- Globals dont require declaration? what the fuck?
 --
-function ASPL.FUNC.ease_risk(mod, instant)
+function CHAR.FUNC.ease_risk(mod, instant)
   local Risk = G.GAME.Risk or 0
-  local risk_UI = G.HUD:get_UIE_by_ID("astropulvis_risk_UI_shit")
+  local risk_UI = G.HUD:get_UIE_by_ID("charcuterie_risk_UI_shit")
 
   local function _mod(mod)
     -- Use the LOCAL Risk variable for calculations
@@ -137,7 +137,7 @@ function get_key_for_value(t, value)
   return nil
 end
 
-function ASPL.FUNC.fetch_most_played()
+function CHAR.FUNC.fetch_most_played()
   local played_tab = {}
   local most_played = {}
   local max_val = -math.huge
@@ -161,7 +161,7 @@ function ASPL.FUNC.fetch_most_played()
   return mp_raw
 end
 
-function ASPL.FUNC.negative_event_proc(riskv)
+function CHAR.FUNC.negative_event_proc(riskv)
   if riskv >= pseudorandom("wagabagabobo") then
     return false
   else
@@ -169,7 +169,7 @@ function ASPL.FUNC.negative_event_proc(riskv)
   end
 end
 
-function ASPL.FUNC.check_enhancement_deck(enhancement)
+function CHAR.FUNC.check_enhancement_deck(enhancement)
   local tablerer = {}
   for i = 1, #G.playing_cards do
     if SMODS.has_enhancement(G.playing_cards[i], enhancement) then
@@ -180,12 +180,12 @@ function ASPL.FUNC.check_enhancement_deck(enhancement)
 end
 
 function ease_ante(mod)
-  ASPL.FUNC.ease_risk(mod * 10)
+  CHAR.FUNC.ease_risk(mod * 10)
   return ease_ante_ref(mod)
 end
 
 function ease_dollars(mod)
-  if next(SMODS.find_card("j_astropulvis_golden_cheese")) then
+  if next(SMODS.find_card("j_charcuterie_golden_cheese")) then
     if mod >= 0 then
       mod = mod * 2
       SMODS.calculate_context({ gc_proc = true })
@@ -194,7 +194,7 @@ function ease_dollars(mod)
   return ease_dollars_ref(mod)
 end
 
-ASPL.FUNC.level_up_hand = function(card, hand_key, instant, amount)
+CHAR.FUNC.level_up_hand = function(card, hand_key, instant, amount)
   if not (instant) then
     update_hand_text({ sound = 'button', volume = 0.7, pitch = 0.8, delay = 0.3 },
         {
@@ -211,7 +211,7 @@ ASPL.FUNC.level_up_hand = function(card, hand_key, instant, amount)
   end
 end
 function SMODS.has_no_rank(card)
-  if card.seal and card.seal == 'astropulvis_obscure' then
+  if card.seal and card.seal == 'charcuterie_obscure' then
     return true
   end
   return smods_has_no_rank_ref(card)

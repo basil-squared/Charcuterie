@@ -1,7 +1,7 @@
 SMODS.Consumable({
 	key = "phase",
 	set = "ritual",
-	atlas = ASPL.G.ritualatlas.key,
+	atlas = CHAR.G.ritualatlas.key,
 	pos = { x = 2, y = 0 },
 
 	use = function(self, card, area, copier)

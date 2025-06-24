@@ -1,5 +1,5 @@
 SMODS.Joker({
-	atlas = ASPL.G.jokeratlas.key,
+	atlas = CHAR.G.jokeratlas.key,
 	pos = { x = 13, y = 0 },
 	key = "halley",
 	config = { extra = { to_generation = 5, cards_generated = 3 } },
@@ -12,7 +12,7 @@ SMODS.Joker({
 	calculate = function(self, card, context)
 		if context.joker_main then
 			local shitting_planet_name = 0
-			local mp_hand = ASPL.FUNC.fetch_most_played()
+			local mp_hand = CHAR.FUNC.fetch_most_played()
 			for k,v in pairs(G.P_CENTER_POOLS.Planet) do
 				if v.config.hand_type == mp_hand then
 					shitting_planet_name = v.key

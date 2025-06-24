@@ -1,7 +1,7 @@
 SMODS.Consumable {
     key = "alchemy",
     set = 'ritual',
-    atlas = ASPL.G.ritualatlas.key,
+    atlas = CHAR.G.ritualatlas.key,
     pos = {x =6,y=0},
     loc_vars = function(self,info_queue,card)
         info_queue[#info_queue+1] = {set = 'Other', key = 'aspl_txt_risk'}

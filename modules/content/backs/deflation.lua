@@ -1,6 +1,6 @@
 SMODS.Back {
 	key = "deflation",
-	atlas = ASPL.G.deckatlas.key,
+	atlas = CHAR.G.deckatlas.key,
 	pos = {x = 0, y = 0},
 	config = { extra = {money_start = 100}},
 	loc_vars = function(self, info_queue,card)

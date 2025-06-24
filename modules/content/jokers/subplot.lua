@@ -2,7 +2,7 @@
 SMODS.Joker({
 
 	key = "subplot",
-	atlas = ASPL.G.jokeratlas.key,
+	atlas = CHAR.G.jokeratlas.key,
 	pos = {
 		x = 7,
 		y = 0,

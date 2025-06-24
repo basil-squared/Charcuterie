@@ -2,7 +2,7 @@ local curr_enhancement
 SMODS.Seal {
 	key = "brilliant",
 	badge_colour = HEX('f5d046'),
-	atlas = ASPL.G.sealatlas.key,
+	atlas = CHAR.G.sealatlas.key,
 	pos = {x=2,y=0},
 	config = {extra = {xchips = 1.5}},
 	loc_vars = function(self,info_queue,card) return {vars = {self.config.extra.xchips}}  end,

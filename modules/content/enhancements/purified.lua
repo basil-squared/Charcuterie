@@ -4,7 +4,7 @@ SMODS.Enhancement {
 
 	},
 	config = { extra = { chips = 30, mult = 4, hih_xmult = 1.5 } },
-	atlas = ASPL.G.enhancementatlas.key,
+	atlas = CHAR.G.enhancementatlas.key,
 	pos = { x = 2, y = 0 },
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.chips, card.ability.extra.mult, card.ability.extra.hih_xmult } }

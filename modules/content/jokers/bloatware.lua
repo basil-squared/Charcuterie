@@ -1,6 +1,6 @@
 SMODS.Joker {
 	key = "bloatware",
-	atlas = ASPL.G.jokeratlas.key,
+	atlas = CHAR.G.jokeratlas.key,
 	pos = {x=19,y=0},
 	loc_txt = {
 
