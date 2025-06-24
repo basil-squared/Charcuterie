@@ -16,7 +16,8 @@ SMODS.Gradient({
 })
 
 function SMODS.get_id(self)
-	if next(SMODS.find_card("j_astropulvis_estrogen")) and smods_get_id_ref(self) == 11 or 12 or 13 then
+	local ofr = smods_get_id_ref(self)
+	if next(SMODS.find_card("j_astropulvis_estrogen")) and ofr == 11 or ofr ==  12 or ofr == 13 then
 		return 12 -- 11 is Jack, 12 is Queen, 13 is King and 14 is Ace.
 	else
 		return smods_get_id_ref(self)
