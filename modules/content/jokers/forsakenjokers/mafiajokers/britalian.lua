@@ -10,12 +10,12 @@ SMODS.Joker {
 	end,
 	pools = { ["mafia"] = true},
 	calculate = function(self,card,context)
-		if context.individual and context.cardarea == G.play then
-			for i=1,#context.full_hand do
-				if SMODS.has_enhancement(context.full_hand[i], 'Stone') then
-					ease_dollars(1)
+		if context.individual and context.cardarea == G.play and G and G.GAME and G.GAME.dollars > 0 then
+			if SMODS.has_enhancement(context.other_card, 'm_stone') then
+					return {
+						dollars = 1
+					}
 				end
-			end
 		end
 	end
 }

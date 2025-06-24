@@ -1,7 +1,7 @@
 {
     "id": "charcuterie",
     "name": "Charcuterie",
-    "author": ["basil-squared","HamIsntCool","Pixell","Gelopsys","Grhu"],
+    "author": ["basil-squared","HamIsntCool","Gelopsys"],
     "description": "A variety of flavor, all in one balatro mod!",
     "prefix": "charcuterie",
     "badge_colour": "fc8048",
