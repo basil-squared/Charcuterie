@@ -4,7 +4,7 @@ SMODS.Enhancement {
 		name = "Galactical Card",
 		text = { "{C:green}#1# in #2# chance{} to upgrade", "the hand this card is played in." },
 	},
-	config = { extra = { odds = 20 } },
+	config = { extra = { odds = 5 } },
 	atlas = ASPL.G.enhancementatlas.key,
 	pos = { x = 0, y = 0 },
 	loc_vars = function(self, info_queue, card)
