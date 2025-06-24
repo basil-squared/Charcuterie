@@ -136,3 +136,13 @@ function ASPL.FUNC.fetch_most_played()
 
 	return mp_raw
 end
+
+
+function ASPL.FUNC.negative_event_proc(riskv)
+	if riskv >= pseudorandom("wagabagabobo") then
+		return true
+
+	else
+		return false
+	end
+end

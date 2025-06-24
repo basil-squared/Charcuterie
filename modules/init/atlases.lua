@@ -15,3 +15,16 @@ ASPL.G.blindatlas = SMODS.Atlas({
 	frames = 21,
 })
 
+ASPL.G.ritualatlas = SMODS.Atlas({
+	key = "ritual_atlas",
+	path = "ritualatlas.png",
+	px = 71,
+	py = 95,
+})
+
+ASPL.G.enhancementatlas = SMODS.Atlas {
+	key = "enhancement_atlas",
+	path = "enhancementatlas.png",
+	px = 71,
+	py = 95,
+}
