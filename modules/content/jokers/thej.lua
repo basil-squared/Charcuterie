@@ -1,9 +1,6 @@
 SMODS.Joker({
-	key = "the_j",
-	loc_txt = {
-		name = "The J",
-		text = { "For every joker, gain {X:mult,C:white}X#1#{} Mult." },
-	},
+	key = "thej",
+
 	config = { extra = { xmult = 1.5 } },
 	rarity = 3,
 	atlas = ASPL.G.jokeratlas.key,

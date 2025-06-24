@@ -1,9 +1,6 @@
 SMODS.Joker({
-	key = "alien_joker",
-	loc_txt = {
-		name = "U.F.O",
-		text = { "Turns any face card played into a {C:astropulvis_galactical}Galactical{} Card. " },
-	},
+	key = "ufo",
+
 	rarity = 3,
 	atlas = ASPL.G.jokeratlas.key,
 	blueprint_compat = false,

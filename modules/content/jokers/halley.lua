@@ -1,21 +1,13 @@
 SMODS.Joker({
 	atlas = ASPL.G.jokeratlas.key,
 	pos = { x = 13, y = 0 },
-	key = "halley_comet",
+	key = "halley",
 	config = { extra = { to_generation = 5, cards_generated = 3 } },
 	rarity = 3,
 	blueprint_compat = true,
-	loc_txt = {
-		name = "Halley's Comet",
-		text = {
-			"For every {C:attention}5{} Hands played,",
-			"generate 3 {C:dark_edition}Negative{} {C:planet}Planet Cards{} for your",
-			"{C:attention}most played{} hand.",
-			"{S:0.7,C:inactive}(currently #1#){}",
-		},
-	},
+
 	loc_vars = function(self,info_queue,card)
-		return {vars={self.config.to_generation}}
+		return {vars={self.config.extra.to_generation}}
 	end,
 	calculate = function(self, card, context)
 		if context.joker_main then

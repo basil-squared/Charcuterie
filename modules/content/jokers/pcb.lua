@@ -1,9 +1,6 @@
 SMODS.Joker {
 	key = "pcb",
-	loc_txt = {
-		name = "PCB",
-		text = {"Copies ability of leftmost","and rightmost Jokers."}
-	},
+
 	atlas = ASPL.G.jokeratlas.key,
 	pos = {x = 33,y=0},
 	rarity = 3,

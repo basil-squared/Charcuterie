@@ -3,10 +3,7 @@ SMODS.Joker({
 	atlas = ASPL.G.jokeratlas.key,
 	pos = { x = 14, y = 0 },
 	blueprint_compat = false,
-	loc_txt = {
-		name = "Estrogen",
-		text = { "Played face cards have a {C:green}#1# in #2#{} chance to become {C:attention}Queens{}"},
-	},
+
 	config = {extra={ out_of = 5}},
 	loc_vars = function(self,info_queue,card)
 		return {vars={(G.GAME.probabilities.normal or 1), card.ability.extra.out_of}}

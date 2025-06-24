@@ -1,9 +1,6 @@
 SMODS.Blind {
-    key = "blind_castle",
-    loc_txt = {
-        name = "The Castle",
-        text = {"Super large Blind"},
-    },
+    key = "castle",
+
     atlas = ASPL.G.blindatlas.key,
     pos = {x = 0,y =8},
     boss_colour = HEX("8b14db"),

@@ -18,10 +18,7 @@ SMODS.Joker {
 	atlas = ASPL.G.jokeratlas.key,
 	pos = {x = 30,y=0},
 	blueprint_compat = true,
-	loc_txt = {
-		name = "Schematic",
-		text = {"Copies ability of","{C:attention}Joker{} to the left"}
-	},
+
 	rarity = 3,
 	cost = 10,
 	config = {extra = {retrigger_amt = 1}},

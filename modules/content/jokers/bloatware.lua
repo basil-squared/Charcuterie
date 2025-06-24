@@ -3,8 +3,7 @@ SMODS.Joker {
 	atlas = ASPL.G.jokeratlas.key,
 	pos = {x=19,y=0},
 	loc_txt = {
-		name = "Bloatware",
-		text = {"{X:purple,C:white}X#1#{} {C:chips}Chips{} and {C:mult}Mult{}.","{C:green}#2# in #3#{} chance to spawn #4# {C:red}Debuffed{} cards into your hand."}
+
 	},
 	config = { extra = {xchips_and_mult = 3, odds = 10, amt_create = 2}},
 	rarity = 2,

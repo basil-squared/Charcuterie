@@ -1,9 +1,6 @@
 SMODS.Enhancement {
 	key = "unstable",
-	loc_txt = {
-		name = "Unstable Card",
-		text = {"{X:mult,C:white}X#1#{} Mult.","{C:green}#2# in #3# {}chance to add #4# more"," {C:astropulvis_unstable}Unstable{} cards to the deck."}
-	},
+
 	atlas = ASPL.G.enhancementatlas.key,
 	config = { extra = { odds = 4, xmult = 4, card_num = 2} },
 	pos = {x=3,y=0},

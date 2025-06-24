@@ -1,9 +1,6 @@
 SMODS.Enhancement {
 	key = "galactical",
-	loc_txt = {
-		name = "Galactical Card",
-		text = { "{C:green}#1# in #2# chance{} to upgrade", "the hand this card is played in." },
-	},
+
 	config = { extra = { odds = 5 } },
 	atlas = ASPL.G.enhancementatlas.key,
 	pos = { x = 0, y = 0 },

@@ -1,8 +1,7 @@
 SMODS.Joker({
-	key = "crazy8",
+	key = "crazyeight",
 	loc_txt = {
-		name = "Crazy 8",
-		text = { "For every {C:attention}8{} Played,", "grants {C:white,X:mult}x#1#{} Mult." },
+
 	},
 	config = { extra = { xmult = 4, chips = 88 } },
 	rarity = 4,
