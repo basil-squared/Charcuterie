@@ -10,6 +10,7 @@ end
 CHAR = {}
 CHAR.FUNC = {}
 CHAR.G = {}
+CHAR.G.Overclock_Table = {}
 function convert_to_windows_path(path)
     return path:gsub("/", "\\")
 end

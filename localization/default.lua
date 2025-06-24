@@ -606,6 +606,25 @@ return {
       j_charcuterie_tsunami = {
         name = "Tsunami",
         text = {"If number of scored cards is {C:attention}even{},","gain {X:mult,C:white}X#1#{} Mult relative to the","{C:attention}combined{} ranks of scored cards","{C:inactive,S:0.7}(Currently {X:mult,C:white,S:0.7}X#2#{C:inactive,S:0.7}.)"}
+      },
+      j_charcuterie_ferocious_grin = {
+        name = "Ferocious Grin",
+        text = {"Played {C:attention}face{} cards","give {C:mult}+#1#{} Mult","when scored"},
+        unlock = {"Overclock","{C:attention}Smiley Face{}"}
+      },
+      j_charcuterie_magic_wand = {
+        name = "Magic Wand",
+        text = {"When blind {C:attention}selected{}","create a {C:spectral}Spectral{} card","{C:inactive}(Must have room){}"},
+        unlock = {"Overclock {C:attention}Cartomancer{}"}
+      },
+      j_charcuterie_sidekick = {
+        name = "Sidekick",
+        text = {"Gains {X:chips,C:white}X#1#{} Chips when","a {C:attention}2{} is scored","{C:inactive}(Currently {C:chips}+#2#{}{C:inactive},{X:chips,C:white}X#3#{}{C:inactive}Chips){}"}
+      },
+      j_charcuterie_rigged_ballot = {
+        name = "Rigged Ballot",
+        text = {"Retrigger the {C:attention}first{} and {C:attention}last{}","scored cards {C:attention}#1# to #2#{}","additional times"},
+        unlock = {"Overclock {C:attention}Hanging Chad{}"}
       }
 
     },
@@ -628,6 +647,10 @@ return {
       char_txt_immobile = {
         name = "Immobile",
         text = {"This card is unaffected by","{C:attention}any{} changes to its values","{C:inactive,S:0.5}(Charcuterie Only){}"}
+      },
+      char_txt_oc = {
+        name = "Overclocked!",
+        text = {"This card is an enhanced version","of a vanilla joker,","granting it boosts it","otherwise would not have"}
       },
 
 

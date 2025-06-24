@@ -3,6 +3,7 @@ local start_run_ref = Game.start_run
 function Game:start_run(args)
   args = args or {}
   G.GAME.Risk = 0.00
+  CHAR.G.Overclock_Table = {}
   G.GAME.in_run = true
   G.GAME.RISK_LOCK = false
   G.GAME.RISK_RATE = 1

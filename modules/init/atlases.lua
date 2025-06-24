@@ -4,6 +4,12 @@ CHAR.G.jokeratlas = SMODS.Atlas({
 	px = 71,
 	py = 95,
 })
+CHAR.G.overclockedatlas = SMODS.Atlas({
+	key = "overclockedatlas",
+	path = "overclockedatlas.png",
+	px = 71,
+	py = 95,
+})
 
 CHAR.G.planetatlas = SMODS.Atlas({
 	key = "planetatlas",
