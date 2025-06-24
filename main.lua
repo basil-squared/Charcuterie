@@ -11,6 +11,7 @@ assert(SMODS.load_file("src/blinds.lua"))()
 assert(SMODS.load_file("src/utils.lua"))()
 assert(SMODS.load_file("src/risk.lua"))()
 assert(SMODS.load_file("src/ui.lua"))()
+assert(SMODS.load_file("src/backs.lua"))()
 local chrono_lc = SMODS.Atlas({
 	key = "chrono_lc",
 	path = "chrono_lc.png",
