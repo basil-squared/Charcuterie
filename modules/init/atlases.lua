@@ -35,3 +35,17 @@ ASPL.G.deckatlas = SMODS.Atlas {
 	px= 71,
 	py = 95,
 }
+
+ASPL.G.boosteratlas = SMODS.Atlas {
+	key = "booster_atlas",
+	path = "boosteratlas.png",
+	px=71,
+	py=95,
+}
+
+ASPL.G.voucheratlas = SMODS.Atlas {
+	key = "voucher_atlas",
+	path = "realvoucheratlas.png",
+	px=71,
+	py=95,
+}
