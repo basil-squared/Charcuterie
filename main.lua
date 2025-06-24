@@ -3,6 +3,7 @@
 SMODS.current_mod.optional_features = {
 	cardareas = {
 		unscored = true,
+		retrigger_joker = true,
 	},
 }
 to_big = to_big or function(x) return x end -- NOTE: Talisman Compatibility
