@@ -84,7 +84,7 @@ SMODS.Joker {
   end,
 
   calculate = function(self, card, context)
-    if context.post_trigger then
+    if context.joker_main then
       return {
         message = "THE J. ",
         xmult = (card.ability.extra.xmult * #G.jokers.cards)
@@ -178,6 +178,7 @@ SMODS.Joker {
     extra = { jokplus = 0 }
   },
   pos = { x = 9, y = 0 },
+  soul_pos = { x = 10, y = 0 },
   rarity = 4,
   loc_vars = function(self, info_queue, card)
     return {
@@ -211,7 +212,7 @@ SMODS.Joker {
 SMODS.Joker {
   key = "virtuous",
   atlas = jokeratlas.key,
-  pos = { x = 10, y = 0 },
+  pos = { x = 11, y = 0 },
   loc_txt = {
     name = "Virutous Joker",
     text = { "Awards {C:attention}$1{} per {C:astropulvis_purified}Purified{} card",
