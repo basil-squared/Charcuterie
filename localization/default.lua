@@ -104,6 +104,22 @@ return {
         name = "The Sword",
         text = {"Play only one hand and","start with 0 discards"}
       },
+      bl_charcuterie_bighead = {
+        name = "The Arrhythmia",
+        text = {"Cannot play a hand","containing Hearts"}
+      },
+      bl_charcuterie_biggerhead = {
+        name = "The Asystole",
+        text = {"Permanently disable all played cards","if hand contains Hearts"}
+      },
+      bl_charcuterie_bigwindow = {
+        name = "The Gate",
+        text = {"Cannot play a hand","containing Diamonds"}
+      },
+      bl_charcuterie_biggerwindow = {
+        name = "The Skylight",
+        text = {"Permanently disable all played cards","if hand contains Diamonds"}
+      },
       bl_charcuterie_small_t2 = {
         name = "Small Blind"
 
@@ -175,6 +191,10 @@ return {
       m_stone = {
         name = "Stone Card",
         text = {"{C:chips}+50{} Chips","{C:inactive}Suitless{} and {C:attention}Rankless{}"}
+      },
+      m_charcuterie_arc = {
+        name = "Arc Card",
+        text = {"when played,","{C:green}#1# in #2#{} chance to","{C:attention}retrigger{} the","played card to the","{C:attention}right{} of this card {C:attention}thrice{}"}
       }
     },
     Joker = {
