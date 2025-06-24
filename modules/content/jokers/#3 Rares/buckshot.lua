@@ -2,7 +2,7 @@ SMODS.Joker {
     key = "buckshot",
     atlas = CHAR.G.jokeratlas.key,
     pos = {x = 53,y=0},
-    rarity = 2,
+    rarity = 3,
     config = {extra = {odds = 5, repetitions = 2}},
     loc_vars = function(self,info_queue,card)
         return {vars = {(G.GAME.probabilities.normal or 1),card.ability.extra.odds}}
@@ -12,7 +12,7 @@ SMODS.Joker {
             
                 if context.repetition and context.cardarea == G.play then
                     return {
-                        repetitions = 2
+                        repetitions = card.ability.extra.repetitions
                     }
                 end
                 

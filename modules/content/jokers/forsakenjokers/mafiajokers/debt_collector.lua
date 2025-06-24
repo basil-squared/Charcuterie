@@ -10,7 +10,7 @@ SMODS.Joker {
 			if G and G.jokers and G.jokers.cards then
 				for _, joker in ipairs(G.jokers.cards) do
                 
-                sell_cost = sell_cost + joker.sell_cost
+                sell_cost = sell_cost + to_big(joker.sell_cost)
                 
             	end
 			end
@@ -25,11 +25,11 @@ SMODS.Joker {
             local sell_cost = 0
             for _, joker in ipairs(G.jokers.cards) do
                 
-                sell_cost = sell_cost + joker.sell_cost
-                
+                sell_cost = sell_cost + to_big(joker.sell_cost)
+
             end
 			sell_cost = sell_cost /2
-			if G.GAME.dollars > 0 then
+			if to_big(G.GAME.dollars) > to_big(0) then
 				return round_number(sell_cost,0)
 			end
 			

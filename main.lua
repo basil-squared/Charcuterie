@@ -4,7 +4,7 @@ SMODS.current_mod.optional_features = {
     retrigger_joker = true,
   },
 }
-to_big = to_big or function(x) return x end -- NOTE: Talisman Compatibility
+
 CHAR = {}
 CHAR.FUNC = {}
 CHAR.G = {}

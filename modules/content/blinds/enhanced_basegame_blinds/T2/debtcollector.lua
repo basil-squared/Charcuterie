@@ -17,7 +17,7 @@ SMODS.Blind {
         end
 
 
-        if G.GAME.dollars < 0 and not G.GAME.blind.config.blind.config.extra.has_activated then
+        if to_big(G.GAME.dollars) < to_big(0) and not G.GAME.blind.config.blind.config.extra.has_activated then
             play_sound('charcuterie_bad_sound')
             G.GAME.blind.chips =  G.GAME.blind.chips * 2
             G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)

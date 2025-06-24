@@ -2,6 +2,7 @@ SMODS.Joker {
     key = 'prank',
     atlas = CHAR.G.jokeratlas.key,
     pos = {x = 51,y=0},
+    rarity = 2,
     config = {extra = {xmult = 1.2}},
     loc_vars = function(self,info_queue,card)
         info_queue[#info_queue+1] = G.P_CENTERS.m_charcuterie_arc

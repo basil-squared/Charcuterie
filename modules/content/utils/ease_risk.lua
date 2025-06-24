@@ -1,7 +1,7 @@
 function CHAR.FUNC.ease_risk(mod, instant)
   local Risk = G.GAME.Risk or 0
   local risk_UI = assert(G.HUD:get_UIE_by_ID("charcuterie_risk_UI_shit")) -- assert this because if this returns nil, something has gone terribly wrong.
-
+  mod = mod * (G.GAME.RISK_RATE or 1)
 
   local function _mod(mod)
     -- Use the LOCAL Risk variable for calculations

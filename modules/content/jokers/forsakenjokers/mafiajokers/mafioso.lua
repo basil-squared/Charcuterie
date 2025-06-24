@@ -49,7 +49,7 @@ SMODS.Joker {
 			end
 			card.ability.extra.total_xmult = (card.ability.extra.bxm) + (card.ability.extra.xmult_gained * #mafiajokers)
 		end
-		if context.joker_main and G and G.GAME and G.GAME.dollars > 0  then
+		if context.joker_main and G and G.GAME and to_big(G.GAME.dollars) > to_big(0) then
 			return {
 				xmult = card.ability.extra.total_xmult
 			}
