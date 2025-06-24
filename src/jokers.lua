@@ -231,6 +231,7 @@ SMODS.Joker {
   key = "estrogen",
   atlas = jokeratlas.key,
   pos = { x = 11, y = 0 },
+  blueprint_compat = false,
   loc_txt = {
     name = "Estrogen",
     text = { "All face cards are considered {C:attention}Queens{}." }
@@ -238,4 +239,33 @@ SMODS.Joker {
 
   rarity = 2,
   cost = 5
+}
+
+SMODS.Joker {
+  atlas = jokeratlas.key,
+  pos = {x=0,y=0},
+  key = "haley_comet",
+  config = {extra = {to_generation = 5}},
+  loc_txt = {
+    name = "Haley's Comet",
+    text = {"For every {C:attention}5{} Hands played,","generate 3 {C:dark_edition}Negative{} {C:planet}Planet Cards{} for your", "{C:attention}most played{} hand.", "{S:0.7,C:inactive}(currently #1#){}"}
+
+  },
+
+  calculate = function(self,card,context)
+    if context.joker_main then 
+      if self.config.extra.to_generation ==  0 then
+        -- Spawn logic here
+        return {
+          message = "Reset"
+        }
+      else
+        self.config.extra.to_generation = self.config.extra.to_generation -1
+        return { 
+          message = tostring(self.config.extra.to_generation) .. " Remaining"
+        }
+      end
+    end
+  end
+  
 }
