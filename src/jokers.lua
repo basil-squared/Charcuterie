@@ -174,6 +174,7 @@ SMODS.Joker {
       "{S:0.6,C:inactive}Currently +#1# Joker Slots.{}" },
   },
   atlas = jokeratlas.key,
+  blueprint_compat = false,
   config = {
     extra = { jokplus = 0 }
   },
@@ -224,4 +225,17 @@ SMODS.Joker {
   cost = 5,
   calculate = function(self, card, context)
   end
+}
+
+SMODS.Joker {
+  key = "estrogen",
+  atlas = jokeratlas.key,
+  pos = { x = 11, y = 0 },
+  loc_txt = {
+    name = "Estrogen",
+    text = { "All face cards are considered {C:attention}Queens{}." }
+  },
+
+  rarity = 2,
+  cost = 5
 }
