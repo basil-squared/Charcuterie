@@ -1,5 +1,6 @@
 local smods_has_no_suit_ref = SMODS.has_no_suit
 local smods_get_id_ref = SMODS.get_id
+local start_run_ref = Game.start_run
 function SMODS.has_no_suit(card)
 	if G.GAME.blind then
 		if G.GAME.blind.config.blind.key == "bl_astropulvis_the_dip" then
@@ -23,17 +24,22 @@ function SMODS.get_id(self)
 		return smods_get_id_ref(self)
 	end
 end
-
+function Game:start_run(args)
+	args = args or {}
+	G.GAME.Risk = 0.01
+	return start_run_ref(self,args)
+end
 -- Globals dont require declaration? what the fuck?
 --
 function ASPL.FUNC.ease_risk(mod, instant)
+	local Risk = G.GAME.Risk or 0
 	local risk_UI = G.HUD:get_UIE_by_ID("astropulvis_risk_UI_shit")
 	local function _mod(mod)
-		if Risk + (mod / 100) > 1 then
+		if G and G.GAME and G.GAME.Risk or 0  + (mod / 100) > 1 then
 			Risk = 1
 			Percentage_Risk = 100
 			Risk_manip_table.disp_risk = Percentage_Risk .. "%"
-			Risk_manip_table.risk = Risk
+			Risk_manip_table.risk = G and G.GAME and G.GAME.Risk or 0
 			risk_UI.config.object:update()
 			G.HUD:recalculate()
 			attention_text({
@@ -48,7 +54,7 @@ function ASPL.FUNC.ease_risk(mod, instant)
 			return
 		end
 
-		if Risk + (mod / 100) < 0 then
+		if G and G.GAME and G.GAME.Risk or 0  + (mod / 100) < 0 then
 			Risk = 0
 			Percentage_Risk = 0
 			Risk_manip_table.disp_risk = Percentage_Risk .. "%"
