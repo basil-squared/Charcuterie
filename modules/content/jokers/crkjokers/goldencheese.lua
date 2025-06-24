@@ -6,7 +6,7 @@ SMODS.Joker {
         name = "Golden Cheese Cookie",
         text = {"Earn {X:attention,C:white}X2{} dollars","{S:0.5,C:inactive}'Divine Radiance!'"}
     },
-    rarity = 4,
+    rarity = "astropulvis_ancient",
     cost = 10,
     blueprint_compat = false,
     calculate = function(self,context,card)
