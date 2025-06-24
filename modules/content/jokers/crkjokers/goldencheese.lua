@@ -4,7 +4,7 @@ SMODS.Joker {
     pos = {x =21, y = 0  },
     loc_txt = {
         name = "Golden Cheese Cookie",
-        text = {"Earn {C:attention}double the money!{}","{S:0.5,C:inactive}'Divine Radiance!'"}
+        text = {"Earn {X:attention,C:white}X2{} dollars","{S:0.5,C:inactive}'Divine Radiance!'"}
     },
     rarity = 4,
     cost = 10,

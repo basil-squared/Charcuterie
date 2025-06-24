@@ -17,6 +17,7 @@ SMODS.Joker {
 	key = "schematic",
 	atlas = ASPL.G.jokeratlas.key,
 	pos = {x = 30,y=0},
+	blueprint_compat = true,
 	loc_txt = {
 		name = "Schematic",
 		text = {"Copies ability of","{C:attention}Joker{} to the left"}
@@ -53,7 +54,7 @@ SMODS.Joker {
 	
 		
 		local left_joker = G.jokers.cards[get_joker_to_left(G.jokers.cards,card)]
-		print(get_joker_to_left(G.jokers.cards,card))
+
 		
 		return SMODS.blueprint_effect(card,left_joker,context)
 		
