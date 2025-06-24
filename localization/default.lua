@@ -398,6 +398,20 @@ return {
       j_charcuterie_bunny = {
         name = "Bunny",
         text = {"Sell for a {C:green}#1# in #2#{} chance to","create #3# {C:dark_edition}Negative{} Bunnies."}
+      },
+      j_charcuterie_mutated = {
+        name = "Mutated Joker",
+        text = {"played {C:charcuterie_unstable}Unstable Cards{}","have a {C:green}#1#%{} chance of giving {C:attention}$2{}when played","but now has a {C:red}#2#%{} chance of destroying itself."}
+      },
+      j_charcuterie_cursed_die = {
+        name = "Cursed Die",
+        text = {"Quadruples all {C:attention}listed",
+                    "{C:green,E:1,S:1.1}probabilities",
+                    "{C:inactive}(ex: {C:green}1 in 4{C:inactive} -> {C:green}4 in 4{C:inactive})","but locks {C:red}Risk{} to {C:attention}Max{}"}
+      },
+      j_charcuterie_chance = {
+        name = "Chance",
+        text = {"{C:green}#1# in #2#{} chance to give {C:attention}$#3#{}","{C:green}#1# in #4#{} chance to {C:red}remove{} {C:chips}#5#{} Chips","{C:green}#1# in #6#{} chance to give {X:mult,C:white}X#6#{} Mult","and {C:attention}$#6#{}"}
       }
     },
     Other = {
