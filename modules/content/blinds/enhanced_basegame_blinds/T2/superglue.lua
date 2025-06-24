@@ -1,10 +1,11 @@
 sg = SMODS.Blind {
     key = "bigmanacle",
 
-    boss = {min = 8, max =16},
+    boss = {min = 800000, max =16},
     boss_colour = HEX("ffff96"),
     atlas = CHAR.G.blindatlas.key,
-    pos = {x=0,y=16}
+    pos = {x=0,y=16},
+    mult = 3
 
 }
 

@@ -225,7 +225,7 @@ function get_new_boss()
       G.GAME.bosses_used[k] = 0
     end
   end
-  --This is how nostalgic deck replaces the boss blinds with Nostalgic versions
+
   local bl = gnb()
   local bl_key = string.sub(bl, 4)
   local tier2blinds = {
@@ -234,6 +234,7 @@ function get_new_boss()
     wall = true,
     hook = true,
     arm = true,
+    needle = true,
 
   }
   local tier3blinds = {
@@ -242,9 +243,10 @@ function get_new_boss()
     manacle = true,
     hook = true,
     arm = true,
+    needle = true,
   }
-  if G and G.GAME and G.GAME.round_resets.ante > 8  then
-    if G and G.GAME and G.GAME.round_resets.ante > 16 then
+  if G and G.GAME and G.GAME.round_resets.ante >= 8  then
+    if G and G.GAME and G.GAME.round_resets.ante >= 16 then
       if tier3blinds[bl_key] then
         return "bl_charcuterie_bigger" .. bl_key
       end
@@ -257,4 +259,38 @@ function get_new_boss()
 
   end
   return bl
+end
+
+function get_new_small()
+
+  if G and G.GAME and G.GAME.round_resets.ante > 8  then
+
+
+
+    if G and G.GAME and G.GAME.round_resets.ante > 16 then
+      return 'bl_charcuterie_small_t3'
+    end
+    return 'bl_charcuterie_small_t2'
+  end
+  return 'bl_small'
+
+
+
+
+
+
+
+end
+
+function get_new_big()
+  if G and G.GAME and G.GAME.round_resets.ante > 8  then
+
+
+
+    if G and G.GAME and G.GAME.round_resets.ante > 16 then
+      return 'bl_charcuterie_big_t3'
+    end
+    return 'bl_charcuterie_big_t2'
+  end
+  return 'bl_big'
 end

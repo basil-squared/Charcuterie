@@ -34,7 +34,7 @@ return {
       },
       bl_charcuterie_bigtooth = {
         name = "The Debt Collector",
-        text = { "Lose $1 per card played. If money is less than $0, double blind requirement" }
+        text = { "Lose $1 per card played.", "If money is less than $0,"," double blind requirement" }
       },
       bl_charcuterie_dip = {
         name = "The Dip",
@@ -90,12 +90,53 @@ return {
       },
       bl_charcuterie_biggertooth = {
         name = "The Loan Shark",
-        text = {"Lose $2 per hand played. If money is less than 0, Square blind requirement."}
+        text = {"Lose $2 per hand played.", "If money is less than 0, Square blind requirement."}
       },
       bl_charcuterie_biggermanacle = {
         name = "The Chipper",
         text = { "-5 Hand Size" }
       },
+      bl_charcuterie_bigneedle = {
+        name = "The Thread",
+        text = {"Play only one hand, larger blind"}
+      },
+      bl_charcuterie_biggerneedle =  {
+        name = "The Sword",
+        text = {"Play only one hand and","start with 0 discards"}
+      },
+      bl_charcuterie_small_t2 = {
+        name = "Small Blind"
+
+      },
+      bl_charcuterie_small_t3 = {
+        name = "Small Blind"
+
+      },
+      bl_charcuterie_big_t2 = {
+        name = "Big Blind"
+
+      },
+      bl_charcuterie_big_t3 = {
+        name = "Big Blind"
+
+      }
+    },
+    Partner = {
+      pnr_charcuterie_mini_pcb = {
+        name = "Lil' PCB",
+        text = {
+          "{C:green}#1# in #2#{} chance to",
+          "retrigger either the {C:attention} leftmost",
+          "or {C:attention}rightmost{} Joker"
+        }
+      },
+      pnr_charcuterie_mini_stellar = {
+        name = "Explorer",
+        text = {
+          "{C:charcuterie_galactical}Galactical{} cards give",
+          "{X:mult,C:white}X#1#{} Mult"
+        }
+      }
     },
     Edition = {
       e_charcuterie_bleached = {
