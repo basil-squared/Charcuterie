@@ -11,4 +11,17 @@ SMODS.Consumable({
 	loc_vars = function(self, info_queue, card)
 		return { vars = { tostring((1 - (G.GAME.Risk or 0) ) * 100), tostring((G.GAME.Risk or 0) * 100) } }
 	end,
+
+	use = function(self,card,area,copier)
+		if ASPL.FUNC.negative_event_proc(G.GAME.Risk or 0) == false  then
+			ease_dollars(-G.GAME.dollars)
+			-- #TODO: put the logic here
+		else
+			ease_dollars(G.GAME.dollars or 0)
+		end
+	end,
+	can_use = function(self,card)
+		return true
+	end
+
 })
