@@ -1,15 +1,9 @@
 SMODS.Consumable({
-	key = "ritual_juxt",
+	key = "phase",
 	set = "ritual",
 	atlas = ASPL.G.ritualatlas.key,
 	pos = { x = 2, y = 0 },
-	loc_txt = {
-		name = "Phase",
-		text = {
-			"{C:mult} Destroy{} the {C:attention}Leftmost{} or {C:attention}Rightmost{} Joker.",
-			"Add {C:dark_edition}Negative{} to the other.",
-		},
-	},
+
 	use = function(self, card, area, copier)
 		local coin_flip = pseudorandom("two-face")
 

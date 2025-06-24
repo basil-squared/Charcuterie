@@ -1,5 +1,3 @@
-
-
 local plg_lc = SMODS.Atlas({
 	key = "plg_lc",
 	path = "plg_lc.png",
@@ -13,7 +11,6 @@ local plg_hc = SMODS.Atlas({
 	px = 71,
 	py = 95,
 })
-
 
 SMODS.DeckSkin({
 	key = "perfectlightgaia",

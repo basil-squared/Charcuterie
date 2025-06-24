@@ -1,12 +1,9 @@
 SMODS.Consumable {
     set = "ritual",
-    key = "ritual_roulette",
+    key = "roulette",
     atlas = ASPL.G.ritualatlas.key,
     pos = {x = 6, y=0 },
-    loc_txt = {
-        name = "Roulette",
-        text = {"{C:green}#1#%{} chance to apply"," An {C:enhanced}Edition{} to a random joker,","{C:red}#2#%{} chance to backfire,","{C:red}removing{} an edition from a random joker."},
-    },
+
     loc_vars = function(self, info_queue, card)
 		return { vars = { tostring((1 - (G.GAME.Risk or 0) ) * 100), tostring((G.GAME.Risk or 0) * 100) } }
 	end,

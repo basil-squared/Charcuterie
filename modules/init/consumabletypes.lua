@@ -13,7 +13,7 @@ SMODS.ConsumableType({
 })
 
 SMODS.ConsumableType({
-	key = "element",
+	key = "Element",
 	primary_colour = HEX("000000"),
 	secondary_colour = HEX("000000"),
 	loc_txt = {

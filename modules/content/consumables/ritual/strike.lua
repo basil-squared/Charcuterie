@@ -3,10 +3,7 @@ SMODS.Consumable({
 	set = "ritual",
 	atlas = ASPL.G.ritualatlas.key,
 	pos = { x = 3, y = 0 },
-	loc_txt = {
-		name = "Strike",
-		text = { "{C:red}Curse{} your hand.", "Earn {C:attention}$5{} for every card Cursed." },
-	},
+
 
 	use = function(self, card, area, copier)
 		for i = 1, #G.hand.cards do
