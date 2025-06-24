@@ -249,7 +249,7 @@ return {
       },
       bl_charcuterie_lucid_paradise = {
         name = "LUCID PARADISE",
-        text = {"IM ALREADY IN YOUR MIND (INCREDIBLY UNFINISHED)"}
+        text = {"IM ALREADY IN YOUR MIND (INCREDIBLY UNFINISHED, NOT EVEN OBTAINABLE WITHOUT DEBUG)"}
       }
     },
     Partner = {
