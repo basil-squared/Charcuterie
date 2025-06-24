@@ -47,8 +47,8 @@ function ASPL.FUNC.RequireFolderRecursive(path)
 end
 
 
-
-ASPL.FUNC.RequireFolderRecursive("modules")
+ASPL.FUNC.RequireFolder("modules/init/")
+ASPL.FUNC.RequireFolderRecursive("modules/content")
 
 
 --[[
