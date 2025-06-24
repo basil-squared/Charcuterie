@@ -1,0 +1,13 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 4
+
+[[patches]]
+[patches.pattern]
+match_indent = true
+target = 'functions/common_events.lua'
+pattern = '''if amt > 0 or amt < 0 then'''
+position = 'at'
+payload = '''if to_big(amt) ~= to_big(0) then'''
+
