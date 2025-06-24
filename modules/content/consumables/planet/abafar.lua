@@ -20,7 +20,7 @@ SMODS.Consumable {
 				colours = {
 					(
 							to_big(G.GAME.hands[hand].level) == to_big(1) and G.C.UI.TEXT_DARK
-									or G.C.HAND_LEVELS[to_number(to_big(math.min(7, G.GAME.hands[hand].level)))]
+									or G.C.HAND_LEVELS[to_big(math.min(7, G.GAME.hands[hand].level))]
 					),
 				},
 			},

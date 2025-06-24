@@ -45,8 +45,8 @@ SMODS.Consumable({
 	can_use = function(self, card)
 		if #G.hand.highlighted <= 2 then
 			if
-			(G.hand.highlighted[1] and SMODS.has_enhancement(G.hand.highlighted[2], "m_charcuterie_cursed"))
-							or (G.hand.highlighted[2] and SMODS.has_enhancement(G.hand.highlighted[i], "m_charcuterie_cursed"))
+			(G.hand.highlighted[1] and SMODS.has_enhancement(G.hand.highlighted[1], "m_charcuterie_cursed"))
+							or (G.hand.highlighted[2] and SMODS.has_enhancement(G.hand.highlighted[2], "m_charcuterie_cursed"))
 			then
 				return #G.jokers.cards > 0
 			end

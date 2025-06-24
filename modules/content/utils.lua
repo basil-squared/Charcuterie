@@ -4,6 +4,7 @@ local smods_get_id_ref = SMODS.get_id
 local start_run_ref = Game.start_run
 local ease_ante_ref = ease_ante
 local ease_dollars_ref = ease_dollars
+---@diagnostic disable-next-line: duplicate-set-field
 function SMODS.has_no_suit(card)
   if card.edition and card.edition.type == "charcuterie_bleached" then
     return true
@@ -33,6 +34,7 @@ SMODS.Gradient({
 })
 
 
+---@diagnostic disable-next-line: duplicate-set-field
 function Game:start_run(args)
   args = args or {}
   G.GAME.Risk = 0.00
@@ -45,7 +47,8 @@ end
 --
 function CHAR.FUNC.ease_risk(mod, instant)
   local Risk = G.GAME.Risk or 0
-  local risk_UI = G.HUD:get_UIE_by_ID("charcuterie_risk_UI_shit")
+  local risk_UI = assert(G.HUD:get_UIE_by_ID("charcuterie_risk_UI_shit")) -- assert this because if this returns nil, something has gone terribly wrong.
+
 
   local function _mod(mod)
     -- Use the LOCAL Risk variable for calculations
@@ -210,6 +213,7 @@ CHAR.FUNC.level_up_hand = function(card, hand_key, instant, amount)
         { mult = 0, chips = 0, handname = '', level = '' })
   end
 end
+---@diagnostic disable-next-line: duplicate-set-field
 function SMODS.has_no_rank(card)
   if card.seal and card.seal == 'charcuterie_obscure' then
     return true
@@ -227,6 +231,7 @@ function get_new_boss()
   end
 
   local bl = gnb()
+---@diagnostic disable-next-line: param-type-mismatch
   local bl_key = string.sub(bl, 4)
   local tier2blinds = {
     tooth = true,
