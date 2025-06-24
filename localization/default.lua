@@ -247,6 +247,10 @@ return {
         name = "The Monument",
         text = {"All suits used this ante are debuffed"}
       },
+      bl_charcuterie_lucid_paradise = {
+        name = "LUCID PARADISE",
+        text = {"IM ALREADY IN YOUR MIND"}
+      }
     },
     Partner = {
       pnr_charcuterie_mini_pcb = {

@@ -10,7 +10,7 @@ CHAR.FUNC = {}
 CHAR.G = {}
 
 CHAR.G.MODPATH = SMODS.current_mod.path
-
+CHAR.G.lyrics = {curr_lyric = "test"}
 SMODS.Atlas {
   key = "modicon",
   path = "modicon.png",
