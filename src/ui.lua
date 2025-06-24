@@ -4,12 +4,12 @@ Risk is a mechanic for astropulvis that I want to add, but problem is, I have no
 
   ]]
 difficulty_atlas = SMODS.Atlas({
-	key = "diff_atlas",
+	key = "diffatlas",
 	path = "diff_atlas.png",
 	px = 128,
 	py = 128,
 })
-diff_atlas_vanilla = G.ASSET_ATLAS["astropulvia_diff_atlas"]
+diff_atlas_vanilla = G.ASSET_ATLAS["astropulvis_diffatlas"]
 local original_hud = create_UIBox_HUD
 local original_blind_hud = create_UIBox_blind_choice
 -- ALSOOOOO... make globals start with uppercase letters. Good practice or whatever.
@@ -129,12 +129,9 @@ function diff_test_func()
 						},
 					},
 					{
-						n = G.UIT.T,
+						n = G.UIT.O,
 						config = {
-							text = "test 2",
-							scale = 0.2,
-							colour = G.C.UI.TEXT_LIGHT,
-							id = "astropulvis_test_blind_txt2",
+							object = Sprite(0, 0, 0.7, 0.7, G.ASSET_ATLAS["astropulvis_diffatlas"], { x = 0, y = 0 }),
 						},
 					},
 				},
