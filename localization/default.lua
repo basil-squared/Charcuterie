@@ -249,7 +249,7 @@ return {
       },
       bl_charcuterie_lucid_paradise = {
         name = "LUCID PARADISE",
-        text = {"IM ALREADY IN YOUR MIND"}
+        text = {"IM ALREADY IN YOUR MIND (INCREDIBLY UNFINISHED)"}
       }
     },
     Partner = {
@@ -330,7 +330,7 @@ return {
       },
       j_charcuterie_crazyeight = {
         name = "Crazy 8",
-        text = { "For every {C:attention}8{} Played,", "grants {C:white,X:mult}x#1#{} Mult." }
+        text = {"If there are at least {C:attention}#1#{} Eights","in your {C:attention}Full Deck{}","{X:mult,C:white}X#2#{} Mult for each","Eight in your {C:attention}Full Deck","{C:inactive,S:0.5}(currently {}{X:mult,C:white,S:0.5}X#3#{}{C:inactive,S:0.5})"}
       },
       j_charcuterie_estrogen = {
         name = "Estrogen",
@@ -598,6 +598,14 @@ return {
       j_charcuterie_dubious_merchant = {
         name = "Con Artist",
         text = {"Gives anywhere from ","{C:attention}#1#{} to {C:attention}#2#{}","card slots in shop","{C:inactive}Resets before shop{}","{C:inactive,S:0.7}(Currently {C:attention,S:0.7}#3#{C:inactive,S:0.7}.)"}
+      },
+      j_charcuterie_tidal_wave = {
+        name = "Tidal Wave",
+        text = {"If number of scored cards is {C:attention}odd{},","gain {X:mult,C:white}X#1#{} Mult relative to the","{C:attention}combined{} ranks of scored cards","{C:inactive,S:0.7}(Currently {X:mult,C:white,S:0.7}X#2#{C:inactive,S:0.7}.)"}
+      },
+      j_charcuterie_tsunami = {
+        name = "Tsunami",
+        text = {"If number of scored cards is {C:attention}even{},","gain {X:mult,C:white}X#1#{} Mult relative to the","{C:attention}combined{} ranks of scored cards","{C:inactive,S:0.7}(Currently {X:mult,C:white,S:0.7}X#2#{C:inactive,S:0.7}.)"}
       }
 
     },

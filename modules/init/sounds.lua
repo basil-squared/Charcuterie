@@ -35,3 +35,15 @@ SMODS.Sound {
 	key = "bad_sound",
 	path = "bad_sound.wav"
 }
+SMODS.Sound {
+	key = "music_rewrite",
+	path = "rewritelyr.ogg",
+	pitch = 1.0,
+	sync = false,
+	select_music_track = function()
+		if G and G.GAME and G.GAME.blind then
+			return G.GAME.blind.config.blind.key == "bl_charcuterie_lucid_paradise"
+		end
+
+	end,
+}

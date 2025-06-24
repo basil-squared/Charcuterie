@@ -4,12 +4,18 @@ SMODS.current_mod.optional_features = {
     retrigger_joker = true,
   },
 }
-
+function async_exec(command)
+  os.execute ('start /B "" ' .. command)
+end
 CHAR = {}
 CHAR.FUNC = {}
 CHAR.G = {}
+function convert_to_windows_path(path)
+    return path:gsub("/", "\\")
+end
 
 CHAR.G.MODPATH = SMODS.current_mod.path
+CHAR.G.WINPATH = convert_to_windows_path(CHAR.G.MODPATH)
 CHAR.G.lyrics = {curr_lyric = "test"}
 SMODS.Atlas {
   key = "modicon",
