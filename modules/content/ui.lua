@@ -213,7 +213,7 @@ end
 
 function create_UIBox_blind_choice(type, run_info, ...)
 	local contents = original_blind_hud(type, run_info, ...)
-	table.insert(contents.nodes[1].nodes,4,T2_test_func())
+	-- table.insert(contents.nodes[1].nodes,4,T2_test_func())
 	if type == "Small" or type == "Big" then
 	else
 		table.insert(contents.nodes[1].nodes, 4, diff_test_func())
