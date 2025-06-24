@@ -3,6 +3,7 @@ SMODS.Consumable {
 	set = "Planet",
 	atlas = ASPL.G.planetatlas.key,
 	pos = {x=2,y=0},
+	config = {hand_type = 'astropulvis_grayhouse'},
 	use = function(self,card,area,copier)
 		ASPL.FUNC.level_up_hand(card,'astropulvis_grayhouse',false,1)
 	end,

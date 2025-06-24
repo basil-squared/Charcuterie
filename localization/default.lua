@@ -268,7 +268,7 @@ return {
           "not truly random"
         }
       },
-      astropulvis_obscured_seal = {
+      astropulvis_obscure_seal = {
         name = "Obscured Seal",
         text = {"The card this is applied to","is {C:attention}Rankless{}"}
       },
@@ -278,22 +278,34 @@ return {
       },
       astropulvis_brilliant_seal = {
         name = "Brilliant Seal",
-        text = {"Prevents the enhancement of this card","from being changed {C:attention}once{}"}
+        text = {"{C:white,X:chips}X#1#{} Chips if card is {C:enhanced}Enhanced{}."}
       }
 
     },
     Planet = {
       c_astropulvis_arrakis = {
         name = "Arrakis",
-        text = {"Placeholder"}
+        text = {"(lvl. #1#) Level up",
+                "{C:attention}#2#{}",
+                "{C:mult}+#3#{} Mult and",
+                "{C:chips}+#4#{} chips"
+        }
       },
       c_astropulvis_abafar = {
         name = "Abafar",
-        text = {"Placeholder"}
+        text = {"(lvl. #1#) Level up",
+                "{C:attention}#2#{}",
+                "{C:mult}+#3#{} Mult and",
+                "{C:chips}+#4#{} chips"
+        }
       },
       c_astropulvis_theia = {
         name = "Theia",
-        text = {"Placeholder"}
+        text = {"(lvl. #1#) Level up",
+                "{C:attention}#2#{}",
+                "{C:mult}+#3#{} Mult and",
+                "{C:chips}+#4#{} chips"
+        }
       }
     },
     Spectral = {},
@@ -404,7 +416,7 @@ return {
       astropulvis_bleached = "Bleached",
       astropulvis_brilliant_seal = "Brilliant Seal",
       astropulvis_lime_seal = "Lime Seal",
-      astropulvis_obscured_seal = "Obscured Seal"
+      astropulvis_obscure_seal = "Obscured Seal"
     },
     poker_hands = {
       ['astropulvis_grayflush'] = "Grayscale Flush",
