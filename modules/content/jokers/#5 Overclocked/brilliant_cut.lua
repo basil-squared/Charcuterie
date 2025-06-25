@@ -1,6 +1,6 @@
 SMODS.Joker {
 	key = "brilliant_cut",
-	atlas = CHAR.G.overclockatlas.key,
+	atlas = CHAR.G.overclockedatlas.key,
 	pos = {X=11,y=0},
 	rarity = "charcuterie_overclocked",
 	config = {extra = {xdollars = 1.2}},
