@@ -11,8 +11,8 @@ SMODS.Joker {
 	unlocked = false,
 	calculate = function(self,card,context)
 		if context.individual and context.cardarea == G.play then
-			if context.other_card.base.suit == 'Diamonds' then
-				local ret_dollar = to_big(G.GAME.dollars) * to_big(card.ability.extra.xdollars - 1)
+			if context.other_card:is_suit('Diamonds') then
+				local ret_dollar = to_number(to_big(G.GAME.dollars) * to_big(card.ability.extra.xdollars - 1))
 				return {
 					dollars = ret_dollar
 				}
