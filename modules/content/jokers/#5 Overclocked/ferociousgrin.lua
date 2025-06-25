@@ -19,5 +19,13 @@ SMODS.Joker {
 		end
 		return false
 
+	end,
+	calculate = function(self,card,context)
+		if context.individual and context.cardarea == G.play then
+			if context.other_card:is_face() then
+				return {mult = card.ability.extra.mult}
+
+			end
+		end
 	end
 }

@@ -619,13 +619,34 @@ return {
       },
       j_charcuterie_sidekick = {
         name = "Sidekick",
-        text = {"Gains {X:chips,C:white}X#1#{} Chips when","a {C:attention}2{} is scored","{C:inactive}(Currently {C:chips}+#2#{}{C:inactive},{X:chips,C:white}X#3#{}{C:inactive}Chips){}"}
+        text = {"Gains {X:chips,C:white}X#1#{} Chips when","a {C:attention}2{} is scored","{C:inactive}(Currently {C:chips}+#3#{}{C:inactive},{X:chips,C:white} X#2#{}{C:inactive}Chips){}"}
       },
       j_charcuterie_rigged_ballot = {
         name = "Rigged Ballot",
         text = {"Retrigger the {C:attention}first{} and {C:attention}last{}","scored cards {C:attention}#1# to #2#{}","additional times"},
         unlock = {"Overclock {C:attention}Hanging Chad{}"}
+      },
+      j_charcuterie_brilliant_cut = {
+        name = "Brilliant Cut",
+        text = {"Played {C:diamonds}Diamonds{} give","{C:white,X:money}X#1#{} Dollars","when scored"},
+        unlock = {"Overclock {C:attention}Rough Gem{}"}
+      },
+      j_charcuterie_trilliant_cut = {
+        name = "Trilliant Cut",
+        text = {"Played {C:spades}Spades{} give","{C:chips}+#1#{} Chips","when scored"},
+        unlock = {"Overclock {C:attention}Arrowhead{}"}
+      },
+      j_charcuterie_cushion_cut = {
+        name = "Cushion Cut",
+        text = {"Played {C:clubs}Clubs{} give","{C:mult}+#1#{} Mult","when scored"},
+        unlock = {"Overclock {C:attention}Onyx Agate{}"}
+      },
+      j_charcuterie_heart_cut = {
+        name = "Heart Cut",
+        text = {"Played {C:hearts}Hearts{} have","a {C:green}#1# in #2#{} chance","to give {C:white,X:mult}X#3#{} Mult","when scored"},
+        unlock = {"Overclock {C:attention}Bloodstone{}"}
       }
+
 
     },
     Other = {
@@ -651,6 +672,10 @@ return {
       char_txt_oc = {
         name = "Overclocked!",
         text = {"This card is an enhanced version","of a vanilla joker,","granting it boosts it","otherwise would not have"}
+      },
+      char_txt_ochint_smiley = {
+        name = "Overclockable",
+        text = {"To overclock {C:attention}Smiley Face{}","you must do something","that would otherwise hinder","the card's function..."}
       },
 
 

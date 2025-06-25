@@ -1,6 +1,8 @@
 SMODS.Joker:take_ownership('smiley',
 		{
-
+			loc_vars = function(self,info_queue,card)
+				info_queue[#info_queue+1] = {set = "Other",key = "char_txt_ochint_smiley"}
+			end,
 
 			calculate = function(self, card, context)
 				if context.remove_playing_cards and not context.blueprint then
