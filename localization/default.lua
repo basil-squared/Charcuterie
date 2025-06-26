@@ -677,6 +677,10 @@ return {
         name = "Overclockable",
         text = {"To overclock {C:attention}Smiley Face{}","you must do something","that would otherwise hinder","the card's function..."}
       },
+      char_txt_ochint_mineral = {
+        name = "Overclockable",
+        text = {"To overclock this card","you must {C:attention}Maximize{} it's potential..."}
+      },
 
 
       charcuterie_obscure_seal = {

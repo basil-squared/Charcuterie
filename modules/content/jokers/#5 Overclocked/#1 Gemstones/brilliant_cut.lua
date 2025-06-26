@@ -14,7 +14,10 @@ SMODS.Joker {
 			if context.other_card:is_suit('Diamonds') then
 				local ret_dollar = to_number(to_big(G.GAME.dollars) * to_big(card.ability.extra.xdollars - 1))
 				return {
-					dollars = ret_dollar
+					dollars = ret_dollar,
+					message = "X" .. card.ability.extra.xdollars,
+					colour = G.C.MONEY,
+					remove_default_message = true
 				}
 			end
 		end
