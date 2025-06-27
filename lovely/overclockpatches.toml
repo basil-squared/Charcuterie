@@ -1,0 +1,18 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 4
+
+
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''local last_mult = self.ability.mult'''
+position = 'after'
+match_indent = true
+payload = '''
+    if last_mult >= 25 then
+        CHAR.FUNC.overclock_proc({card=self,key="j_charcuterie_metro_lines"})
+        return {}
+    end
+'''

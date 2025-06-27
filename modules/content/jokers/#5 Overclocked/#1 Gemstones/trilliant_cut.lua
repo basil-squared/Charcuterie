@@ -2,7 +2,7 @@ SMODS.Joker {
 	key = 'trilliant_cut',
 	atlas = CHAR.G.overclockedatlas.key,
 	pos = {x = 12,y=0},
-	config = {extra = {chips = 100}},
+	config = {extra = {chips = 200}},
 	loc_vars = function(self,info_queue,card)
 		info_queue[#info_queue + 1] = {set="Other",key="char_txt_oc"}
 		return {vars = {card.ability.extra.chips}}
@@ -12,8 +12,9 @@ SMODS.Joker {
 	calculate = function(self,card,context)
 		if context.individual and context.cardarea == G.play then
 			if context.other_card:is_suit('Spades') then
+				local curr_chips = to_number(to_big(mult) * to_big((card.ability.extra.chips / 100)))
 				return {
-					chips = card.ability.extra.chips
+					chips = curr_chips
 				}
 			end
 		end

@@ -561,7 +561,7 @@ return {
         text = {"{C:white,X:mult}X#1#{} Mult for", "every {C:attention}mod{} currently installed","{C:inactive,S:0.7}(Currently {X:mult,C:white,S:0.7}X#2#{C:inactive,S:0.7}.)"}
       },
       j_charcuterie_overclock = {
-        name = "Overclock",
+        name = "Rev-Up",
         text = {"{C:attention}doubles{} values of","Jokers that are {C:attention}not{} itself","{C:green}#1# in #2#{} chance to","{C:red}destroy{} affected Joker","when {C:attention}triggered{}"}
       },
       j_charcuterie_snake_eyes = {
@@ -633,18 +633,62 @@ return {
       },
       j_charcuterie_trilliant_cut = {
         name = "Trilliant Cut",
-        text = {"Played {C:spades}Spades{} give","{C:chips}+#1#{} Chips","when scored"},
+        text = {"Played {C:spades}Spades{} give","{X:mult}#1#%{} of Mult as {C:chips}Chips","when scored"},
         unlock = {"Overclock {C:attention}Arrowhead{}"}
       },
       j_charcuterie_cushion_cut = {
-        name = "Cushion Cut",
-        text = {"Played {C:clubs}Clubs{} give","{C:mult}+#1#{} Mult","when scored"},
+        name = "Pear Cut",
+        text = {"Played {C:clubs}Clubs{} give","{X:chips}#1#%{} of Chips as {C:red}Mult{}","when scored"},
         unlock = {"Overclock {C:attention}Onyx Agate{}"}
       },
       j_charcuterie_heart_cut = {
         name = "Heart Cut",
         text = {"Played {C:hearts}Hearts{} have","a {C:green}#1# in #2#{} chance","to give {C:white,X:mult}X#3#{} Mult","when scored"},
         unlock = {"Overclock {C:attention}Bloodstone{}"}
+      },
+      j_charcuterie_cannonball = {
+        name = "Cannonball",
+        text = {"All played cards score","{X:mult,C:white}X#1#{} Mult when","a card that wouldn't normally score does"},
+        unlock = {"Overclock {C:attention}Splash{}"}
+      },
+      j_charcuterie_metro_lines = {
+        name = "Metro Lines",
+        text = {"This Joker gains {X:mult,C:white}X#1#{} Mult","per {C:attention}consecutive{} hand","played without a","scoring {C:attention}face{} card","{C:inactive,S:0.7}(Currently {X:mult,C:white,S:0.7}X#2#{C:inactive,S:0.7}.)"},
+        unlock = {"Overclock {C:attention}Ride the Bus{}"}
+      },
+      j_charcuterie_turpentine = {
+        name = "Turpentine",
+        text = {"All played cards gain {C:dark_edition}Bleached{}"},
+        unlock = {"Overclock {C:attention}Marble Joker{}"}
+
+      },
+      j_charcuterie_carte_blanche = {
+        name = "Carte Blanche",
+        text = {"All shop rerolls are {C:money}$#1#"},
+        unlock = {"Overclock {C:attention}Chaos the Clown{}"}
+      },
+      j_charcuterie_orbital_cannon = {
+        name = "Orbital Cannon",
+        text = {"{C:white,X:mult}X#1#{} Mult","for each {C:planet}Planet Card{} used","that does {C:attention}not{}","upgrade your {C:attention}most played{} hand","{C:inactive,S:0.7}(Currently {X:mult,C:white,S:0.7}X#2#{C:inactive,S:0.7}.)"},
+        unlock = {"Overclock {C:attention}Half Joker{}"}
+      },
+      j_charcuterie_split_atom = {
+        name = "Split Atom",
+        text = {"{C:white,X:mult}X#1#{} Mult if","played hand contains {C:attention}3{} or fewer cards","{C:green}#2# in #3#{} chance to {C:red}destroy{} played cards otherwise"},
+        unlock = {"Overclock {C:attention}Half Joker{}"}
+      },
+      j_charcuterie_providence = {
+        name = "Providence",
+        text = {"Played {C:attention}#1#s{} give","{C:white,X:mult}X#2#{} Mult when scored"},
+        unlock = {"Overclock {C:attention}Idol{}"}
+      },
+      j_charcuterie_snowballs_chance = {
+        name = "Snowball's Chance",
+        text = {
+          "{C:white,X:mult}X#1#{} Mult for every",
+          "{C:money}$#2#{} you have",
+          "{C:inactive}(Currently {C:white,X:mult}X#3#{C:inactive} Mult)",
+        },
       }
 
 
@@ -670,8 +714,8 @@ return {
         text = {"This card is unaffected by","{C:attention}any{} changes to its values","{C:inactive,S:0.5}(Charcuterie Only){}"}
       },
       char_txt_oc = {
-        name = "Overclocked!",
-        text = {"This card is an enhanced version","of a vanilla joker,","granting it boosts it","otherwise would not have"}
+        name = "Overclocked",
+        text = {"This card is an {C:attention}enhanced{} version","of a Joker",}
       },
       char_txt_ochint_smiley = {
         name = "Overclockable",
@@ -679,7 +723,11 @@ return {
       },
       char_txt_ochint_mineral = {
         name = "Overclockable",
-        text = {"To overclock this card","you must {C:attention}Maximize{} it's potential..."}
+        text = {"To overclock this card","you must {C:attention}maximize{} it's potential..."}
+      },
+      char_txt_ochint_sacrifice = {
+        name = "Overclockable",
+        text = {"To overclock this Joker","you must {C:attention}crash the bus.{}"}
       },
 
 
@@ -724,6 +772,10 @@ return {
       }
     },
     Spectral = {
+      c_charcuterie_boost_circuit = {
+        name = "Boost Circuit",
+        text = {"Forcefully {C:blue}Overclocks{}","a selected Joker"}
+      },
       c_charcuterie_purge = {
         name = "Purge",
         text = {"Adds {C:dark_edition}Bleached{} to","#1# selected","card in your hand"}

@@ -14,7 +14,7 @@ SMODS.Joker:take_ownership('smiley',
 
 					end
 					if card.ability.ext_ovr.faces_destroyed >= 10 then
-						CHAR.FUNC.overclock_proc(card,'j_charcuterie_ferocious_grin')
+						CHAR.FUNC.overclock_proc({card =card,key =card.ability.ext_ovr.overclock_counterpart})
 
 
 
@@ -29,6 +29,7 @@ SMODS.Joker:take_ownership('smiley',
 			add_to_deck = function(self,card,from_debuff)
 				card.ability.ext_ovr = {}
 				card.ability.ext_ovr.faces_destroyed = 0
+				card.ability.ext_ovr.overclock_counterpart = "j_charcuterie_ferocious_grin"
 			end
 
 

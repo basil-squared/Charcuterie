@@ -3,6 +3,7 @@ SMODS.Joker:take_ownership('j_bloodstone',{
 	add_to_deck = function(self,card,from_debuff)
 		card.ability.ext_ovr = {}
 		card.ability.ext_ovr.suit_req = 40
+		card.ability.ext_ovr.overclock_counterpart = "j_charcuterie_heart_cut"
 	end,
 	loc_vars = function(self,info_queue,card)
 		info_queue[#info_queue+1] = {set = "Other",key = "char_txt_ochint_mineral"}
@@ -17,11 +18,11 @@ SMODS.Joker:take_ownership('j_bloodstone',{
 				end
 			end
 			if count >= card.ability.ext_ovr.suit_req then
-				CHAR.FUNC.overclock_proc(card,'j_charcuterie_heart_cut')
+				CHAR.FUNC.overclock_proc({card =card,key =card.ability.ext_ovr.overclock_counterpart})
 			end
 
 		end
 	end
 
 
-})
+},true)

@@ -36,3 +36,7 @@ SMODS.Sound {
 
 	end,
 }
+SMODS.Sound {
+	key = "explosion",
+	path = "explosion.wav"
+}

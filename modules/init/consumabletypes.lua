@@ -13,16 +13,3 @@ SMODS.ConsumableType({
 	},
 })
 
-SMODS.ConsumableType({
-	key = "Element",
-	primary_colour = HEX("7dd75a"),
-	secondary_colour = HEX("436e47"),
-	loc_txt = {
-		name = "Element Card",
-		collection = "Element Cards",
-		undiscovered = {
-			name = "???",
-			text = {"An undiscovered Element Card.","Look for these scientific cards in the shop and booster packs!"}
-		}
-	}
-})

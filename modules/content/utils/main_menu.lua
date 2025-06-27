@@ -3,7 +3,7 @@ local main_menu_ref = Game.main_menu
 Game.main_menu = function(change_context)
     
     local ret = main_menu_ref(change_context)
-    local sel_card = 'j_charcuterie_paranoia'
+    local sel_card = 'c_charcuterie_boost_circuit'
     local newcard = Card(
         G.title_top.T.x,
         G.title_top.T.y,

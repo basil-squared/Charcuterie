@@ -2,7 +2,7 @@ SMODS.Joker {
 	key = 'cushion_cut',
 	atlas = CHAR.G.overclockedatlas.key,
 	pos = {x = 13,y=0},
-	config = {extra = {mult = 16}},
+	config = {extra = {mult = 25}},
 	loc_vars = function(self,info_queue,card)
 		info_queue[#info_queue + 1] = {set="Other",key="char_txt_oc"}
 		return {vars = {card.ability.extra.mult}}
@@ -11,9 +11,11 @@ SMODS.Joker {
 	unlocked = false,
 	calculate = function(self,card,context)
 		if context.individual and context.cardarea == G.play then
+			local mult_given = to_number(to_big(hand_chips) / to_big(card.ability.extra.mult))
 			if context.other_card:is_suit('Clubs') then
+
 				return {
-					mult = card.ability.extra.mult
+					mult = mult_given
 				}
 			end
 		end
