@@ -917,28 +917,10 @@ return {
       },
       c_charcuterie_premonition = {
         name = "Premonition",
-        text = {"Ante {C:attention}-1{}","Next Boss Blind is a {C:attention}Showdown{} Blind"}
+        text = {"{C:attention}-1{} Ante","Next Boss Blind is a {C:attention}Showdown{} Blind"}
       }
     },
-    Element = {
-      c_charcuterie_titanium = {
-        name = "Titanium",
-        text = { "Converts up to {C:attention}3{}", " selected cards into {C:enhanced}Steel{} Cards" }
-      },
-      c_charcuterie_plutonium = {
-        name = "Plutonium",
-        text = { "{C:green}#1#%{} Chance to add {C:charcuterie_unstable}Unstable{}", "to up to {C:attention}2{} selected cards,", "but {C:red}#2#%{} chance to destroy", "selected cards instead." }
-      },
-      c_charcuterie_neodymium = {
-        name = "Neodymium",
-        text = { "Make a selected {C:enhanced}Steel Card{} {C:dark_edition}Negative{}" },
 
-      },
-      c_charcuterie_zinc = {
-        name = "Zinc",
-        text = { "Adds {C:attention}Brilliant Seal{} to a ", "selected {C:enhanced}Steel Card{}" }
-      }
-    },
     tooltips = {
 
     }
