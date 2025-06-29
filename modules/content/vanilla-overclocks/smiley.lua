@@ -1,7 +1,7 @@
 SMODS.Joker:take_ownership('smiley',
 		{
 			loc_vars = function(self,info_queue,card)
-				info_queue[#info_queue+1] = {set = "Other",key = "char_txt_ochint_smiley"}
+				info_queue[#info_queue+1] = {set = "Other",key = "char_txt_ochint_hinder"}
 			end,
 
 			calculate = function(self, card, context)

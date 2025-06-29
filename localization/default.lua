@@ -670,7 +670,7 @@ return {
       j_charcuterie_orbital_cannon = {
         name = "Orbital Cannon",
         text = {"{C:white,X:mult}X#1#{} Mult","for each {C:planet}Planet Card{} used","that does {C:attention}not{}","upgrade your {C:attention}most played{} hand","{C:inactive,S:0.7}(Currently {X:mult,C:white,S:0.7}X#2#{C:inactive,S:0.7}.)"},
-        unlock = {"Overclock {C:attention}Half Joker{}"}
+        unlock = {"Overclock {C:attention}Satellite{}"}
       },
       j_charcuterie_split_atom = {
         name = "Split Atom",
@@ -710,6 +710,26 @@ return {
           "{C:dark_edition}changes boss blind music{}"
         },
         unlock = {"Overclock {C:attention}Golden Joker{}"}
+      },
+      j_charcuterie_infinite_ball = {
+        name = "Infinite Ball",
+        text = {
+          "{C:green}#1# in #2#{} chance for each",
+          "played {C:attention}8{} to create a",
+          "{C:spectral}Spectral{} card when scored",
+          "{C:inactive}(Must have room)"
+        },
+        unlock = {"Overclock  {C:attention}8 Ball"}
+      },
+      j_charcuterie_delirium = {
+        name = "Delirium",
+        text = {
+          "When {C:attention}Small Blind{} or {C:attention}Big Blind{}",
+          "is selected, gain {X:purple,C:white}X#1#{} Chips and Mult",
+          "and {C:attention}destroy{} a random joker",
+          "{C:inactive}(Currently {X:purple,C:white}X#2#{C:inactive} Chips and Mult)"
+        },
+        unlock = {"Overclock {C:attention}Madness{}"}
       }
 
 
@@ -738,9 +758,9 @@ return {
         name = "Overclocked",
         text = {"This card is an {C:attention}enhanced{} version","of a Joker",}
       },
-      char_txt_ochint_smiley = {
+      char_txt_ochint_hinder = {
         name = "Overclockable",
-        text = {"To overclock {C:attention}Smiley Face{}","you must do something","that would otherwise hinder","the card's function..."}
+        text = {"To overclock this Joker","you must do something","that would otherwise hinder","the card's function..."}
       },
       char_txt_ochint_mineral = {
         name = "Overclockable",
