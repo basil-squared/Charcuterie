@@ -40,3 +40,15 @@ SMODS.Sound {
 	key = "explosion",
 	path = "explosion.wav"
 }
+SMODS.Sound {
+	key = "music_undef",
+	path = "undefeatable.mp3",
+	pitch = 1.0,
+	sync = false,
+	select_music_track = function()
+		if G and G.GAME and G.GAME.blind and G.GAME.blind.boss then
+			return next(SMODS.find_card('j_charcuterie_undefeatable'))
+		end
+
+	end,
+}

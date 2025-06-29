@@ -689,6 +689,7 @@ return {
           "{C:money}$#2#{} you have",
           "{C:inactive}(Currently {C:white,X:mult}X#3#{C:inactive} Mult)",
         },
+        unlock = {"Overclock {C:attention}Bootstraps{}"}
 
       },
       j_charcuterie_bunker = {
@@ -699,6 +700,16 @@ return {
           "suit changes every round",
           "{C:inactive}(Currently {C:chips}+#3#{C:inactive}, {C:white,X:chips}X#4#{}{C:inactive} Chips)",
         },
+        unlock = {"Overclock {C:attention}Castle{}"}
+      },
+      j_charcuterie_undefeatable = {
+        name = "Undefeatable",
+        text = {
+          "{C:white,X:money}X#1#{} dollars at end of round",
+          "if score catches {C:attention}aflame{}",
+          "{C:dark_edition}changes boss blind music{}"
+        },
+        unlock = {"Overclock {C:attention}Golden Joker{}"}
       }
 
 
@@ -738,6 +749,10 @@ return {
       char_txt_ochint_sacrifice = {
         name = "Overclockable",
         text = {"To overclock this Joker","you must {C:attention}crash the bus.{}"}
+      },
+      char_txt_ochint_golden = {
+        name = "Overclockable",
+        text = {"To overclock this Joker","you must achieve a score {C:attention}insurmountable"}
       },
 
 
