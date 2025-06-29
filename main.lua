@@ -11,6 +11,7 @@ CHAR = {}
 CHAR.FUNC = {}
 CHAR.G = {}
 CHAR.G.Overclock_Table = {}
+CHAR.G.current_bunker_suit = 'Spades'
 function convert_to_windows_path(path)
     return path:gsub("/", "\\")
 end
@@ -65,4 +66,8 @@ CHAR.FUNC.RequireFolderRecursive("modules/init/")
 CHAR.FUNC.RequireFolderRecursive("modules/content")
 if next(SMODS.find_mod("partner")) then
   CHAR.FUNC.RequireFolder("modules/crossmod/partners/")
+end
+if JokerDisplay then
+  jd_def = JokerDisplay.Definitions
+  CHAR.FUNC.RequireFolderRecursive("modules/crossmod/funcs/JokerDisplay")
 end

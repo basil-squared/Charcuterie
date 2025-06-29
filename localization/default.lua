@@ -689,6 +689,16 @@ return {
           "{C:money}$#2#{} you have",
           "{C:inactive}(Currently {C:white,X:mult}X#3#{C:inactive} Mult)",
         },
+
+      },
+      j_charcuterie_bunker = {
+        name = "Bunker",
+        text = {
+          "This Joker gains {X:chips,C:white}X#1#{} Chips",
+          "per discarded {V:1}#2#{} card,",
+          "suit changes every round",
+          "{C:inactive}(Currently {C:chips}+#3#{C:inactive}, {C:white,X:chips}X#4#{}{C:inactive} Chips)",
+        },
       }
 
 

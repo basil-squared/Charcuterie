@@ -7,6 +7,7 @@ function Game:start_run(args)
   G.GAME.in_run = true
   G.GAME.RISK_LOCK = false
   G.GAME.RISK_RATE = 1
+  CHAR.G.current_bunker_suit = 'Diamonds'
   Risk_manip_table.disp_risk = 0 .. "%"
   Risk_manip_table.risk = 0
   
