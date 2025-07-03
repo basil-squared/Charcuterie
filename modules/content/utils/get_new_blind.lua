@@ -31,8 +31,8 @@ function get_new_boss()
     window = true,
     head = true,
   }
-  if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante >= 8  then
-    if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante >= 16 then
+  if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante >= G.GAME.win_ante  then
+    if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante >= G.GAME.win_ante * 2 then
       if tier3blinds[bl_key] then
         return "bl_charcuterie_bigger" .. bl_key
       end

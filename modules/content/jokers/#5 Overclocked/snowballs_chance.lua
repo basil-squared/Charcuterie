@@ -1,6 +1,7 @@
 SMODS.Joker {
 	key = 'snowballs_chance',
 	pos = {x =21,y=0},
+	cost = 30,
 	atlas = CHAR.G.overclockedatlas.key,
 	check_for_unlock = function(self,...)
 		if G.GAME.Overclock_Table and G.GAME.Overclock_Table['j_charcuterie_snowballs_chance'] then

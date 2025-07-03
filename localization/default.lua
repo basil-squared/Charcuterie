@@ -730,6 +730,14 @@ return {
           "{C:inactive}(Currently {X:purple,C:white}X#2#{C:inactive} Chips and Mult)"
         },
         unlock = {"Overclock {C:attention}Madness{}"}
+      },
+      j_charcuterie_hypernova = {
+        name = 'Hypernova',
+        text = {
+          "{C:white,X:mult}X#1#{} Mult for every",
+          "time {C:attention}poker hand{} has been played"
+        },
+        unlock = {"Overclock {C:attention}Supernova{}"}
       }
 
 

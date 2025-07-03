@@ -2,6 +2,7 @@ SMODS.Joker {
 	key = 'metro_lines',
 	atlas = CHAR.G.overclockedatlas.key,
 	pos = {x = 15,y=0},
+	cost = 30,
 	unlocked = false,
 	rarity = 'charcuterie_overclocked',
 	config = { extra = {curr_xmult = 1, xmult_scale = 0.2,base_mult = 1}},

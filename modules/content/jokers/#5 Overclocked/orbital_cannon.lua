@@ -3,6 +3,7 @@ SMODS.Joker {
 	atlas = CHAR.G.overclockedatlas.key,
 	pos = {x = 7, y=0},
 	unlocked = false,
+	cost = 30,
 	config = {extra = {xmult_gain = 0.5, total_xmult = 1}},
 	loc_vars = function(self,info_queue,card)
 		info_queue[#info_queue+1] = {set ="Other",key ="char_txt_oc"}

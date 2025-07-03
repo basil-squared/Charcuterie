@@ -3,7 +3,8 @@ SMODS.Joker {
     atlas = CHAR.G.jokeratlas.key,
     pos = {x =54,y=0},
     soul_pos = {x= 55, y=0},
-    cost = 10,
+    cost = 30,
+
     rarity = "charcuterie_overclocked",
     config = {extra= {chance = 2}},
     loc_vars = function(self,info_queue,card)

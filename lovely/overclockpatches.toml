@@ -30,3 +30,49 @@ payload = '''
         return {}
     end
 '''
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''if (context.other_card:get_id() == 8) and (pseudorandom('8ball') < G.GAME.probabilities.normal/self.ability.extra) then'''
+position = 'after'
+match_indent = true
+payload = '''
+                if self.ability.ext_ovr and self.ability.ext_ovr.hitcounter then
+                    if self.ability.ext_ovr.hitcounter >= 5 then
+                        CHAR.FUNC.overclock_proc({card=self,key='j_charcuterie_infinite_ball'})
+                    end
+                    self.ability.ext_ovr.hitcounter = self.ability.ext_ovr.hitcounter + 1
+                end
+          '''
+
+
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''
+            G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+                        return {
+                            extra = {focus = self, message = localize('k_plus_tarot'), func = function()
+                                G.E_MANAGER:add_event(Event({
+                                    trigger = 'before',
+                                    delay = 0.0,
+                                    func = (function()
+                                            local card = create_card('Tarot',G.consumeables, nil, nil, nil, nil, nil, '8ba')
+                                            card:add_to_deck()
+                                            G.consumeables:emplace(card)
+                                            G.GAME.consumeable_buffer = 0
+                                        return true
+                                    end)}))
+                            end},
+                            colour = G.C.SECONDARY_SET.Tarot,
+                            card = self
+                        }
+                    end
+           '''
+position = 'after'
+match_indent = true
+payload = '''
+           else
+              card.ability.ext_ovr.hitcounter = 0
+              return { message = localize('k_reset')}
+          '''

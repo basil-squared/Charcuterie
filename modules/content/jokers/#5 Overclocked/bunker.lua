@@ -1,6 +1,7 @@
 
 SMODS.Joker {
 	key = 'bunker',
+	cost = 30,
 	atlas = CHAR.G.overclockedatlas.key,
 	pos = {x=24,y=0},
 	config = {extra={xchip_scale = 0.2,curr_xchip = 1, current_suit = ""}},

@@ -1,5 +1,6 @@
 SMODS.Joker {
 	key = "magic_wand",
+	cost = 30,
 	atlas = CHAR.G.overclockedatlas.key,
 	pos = {x=6,y=0},
 	rarity = "charcuterie_overclocked",

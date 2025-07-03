@@ -2,6 +2,7 @@ SMODS.Joker {
 	key = "ferocious_grin",
 	atlas = CHAR.G.overclockedatlas.key,
 	pos = {x=0,y=0},
+	cost = 30,
 	rarity = "charcuterie_overclocked",
 	config = {extra = {mult = 25}},
 	loc_vars = function(self,info_queue,card)
