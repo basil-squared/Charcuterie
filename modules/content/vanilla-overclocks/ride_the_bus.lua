@@ -8,7 +8,7 @@ SMODS.Joker:take_ownership('ride_the_bus',{
 	end,
 
 	loc_vars = function(self,info_queue,card)
-		info_queue[#info_queue+1] = {set = "Other",key = "char_txt_ochint_sacrifice"}
+		info_queue[#info_queue+1] =  CHAR.FUNC.ochint_mgr('rtb')
 
 	end,
 

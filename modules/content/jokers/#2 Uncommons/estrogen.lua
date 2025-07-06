@@ -14,7 +14,7 @@ SMODS.Joker({
 	cost = 5,
 	calculate = function(self,card,context)
 		if context.individual and context.cardarea == G.play then
-			if pseudorandom('girlpill') < G.GAME.probabilities.normal / card.ability.extra.out_of and context.other_card.is_face() then
+			if pseudorandom('girlpill') < G.GAME.probabilities.normal / card.ability.extra.out_of and context.other_card:is_face() then
 				assert(SMODS.change_base(context.other_card,nil,'Queen'))
 				return {
 					message = ":3",

@@ -13,6 +13,7 @@ Game.main_menu = function(change_context)
         G.P_CENTERS[sel_card],
         {bypass_discovery_center = true}
     )
+---@diagnostic disable-next-line: undefined-global
     if not Cryptid then
         G.title_top.T.w = G.title_top.T.w * 1.7675
         G.title_top.T.X = G.title_top.T.x - 0.8

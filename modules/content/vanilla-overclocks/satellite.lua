@@ -5,7 +5,7 @@ SMODS.Joker:take_ownership('satellite',{
 		card.ability.ext_ovr.overclock_counterpart = "j_charcuterie_orbital_cannon"
 	end,
 	loc_vars = function(self,info_queue,card)
-		info_queue[#info_queue+1] = {set= "Other",key="char_txt_ochint_mineral"}
+		info_queue[#info_queue+1] = CHAR.FUNC.ochint_mgr('satellite')
 	end,
 	calculate = function(self,card,context)
 		if context.using_consumeable then

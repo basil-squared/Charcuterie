@@ -29,8 +29,8 @@ SMODS.Consumable {
             end
         else
             if r_u_joker and not r_u_joker.edition then
-                local poss_editions = {"e_negative", "e_polychrome", "e_foil", "e_holographic","e_charcuterie_melty"} -- TODO: replace with poll_edition because this crashes
-                r_u_joker:set_edition(pseudorandom_element(poss_editions, pseudoseed("I pissed myself")))
+                local sel_edition = poll_edition('blahblahblah',nil,false,true)
+                r_u_joker:set_edition(sel_edition)
                 r_u_joker:juice_up()
             end
         end

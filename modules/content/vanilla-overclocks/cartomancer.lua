@@ -13,9 +13,5 @@ SMODS.Joker:take_ownership('cartomancer',{
 			end
 		end
 	end,
-	add_to_deck = function(self,card,from_debuff)
-		card.ability.ext_ovr = {}
-		card.ability.ext_ovr.spectral_used = 0
-
-	end
+	
 },true)

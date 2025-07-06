@@ -6,7 +6,7 @@ SMODS.Joker:take_ownership('j_bloodstone',{
 		card.ability.ext_ovr.overclock_counterpart = "j_charcuterie_heart_cut"
 	end,
 	loc_vars = function(self,info_queue,card)
-		info_queue[#info_queue+1] = {set = "Other",key = "char_txt_ochint_mineral"}
+		info_queue[#info_queue+1] = CHAR.FUNC.ochint_mgr('mineral')
 	end,
 	calculate = function(self,card,context)
 		if context.before then

@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local lu_ref = love.update
 CHAR.FUNC.prepare_window_manip = function()
     if love.window.getFullscreen then

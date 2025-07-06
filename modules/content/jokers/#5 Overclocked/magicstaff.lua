@@ -10,9 +10,7 @@ SMODS.Joker {
 
 	end,
 	unlocked = false,
-	locked_loc_vars = function(self,info_queue,card)
-
-	end,
+	
 	check_for_unlock = function(self,...)
 		if G.GAME.Overclock_Table and G.GAME.Overclock_Table['j_charcuterie_magic_wand'] then
 			return true
