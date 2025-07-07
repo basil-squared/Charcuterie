@@ -4,7 +4,7 @@ SMODS.Joker:take_ownership('golden',{
 		card.ability.ext_ovr.overclock_counterpart = 'j_charcuterie_undefeatable'
 	end,
 	loc_vars = function(self,info_queue,card)
-		info_queue[#info_queue+1] = {set= "Other",key="char_txt_ochint_golden"}
+		info_queue[#info_queue+1] = CHAR.FUNC.ochint_mgr('golden')
 	end,
 	calculate = function(self,card,context)
 		if context.final_scoring_step then

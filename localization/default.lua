@@ -1024,6 +1024,14 @@ return {
         name = 'Whoops!',
         text = {'For whatever reason,','this info_queue entry {C:attention}Failed to load{}','Please contact me!'}
       },
+      char_txt_ochint_satellite = {
+        name = 'Overclockable',
+        text = {'To overclock this joker',"you must {C:attention}Maximize{} it's potential..."}
+      },
+      char_txt_ochint_obvioussatellite = {
+        name = 'Overclockable',
+        text = {'To overclock this joker',"max out it's scaling"}
+      },
 
 			charcuterie_obscure_seal = {
 				name = "Obscured Seal",
