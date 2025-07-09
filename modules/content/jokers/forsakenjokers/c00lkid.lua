@@ -21,7 +21,7 @@ SMODS.Joker {
 				return {
 					message = "Miss!",
 					colour = G.C.RED,
-					sound = 'charcuterie_coolkid_miss'
+
 				}
 			end
 			for i=1, #jokers do
@@ -50,11 +50,11 @@ SMODS.Joker {
 				card.ability.extra.curr_xchip = card.ability.extra.curr_xchip + card.ability.extra.x_chip_gain
 
 			end
-			play_sound('charcuterie_coolkid_wo_hit')
+
 			return {
-				message = "TAG!",
+				message = "!!!",
 				colour = G.C.RED,
-				sound = 'charcuterie_coolkid_hit'
+
 			}
 		end
 		if context.joker_main then

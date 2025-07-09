@@ -1,3 +1,5 @@
+-- God i need a fucking job
+
 open_oc_UI = function()
     CHAR.UI.OC =
         UIBox(
@@ -90,7 +92,7 @@ function overclock_demonstration()
                                                         0,
                                                         0,
                                                         4.8366221350656 / 2,
-                                                        6.9300126165033 / 2,
+                                                        6.9300126165033 / 2, -- Okay so, these values are APPARENTLY what the base game uses for card dimensions. i'm so sorry to whoever sees this
                                                         G.ASSET_ATLAS["Joker"],
                                                         {x = 6, y = 15}
                                                     )
@@ -132,3 +134,7 @@ function overclock_demonstration()
         }
     }
 end
+--[[
+    look at me go,
+    not finishing the crucial UI!
+]]

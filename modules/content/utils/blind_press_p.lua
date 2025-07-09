@@ -1,5 +1,5 @@
 local blind_play_ref = Blind.press_play
-
+-- Have to do it this way because vanilla blind code is a fucking slag
 Blind.press_play = function(self)
     if self.config.blind.key == "bl_charcuterie_bighook" then
         G.E_MANAGER:add_event(Event({ func = function()

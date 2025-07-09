@@ -10,6 +10,6 @@ function Game:start_run(args)
   CHAR.G.current_bunker_suit = 'Diamonds'
   Risk_manip_table.disp_risk = 0 .. "%"
   Risk_manip_table.risk = 0
-  
+  -- WAITER! WAITER! MORE Game:start_run() hooks!
   return start_run_ref(self, args)
 end

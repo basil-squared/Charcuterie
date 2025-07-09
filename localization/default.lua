@@ -299,6 +299,31 @@ return {
 			},
 		},
 		Enhanced = {
+			m_charcuterie_recycled = {
+				name = 'Recycled Card',
+				text = {"{C:money}$#1#{} if held in hand at end of round ",
+				        "disables interest if held in hand at end of round"
+				}
+			},
+			m_charcuterie_handy = {
+				name = 'Handy Card',
+				text = {
+					"{C:green}#1# in #2#{} chance to give",
+					"{C:blue}+#3#{} #4# when scored"
+				}
+			},
+			m_charcuterie_wasteful = {
+				name = 'Wasteful Card',
+				text = {
+					"{C:money}+$#1#{} when discarded"
+				}
+			},
+			m_charcuterie_luxurious = {
+				name = 'Luxurious Card',
+				text = {
+					"{C:money}$#1#{} when scored"
+				}
+			},
 			m_charcuterie_cursed = {
 				name = "Cursed Card",
 				text = { "After being played 3 times, {C:red}Debuffs itself.{}", "{s:0.7,C:inactive}#1# plays left.{}" },
@@ -557,7 +582,7 @@ return {
 				},
 			},
 			j_charcuterie_c00lkid = {
-				name = "C00lkid",
+				name = "Chainsaw",
 				text = {
 					"Destroy all {C:attention}Perishable{} Jokers when{C:attention} blind{} selected.",
 					"Gain {X:chips,C:white}X#1#{} for each Perishable Joker destroyed.",
@@ -565,10 +590,10 @@ return {
 				},
 			},
 			j_charcuterie_mafioso = {
-				name = "Mafioso",
+				name = "Chedda",
 				text = {
 					"If no {C:attention}Mafia Members{} are present",
-					"create #1# {C:attention}Mafia Members{}. {C:inactive,S:0.4}(excludes Mafioso)",
+					"create #1# {C:attention}Mafia Members{}. {C:inactive,S:0.4}(excludes Chedda)",
 					"Gains {X:mult,C:white}X#2#{} Mult for each {C:attention}Mafia Member{} present.",
 					"{C:inactive,S:0.7}(Currently {X:mult,C:white,S:0.7}X#3#{C:inactive,S:0.7}.)",
 				},
@@ -1198,6 +1223,8 @@ return {
 		collabs = {},
 		dictionary = {
 			ph_two_time = "Saved by Two Time",
+			k_char_orbremjd = "NOT most played hand",
+			char_config_flavor = 'Wow, a whole charcuterie board of settings!'
 		},
 		high_scores = {},
 		labels = {
