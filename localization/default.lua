@@ -983,6 +983,14 @@ return {
 				},
 				unlock = { "Overclock {C:attention}Acrobat{}" },
 			},
+			j_charcuterie_yaai = {
+				name = "You are an Idiot!",
+				text = {
+					"{X:mult,C:white}X#1#{} Mult",
+					"{C:red}I wouldn't sell this{}"
+				},
+				unlock = {"Lose a run with 1% or less","of the blind requirement remaining"}
+			}
 		},
 		Other = {
 			aspl_txt_risk = {

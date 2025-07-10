@@ -1,4 +1,6 @@
-
+-- This is for the config option to make the overclock hints more obvious,
+-- meant to be plugged into info_queue to make the choice
+-- this is the best way to do this
 
 function CHAR.FUNC.ochint_mgr(key)
     local locNames = G.localization.descriptions.Other

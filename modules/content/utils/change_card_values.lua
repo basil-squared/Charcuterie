@@ -22,7 +22,9 @@ function CHAR.FUNC.recursive_apply_num(table, modi, op, visited)
 	return table
 end
 
-
+-- This is a shitstorm and i hardly understand how it works, but it does, and i refuse to mess with it further.
+-- any attempts to 'improve it' have lead to a crash or utter disaster
+-- I've raised a very angry creature, and now i get to have the responsibility of caring for it.
 
 function CHAR.FUNC.change_card_values(card,mod,operation,reset)
 

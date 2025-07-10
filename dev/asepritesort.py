@@ -55,6 +55,36 @@ for filename in progress_bar:
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
+    elif filename == 'joker_atlas2.aseprite':
+        subprocess.run(
+            [
+                "aseprite",
+                "-b",
+                "--sheet",
+                f"../assets/1x/{name}.png",
+                f"./spritesheets/{filename}",
+                "--sheet-columns",
+                "10",
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        # 2x export
+        subprocess.run(
+            [
+                "aseprite",
+                "-b",
+                "--sheet",
+                f"../assets/2x/{name}.png",
+                f"./spritesheets/{filename}",
+                "--sheet-columns",
+                "10",
+                "--scale",
+                "2",
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
     else:
         # Original 1x export
         subprocess.run(
