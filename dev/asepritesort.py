@@ -85,6 +85,36 @@ for filename in progress_bar:
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
+    elif filename == 'ritualatlas.aseprite':
+        subprocess.run(
+            [
+                "aseprite",
+                "-b",
+                "--sheet",
+                f"../assets/1x/{name}.png",
+                f"./spritesheets/{filename}",
+                "--sheet-columns",
+                "7",
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        # 2x export
+        subprocess.run(
+            [
+                "aseprite",
+                "-b",
+                "--sheet",
+                f"../assets/2x/{name}.png",
+                f"./spritesheets/{filename}",
+                "--sheet-columns",
+                "7",
+                "--scale",
+                "2",
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
     else:
         # Original 1x export
         subprocess.run(
