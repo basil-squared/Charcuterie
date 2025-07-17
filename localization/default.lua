@@ -312,10 +312,12 @@ return {
 					"{C:blue}+#3#{} #4# when scored"
 				}
 			},
-			m_charcuterie_wasteful = {
-				name = 'Wasteful Card',
+			m_charcuterie_void = {
+				name = 'Void Card',
 				text = {
-					"{C:money}+$#1#{} when discarded"
+					'When scored',
+					'lower {C:attention}blind requirement{}',
+					'by {C:attention}#1#%{}'
 				}
 			},
 			m_charcuterie_luxurious = {
@@ -990,6 +992,44 @@ return {
 					"{C:red}I wouldn't sell this{}"
 				},
 				unlock = {"Lose a run with 1% or less","of the blind requirement remaining"}
+			},
+			j_charcuterie_charlie = {
+				name = "Charlie's Inferno",
+				text = {
+					"when {C:spectral}Spectral{} card used,",
+					"create {C:attention}#1#{} copies of",
+					"{C:tarot}The Devil {C:inactive}(Must have room){}"
+				},
+				unlock = {"Have both {C:tarot}The Judgement{},",
+									"and {C:tarot}The Devil{} in your",
+				          "consumable slots {C:attention}at the same time{}"
+				}
+			},
+			j_charcuterie_quasar = {
+				name = 'Quasar',
+				text = {
+					'If hand contains #1# or more scoring {C:enhanced}Void Cards{}',
+					'{C:attention}destroy{} unscored cards'
+				},
+				unlock = {
+					'Have over {C:attention}20{} {C:enhanced}Void Cards{}',
+					'in your {C:attention}full deck{}'
+				}
+			},
+			j_charcuterie_bookshelf = {
+				name = 'Bookshelf',
+				text = {
+					'When using a{C:ritual} Ritual Card{}',
+					'creates a {C:tarot}Tarot Card',
+					'{C:inactive}(Cannot spawn the same card twice)'
+				}
+			},
+			j_charcuterie_voidstar = {
+				name = 'Void Star',
+				text = {
+					"Converts scored {C:attention}Face cards{}",
+					"into {C:enhanced}Void Cards{}"
+				}
 			}
 		},
 		Other = {
@@ -1178,8 +1218,8 @@ return {
 				name = "Blood Pact",
 				text = { "Spawn a random {C:red}Eternal Rare{} Joker." },
 			},
-			c_charcuterie_chippedcoin = {
-				name = "Chipped Coin",
+			c_charcuterie_fate = {
+				name = "Fate",
 				text = {
 					"{C:green}#1#%{} chance to {C:attention}double{} money.",
 					"{C:red}#2#%{} Chance to backfire and set money to {C:money}$0{} instead.",
@@ -1219,6 +1259,18 @@ return {
 				name = "Premonition",
 				text = { "{C:attention}-1{} Ante", "Next Boss Blind is a {C:attention}Showdown{} Blind" },
 			},
+			c_charcuterie_paradox = {
+				name = 'Paradox',
+				text = {"{C:red}Destroy{} a random Joker","add a {C:red}Red Seal{} to up to","{C:attention}#1#{} selected cards"}
+			},
+			c_charcuterie_riptide = {
+				name = 'Riptide',
+				text = {"{C:red}Destroy{} a random Joker","add a {C:planet}Blue Seal{} to up to","{C:attention}#1#{} selected cards"}
+			},
+			c_charcuterie_lockon = {
+				name = 'Lock-On',
+				text = {"The next {C:attention}#1#{} Boss Blinds","will be a {C:attention}repeat","of the {C:attention}current one{}"}
+			}
 		},
 
 		tooltips = {},
@@ -1232,7 +1284,8 @@ return {
 		dictionary = {
 			ph_two_time = "Saved by Two Time",
 			k_char_orbremjd = "NOT most played hand",
-			char_config_flavor = 'Wow, a whole charcuterie board of settings!'
+			char_config_flavor = 'Wow, a whole charcuterie board of settings!',
+			k_reduced = 'Reduced!',
 		},
 		high_scores = {},
 		labels = {

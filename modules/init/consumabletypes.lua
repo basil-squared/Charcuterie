@@ -3,6 +3,7 @@ SMODS.ConsumableType({
 	shop_rate = 0,
 	primary_colour = HEX("140100"),
 	secondary_colour = HEX("570803"),
+	collection_rows = {7,7},
 	loc_txt = {
 		name = "Ritual Card", -- used on card type badges
 		collection = "Ritual Cards", -- label for the button to access the collection

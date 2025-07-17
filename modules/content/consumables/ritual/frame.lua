@@ -10,7 +10,7 @@ SMODS.Consumable {
         return { vars = { tostring((1 - (G.GAME.Risk or 0) ) * 100), tostring((G.GAME.Risk or 0) * 100) } }
     end,
     atlas = CHAR.G.ritualatlas.key,
-    pos = {x=6,y=0},
+    pos = {x=0,y=1},
     use = function(self,area,card,copier)
         local random_joker = assert(pseudorandom_element(G.jokers.cards, pseudoseed("Happy wheels")))
         random_joker.pinned = true

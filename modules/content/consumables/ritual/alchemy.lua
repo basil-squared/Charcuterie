@@ -2,7 +2,7 @@ SMODS.Consumable {
     key = "alchemy",
     set = 'ritual',
     atlas = CHAR.G.ritualatlas.key,
-    pos = {x =9,y=0},
+    pos = {x =2,y=1},
     loc_vars = function(self,info_queue,card)
         info_queue[#info_queue+1] = {set = 'Other', key = 'aspl_txt_risk'}
         return { vars = { tostring((1 - (G.GAME.Risk or 0) ) * 100), tostring((G.GAME.Risk or 0) * 100) } }

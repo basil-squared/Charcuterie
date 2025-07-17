@@ -1,9 +1,13 @@
+
+
 SMODS.current_mod.optional_features = {
 	cardareas = {
 		unscored = true,
+		discard = true,
 		retrigger_joker = true,
 	},
 }
+
 SMODS.current_mod.extra_tabs = function()
 	return {
 		{
@@ -19,6 +23,7 @@ end
 CHAR = {}
 CHAR.FUNC = {}
 CHAR.G = {}
+CHAR.G.MODS_ENABLED = {}
 CHAR.G.Overclock_Table = {}
 CHAR.G.current_bunker_suit = "Spades"
 CHAR.G.CONF = SMODS.current_mod.config
@@ -35,6 +40,8 @@ SMODS.Atlas({
 	px = 34,
 	py = 34,
 })
+
+
 local NFS = require("nativefs")
 
 function CHAR.FUNC.RequireFolder(path)

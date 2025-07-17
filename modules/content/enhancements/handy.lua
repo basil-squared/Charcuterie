@@ -16,7 +16,7 @@ SMODS.Enhancement {
 		}}
 	end,
 	calculate = function(self,card,context)
-		if context.individual and context.cardarea == G.play then
+		if context.main_scoring and context.cardarea == G.play then
 			if pseudorandom('orjgroigjreongroi') < G.GAME.probabilities.normal / card.ability.extra.odds then
 				G.E_MANAGER:add_event(Event({
 					func = function()
