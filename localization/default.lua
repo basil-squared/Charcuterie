@@ -1030,6 +1030,16 @@ return {
 					"Converts scored {C:attention}Face cards{}",
 					"into {C:enhanced}Void Cards{}"
 				}
+			},
+			j_charcuterie_blue_java = {
+				name = 'Blue Java',
+				text = {
+					"{C:white,X:mult}X#1#{} Mult",
+					"{C:green}#2# in #3#{} chance to",
+					"{C:attention}destroy itself at",
+					"end of round"
+				},
+				unlock = {"Overclock {C:attention}Cavendish{}"}
 			}
 		},
 		Other = {
@@ -1283,7 +1293,7 @@ return {
 		collabs = {},
 		dictionary = {
 			ph_two_time = "Saved by Two Time",
-			k_char_orbremjd = "NOT most played hand",
+			k_char_orbital_cannon_reminder_JokDisp= "NOT most played hand",
 			char_config_flavor = 'Wow, a whole charcuterie board of settings!',
 			k_reduced = 'Reduced!',
 		},

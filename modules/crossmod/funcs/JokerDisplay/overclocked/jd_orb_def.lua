@@ -10,7 +10,7 @@ jd_def['j_charcuterie_orbital_cannon'] = {
 	},
 	reminder_text = {
 		{text = '(' },
-		{text = localize('k_char_orbremjd')},
+		{text = localize('k_char_orbital_cannon_reminder_JokDisp')},
 		{text = ')'}
 	}
 }
