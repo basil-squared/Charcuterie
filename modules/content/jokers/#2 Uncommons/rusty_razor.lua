@@ -26,14 +26,22 @@ SMODS.Joker {
 	key = 'rusty_razor',
 	config = {extra = {mult = 3, odds = 15, base_mult = 1, curr_mult = to_big(0)}},
 	loc_vars = function(self,info_queue,card)
-		return {vars = {card.ability.extra.mult, (G.GAME.probabilities.normal or 1), card.ability.extra.odds,card.ability.extra.curr_mult}}
+		local new_num,new_denom = SMODS.get_probability_vars(card,1,card.ability.extra.odds,'razor')
+		return {
+			vars = {
+				card.ability.extra.mult, 
+				new_num, 
+				new_denom,
+				card.ability.extra.curr_mult
+			}
+		}
 	end,
 	rarity = 2,
 	atlas = CHAR.G.jokeratlas.key,
 	pos = { x = 67,y=0},
 	calculate = function(self,card,context)
 		if context.setting_blind then
-			if pseudorandom('tetanus') < (G.GAME.probabilities.normal or 1) / card.ability.extra.odds then
+			if SMODS.pseudorandom_probability(card,'wp0r9igwj8ip',1,card.ability.extra.odds) then
 				local victim = card
 				if not victim then
 					return
@@ -57,41 +65,25 @@ SMODS.Joker {
 						return true
 					end,
 				}))
-			else
-				local diss_trg1
+			else -- TODO: PLEASE PLEASE PLEASE CHANGE THIS TO THE NEW SYSTEM THIS SHIT SUCKS SO BAD
+				
 				local comb_sell = to_big(0)
-				local diss_trg2
+				
 				local victim1 = G.jokers.cards[get_joker_to_left(G.jokers.cards,card)]
 				local victim2 = G.jokers.cards[get_joker_to_right(G.jokers.cards,card)]
 				if victim1 then
 
 					comb_sell = comb_sell + to_big(victim1.sell_cost)
-					diss_trg1 = victim1
-					G.GAME.joker_buffer = G.GAME.joker_buffer - 1
-					diss_trg1.getting_sliced = true
+					SMODS.destroy_cards(victim1)
 				end
 				if victim2 then
 					comb_sell = comb_sell + to_big(victim2.sell_cost)
-					diss_trg2 = victim2
-					G.GAME.joker_buffer = G.GAME.joker_buffer - 1
-					diss_trg2.getting_sliced = true
+					SMODS.destroy_card(victim2)
+					
 				end
-				G.E_MANAGER:add_event(Event({
-					trigger = "immediate",
-					blockable = false,
-					func = function()
-						if diss_trg1 and diss_trg1.start_dissolve then
-							diss_trg1:start_dissolve()
-						end
-						if diss_trg2  and diss_trg2.start_dissolve then
-							diss_trg2:start_dissolve()
-						end
-						G.GAME.joker_buffer = 0
-						return true
-					end,
-				}))
+				
 				comb_sell = comb_sell * to_big(card.ability.extra.mult)
-				print(comb_sell)
+				
 				card.ability.extra.curr_mult = card.ability.extra.curr_mult + comb_sell
 				return {
 					message = "+" .. comb_sell .. " Mult",

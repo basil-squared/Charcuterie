@@ -9,7 +9,7 @@ SMODS.Joker {
 	end,
 	rarity = 2,
 	calculate = function(self,card,context)
-		if context.card_killed  then
+		if context.joker_type_destroyed then
 			card.ability.extra.total_xmult = card.ability.extra.total_xmult + card.ability.extra.xmult_gained
 			return {
 				message = localize('k_upgrade_ex')
