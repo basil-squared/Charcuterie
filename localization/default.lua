@@ -1030,6 +1030,20 @@ return {
 					"Converts scored {C:attention}Face cards{}",
 					"into {C:enhanced}Void Cards{}"
 				}
+			},
+			j_charcuterie_pour_deux = {
+				name = 'Pour Deux',
+				text = {
+					"{X:dark_edition,C:white}^#1#{} Mult when",
+					"scored hand contains a {C:Attention}#2#{}"
+				}
+			},
+			j_charcuterie_pour_trois = {
+				name = 'Pour Trois',
+				text = {
+					"{X:dark_edition,C:white}^#1#{} Mult when",
+					"scored hand contains a  {C:Attention}#2#{}"
+				}
 			}
 		},
 		Other = {
