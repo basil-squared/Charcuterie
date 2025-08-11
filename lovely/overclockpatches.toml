@@ -76,3 +76,17 @@ payload = '''
               card.ability.ext_ovr.hitcounter = 0
               return { message = localize('k_reset')}
           '''
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''
+if self.ability.name == 'Madness' and not context.blueprint and not context.blind.boss then
+'''
+position = 'after'
+match_indent = true
+payload = '''
+    if self.ability.x_mult >= self.ability.ext_ovr.req_xmult then
+        CHAR.FUNC.overclock_proc({card=self,key='j_charcuterie_delirium'})
+        
+    end
+'''

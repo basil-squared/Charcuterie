@@ -4,7 +4,7 @@ SMODS.Joker:take_ownership('bootstraps',{
 		card.ability.ext_ovr.overclock_counterpart = 'j_charcuterie_snowballs_chance'
 	end,
 	loc_vars = function(self,info_queue,card)
-		info_queue[#info_queue+1] = {set="Other",key="char_txt_ochint_hinder"}
+		info_queue[#info_queue+1] = CHAR.FUNC.ochint_mgr('bootstraps')
 	end,
 	calculate = function(self,card,context)
 		if to_big(G.GAME.dollars + (G.GAME.dollar_buffer or 0)) <= to_big(-20) then

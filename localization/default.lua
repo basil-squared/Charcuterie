@@ -1129,6 +1129,23 @@ return {
         name = 'Overclockable',
         text = {'To overclock this joker',"max out it's scaling"}
       },
+	  char_txt_ochint_duo = {
+		name = 'Overclockable',
+		text = {'To overclock this Joker','make {C:attention}great{} use of it...'}
+	  },
+	  char_txt_ochint_obviousduo = {
+		name = 'Overclockable',
+		text = {'To overclock this Joker','play {C:attention}20{} Pairs'}
+	  },
+	  char_txt_ochint_trio = {
+		name = 'Overclockable',
+		text = {'To overclock this Joker','make {C:attention}great{} use of it...'}
+
+	  },
+	  char_txt_ochint_obvioustrio = {
+		name = 'Overclockable',
+		text = {'To overclock this Joker','play {C:attention}30{} 3OAKs'}
+	  },
 
 			charcuterie_obscure_seal = {
 				name = "Obscured Seal",

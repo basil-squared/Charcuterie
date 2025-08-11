@@ -1,8 +1,8 @@
 SMODS.Joker {
-    key = "pour_deux",
+    key = "pour_trois",
     atlas = CHAR.G.overclockedatlas.key,
-    pos = {x=5,y=0},
-    config = { extra = {mult = 0.03, hand = "Three of a Kind"}},
+    pos = {x=8,y=0},
+    config = { extra = {mult = 3, hand = "Three of a Kind"}},
     cost = 30,
     rarity = "charcuterie_overclocked",
     loc_vars = function(self,info_queue,card) 
