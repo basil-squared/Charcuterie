@@ -90,3 +90,32 @@ payload = '''
         
     end
 '''
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''
+    if self.ability.name == 'The Idol' and
+                    context.other_card:get_id() == G.GAME.current_round.idol_card.id and 
+                    context.other_card:is_suit(G.GAME.current_round.idol_card.suit) then
+'''
+position = 'before'
+match_indent = true
+payload = '''
+    if self.ability.name == 'The Idol' and not context.other_card:get_id() == G.GAME.current_round.idol_card.id and context.other_card:is_suit(G.GAME.current_round.idol_card.suit) then
+        self.ability.ext_ovr.counter = 0
+        
+    end
+'''
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''
+    if self.ability.name == 'The Idol' and
+                    context.other_card:get_id() == G.GAME.current_round.idol_card.id and 
+                    context.other_card:is_suit(G.GAME.current_round.idol_card.suit) then
+'''
+position = 'after'
+match_indent = true
+payload = '''
+    self.ability.ext_ovr.counter = self.ability.ext_ovr.counter + 1 
+'''

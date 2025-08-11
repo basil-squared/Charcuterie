@@ -13,17 +13,17 @@ SMODS.Joker {
 
 				if #card.ability.extra.used_tarots >= #G.P_CENTER_POOLS.Tarot then
 					return {
-						message = localize(k_nope_ex),
+						message = localize('k_nope_ex'),
 						func = function()
 							SMODS.destroy_cards(card)
 						end
 					}
 				end
-				local rand_tarot = pseudorandom_element(G.P_CENTER_POOLS.Tarot, pseudoseed('BLAHBLAHLAFGJEIHJFOAHFUHBNQW{F'))
+				local rand_tarot = pseudorandom_element(G.P_CENTER_POOLS.Tarot, pseudoseed('BLAHBLAHLAFGJEIHJFOAHFUHBNQWhF'))
 				local function repeat_until_hit()
 					for k,v in pairs(card.ability.extra.used_tarots) do
-						if rand_tarot.key == card.ability.extra.used_tarots[k] then
-							rand_tarot = pseudorandom_element(G.P_CENTER_POOLS.Tarot, pseudoseed('BLAHBLAHLAFGJEIHJFOAHFUHBNQW{F'))
+						if card.ability.extra.used_tarots[k] ~= nil and rand_tarot.key == card.ability.extra.used_tarots[k] then
+							rand_tarot = pseudorandom_element(G.P_CENTER_POOLS.Tarot, pseudoseed('BLAHBLAHLAFGJEIHJFOAHFUHBNQWhF'))
 							repeat_until_hit()
 
 						end
