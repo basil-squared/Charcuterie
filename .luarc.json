@@ -2,6 +2,7 @@
   "Lua.workspace.library": ["~/BalatroMods/Mods/smods-1.0.0-beta-0711a", "~/BalatroMods/Mods/lovely/dump"],
     "diagnostics.globals": [
         "JokerDisplay",
-        "Partner_API"
+        "Partner_API",
+        "ease_hands"
     ]
 }

@@ -20,6 +20,19 @@ SMODS.Joker {
     end,
     rarity = 'charcuterie_overclocked',
     cost = 30,
+    calculate = function (self, card, context)
+        if context.individual and context.cardarea == G.play then
+            local mp = CHAR.FUNC.check_played_rank_deck(G.playing_cards)
+            
+            if context.other_card:get_id() == mp.id then
+                return {
+                    xmult = card.ability.extra.xmult
+                }
+            end
+
+        end
+        
+    end
 
 
 }

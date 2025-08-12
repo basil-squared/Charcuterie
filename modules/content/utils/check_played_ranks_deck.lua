@@ -1,7 +1,7 @@
 ---@param cards Card[]
 ---@return table <number|string,number>
 function CHAR.FUNC.check_played_rank_deck(cards)
-    print('Updating highest played...')
+    
     local cards_played_bleh = {}
     local cards_id_played = {}
     local highest_played_val = 'None'
@@ -21,7 +21,7 @@ function CHAR.FUNC.check_played_rank_deck(cards)
     
     for k,_ in pairs(cards_played_bleh) do
         if cards_played_bleh[k] > highest_played_num then
-            print("Highest played val " ..highest_played_val)
+            
             highest_played_val = k
             highest_played_num = cards_played_bleh[k]
             
@@ -33,7 +33,7 @@ function CHAR.FUNC.check_played_rank_deck(cards)
             
         end
     end
-    print("Highest played is " .. highest_played_val .. " with an ID of " .. highest_played_id)
+   
     return {rank = highest_played_val, id = highest_played_id}
     
 end
