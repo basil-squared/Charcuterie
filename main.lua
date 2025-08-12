@@ -8,15 +8,7 @@ SMODS.current_mod.optional_features = {
 	},
 }
 
-SMODS.current_mod.extra_tabs = function()
-	return {
-		{
-			label = "Overclock  Info",
-			tab_definition_function = overclock_demonstration,
-		},
-		-- insert more tables with the same structure here
-	}
-end
+
 function async_exec(command)
 	os.execute('start /B "" ' .. command)
 end
