@@ -1,5 +1,9 @@
 SMODS.Joker:take_ownership('j_cavendish',
 {
+    loc_vars = function (self, info_queue, card)
+
+        info_queue[#info_queue+1] = CHAR.FUNC.ochint_mgr('cavendish')
+    end,
     add_to_deck = function(self,card,from_debuff)
         card.ability.ext_ovr =  {}
         card.ability.ext_ovr.overclock_counterpart = 'j_charcuterie_blue_java'

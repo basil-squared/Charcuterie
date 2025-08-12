@@ -1,4 +1,7 @@
 SMODS.Joker:take_ownership('j_idol',{
+    loc_vars =function (self, info_queue, card)
+        info_queue[#info_queue+1] =  CHAR.FUNC.ochint_mgr('idol')
+    end,
     add_to_deck = function(self,card,from_debuff)
         card.ability.ext_ovr = {}
         card.ability.ext_ovr.overclock_counterpart = 'j_charcuterie_providence'

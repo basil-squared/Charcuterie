@@ -1118,6 +1118,40 @@ return {
 				name = "Overclockable",
 				text = {"To overclock this Joker", "Scale it to {C:chips}+200{} Chips"}
 			},
+			char_txt_ochint_cavendish = {
+				name = "Overclockable",
+				text = {"To overclock this Joker","You must do the {C:attention}Unprecedented{}"}
+			},
+			char_txt_ochint_obviouscavendish = {
+				name = "Overclockable",
+				text = {"To overclock this Joker","You must {C:attention}destroy{} it"}
+			},
+			char_txt_ochint_idol = {
+				name = "Overclockable",
+				text = {"To overclock this Joker", "You must {C:attention}look and listen"}
+			},
+
+			char_txt_ochint_obviousidol = {
+				name = "Overclockable",
+				text = {"To overclock this Joker","Hit {C:attention}5 times{}"}
+			},
+			char_txt_ochint_supernova = {
+				name = "Overclockable",
+				text = {"To overclock this Joker","Use {C:spectral}Black Hole"}
+			},
+			char_txt_ochint_obvioussupernova = {
+				name = "Overclockable",
+				text = {"To overclock this Joker","Use {C:spectral}Black Hole"}
+			},
+			char_txt_ochint_madness = {
+				name = "Overclockable",
+				text = {"To overclock this Joker", "You must put {C:attention}blood{} on your hands"}
+			},
+			char_txt_ochint_obviousmadness = {
+				name = "Overclockable",
+				text = {"To overclock this Joker","Scale it to {X:mult,C:white}X7"}
+			},
+
 			
 			char_txt_ochint_hinder = {
 				name = "Overclockable",
