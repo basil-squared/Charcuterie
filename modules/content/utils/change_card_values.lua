@@ -1,3 +1,4 @@
+---@diagnostic disable: need-check-nil, return-type-mismatch, param-type-mismatch
 function CHAR.FUNC.recursive_apply_num(table, modi, op, visited)
 	visited = visited or {}
 	if type(table) ~= "table" then return table end
@@ -25,7 +26,11 @@ end
 -- This is a shitstorm and i hardly understand how it works, but it does, and i refuse to mess with it further.
 -- any attempts to 'improve it' have lead to a crash or utter disaster
 -- I've raised a very angry creature, and now i get to have the responsibility of caring for it.
-
+---@param card Card
+---@param mod number
+---@param operation string
+---@param reset boolean?
+---@return table?
 function CHAR.FUNC.change_card_values(card,mod,operation,reset)
 
 
@@ -37,13 +42,14 @@ function CHAR.FUNC.change_card_values(card,mod,operation,reset)
 	so I need to save the card's ability table temporarily, probably manually check for things that all cards have, then only change the leftovers,
 	then finally tack it back onto the card.
 	]]
-	local old_table
+	local old_table = {}
 	if card and card.ability and card.ability.extra then
 		old_table = card.ability
 
 	else
 		return
 	end
+	
 	if reset then
 		if type(old_table.extra) == 'table' and old_table.extra.flag then
 
@@ -78,12 +84,11 @@ function CHAR.FUNC.change_card_values(card,mod,operation,reset)
 		old_table.extra.flag = true
 		return old_table
 
-		else if type(old_table.extra) == 'number' then
-			old_table.old_extra = old_table.extra
-			old_table.extra = CHAR.FUNC.op(operation,old_table.extra,mod)
-			return old_table
+	elseif type(old_table.extra) == 'number' then
+		old_table.old_extra = old_table.extra
+		old_table.extra = CHAR.FUNC.op(operation,old_table.extra,mod)
+		return old_table
 
 	end
 
 	end
-end

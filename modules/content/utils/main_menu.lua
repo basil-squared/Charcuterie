@@ -1,5 +1,6 @@
 local main_menu_ref = Game.main_menu
 
+---@diagnostic disable-next-line: duplicate-set-field
 Game.main_menu = function(change_context)
     
     local ret = main_menu_ref(change_context)

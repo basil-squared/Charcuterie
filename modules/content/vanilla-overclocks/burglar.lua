@@ -8,7 +8,7 @@ SMODS.Joker:take_ownership('j_burglar',{
         info_queue[#info_queue+1] = CHAR.FUNC.ochint_mgr('burglar')
     end,
     calculate = function(self,card,context)
-        if to_big(G.game.dollars) >= 500 then
+        if to_big(G.GAME.dollars) >= to_big(500) then
             CHAR.FUNC.overclock_proc({card=card,key='j_charcuterie_bank_robbery'})
         end
     end

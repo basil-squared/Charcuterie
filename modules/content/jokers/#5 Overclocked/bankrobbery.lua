@@ -24,6 +24,11 @@ SMODS.Joker {
     
     end,
     rarity = 'charcuterie_overclocked',
-    cost = 30
+    cost = 30,
+    unlocked = false,
+    check_for_unlock = function (self, args)
+        return G.GAME.Overclock_Table and G.GAME.Overclock_Table['j_charcuterie_bank_robbery']
+        
+    end
 
 }

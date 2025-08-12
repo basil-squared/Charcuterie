@@ -32,9 +32,13 @@ jd_def['j_charcuterie_cushion_cut'] = {
 			if text ~= 'Unknown' then
 
 				for _,v in pairs(scoring_hand) do
-					chips_2b = chips_2b + v:get_chip_bonus()
+					if v:is_suit("Clubs") then
+						chips_2b = chips_2b + v:get_chip_bonus()
 
-					count = count + JokerDisplay.calculate_card_triggers(v,scoring_hand)
+						count = count + JokerDisplay.calculate_card_triggers(v,scoring_hand)
+						
+					end
+					
 				end
 
 
