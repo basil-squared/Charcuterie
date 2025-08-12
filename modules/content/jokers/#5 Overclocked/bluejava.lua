@@ -2,6 +2,7 @@ SMODS.Joker {
     key = 'blue_java',
     atlas = CHAR.G.overclockedatlas.key,
     pos = {x = 1,y = 0},
+    cost = 30,
     rarity = 'charcuterie_overclocked',
     config = {extra = {odds = 10000, xmult = 12}},
     loc_vars = function(self,info_queue,card)

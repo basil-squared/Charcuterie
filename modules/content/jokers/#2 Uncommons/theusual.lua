@@ -3,6 +3,7 @@ SMODS.Joker {
 	atlas = CHAR.G.jokeratlas.key,
 	pos ={x=52,y=0},
 	rarity = 2,
+	cost =5,
 
 	config = {extra = {xmult = 2}},
 	blueprint_compat = true,

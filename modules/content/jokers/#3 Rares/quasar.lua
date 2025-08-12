@@ -4,6 +4,7 @@ SMODS.Joker {
 	pos = {x=2,y=0},
 	config = {extra = {score_req = 1}, locked_extra = {cards_req = 20}},
 	rarity =3,
+	cost = 7,
 	loc_vars = function(self,info_queue,card)
 		info_queue[#info_queue+1] = G.P_CENTERS.m_charcuterie_void
 		return {

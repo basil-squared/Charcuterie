@@ -9,6 +9,7 @@ SMODS.Joker {
 		return {vars = {card.ability.extra.xdollars}}
 	end,
 	unlocked = false,
+	cost = 30,
 	calculate = function(self,card,context)
 		if context.individual and context.cardarea == G.play then
 			if context.other_card:is_suit('Diamonds') then

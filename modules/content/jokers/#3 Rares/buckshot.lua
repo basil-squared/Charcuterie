@@ -3,6 +3,7 @@ SMODS.Joker {
     atlas = CHAR.G.jokeratlas.key,
     pos = {x = 53,y=0},
     rarity = 3,
+    cost = 7,
     config = {extra = {odds = 5, repetitions = 2}},
     loc_vars = function(self,info_queue,card)
         return {vars = {(G.GAME.probabilities.normal or 1),card.ability.extra.odds}}

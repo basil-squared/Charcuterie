@@ -6,6 +6,7 @@ SMODS.Joker {
 		info_queue[#info_queue+1] = G.P_CENTERS.m_charcuterie_void
 	end,
 	rarity = 2,
+	cost = 5,
 	calculate = function(self,card,context)
 		if context.individual and context.cardarea == G.play then
 			if context.other_card:is_face() then

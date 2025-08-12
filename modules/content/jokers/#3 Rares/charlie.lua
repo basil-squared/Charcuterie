@@ -8,6 +8,7 @@ SMODS.Joker {
 	end,
 	unlocked = false,
 	rarity = 3,
+	cost = 7,
 	calculate = function(self,card,context)
 		if context.using_consumeable then
 			if context.consumeable.ability.set == 'Spectral' then

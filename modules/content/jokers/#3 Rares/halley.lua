@@ -4,6 +4,7 @@ SMODS.Joker({
 	key = "halley",
 	config = { extra = { to_generation = 5, cards_generated = 3 } },
 	rarity = 3,
+	cost = 7,
 	blueprint_compat = true,
 
 	loc_vars = function(self,info_queue,card)

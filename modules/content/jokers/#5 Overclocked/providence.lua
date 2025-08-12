@@ -3,6 +3,10 @@ SMODS.Joker {
     atlas = CHAR.G.overclockedatlas.key,
     pos = { x = 16,y=0},
     config = {extra = { xmult = 4}},
+    unlocked = false,
+    check_for_unlock = function (self, args)
+        return G.GAME.Overclock_Table and G.GAME.Overclock_Table['j_charcuterie_providence']
+    end,
     loc_vars = function(self,info_queue,card)
         info_queue[#info_queue+1] = {set = "Other",key = 'char_txt_oc'}
         local most_played

@@ -4,6 +4,10 @@ SMODS.Joker {
     pos = {x=8,y=0},
     config = { extra = {mult = 3, hand = "Three of a Kind"}},
     cost = 30,
+    unlocked = false,
+    check_for_unlock = function (self, args)
+        return G.GAME.Overclock_Table and G.GAME.Overclock_Table['j_charcuterie_pour_trois']
+    end,
     rarity = "charcuterie_overclocked",
     loc_vars = function(self,info_queue,card) 
         info_queue[#info_queue+1] = {set = "Other", key = 'char_txt_oc'}

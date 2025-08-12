@@ -20,7 +20,7 @@ SMODS.Enhancement {
 			if pseudorandom('orjgroigjreongroi') < G.GAME.probabilities.normal / card.ability.extra.odds then
 				G.E_MANAGER:add_event(Event({
 					func = function()
-						ease_hands(card.ability.extra.hands_granted)
+						ease_hands_played(card.ability.extra.hands_granted)
 					end
 
 				}))

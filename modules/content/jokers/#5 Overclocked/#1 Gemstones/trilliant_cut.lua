@@ -2,6 +2,7 @@ SMODS.Joker {
 	key = 'trilliant_cut',
 	atlas = CHAR.G.overclockedatlas.key,
 	pos = {x = 12,y=0},
+	cost = 30,
 	config = {extra = {chips = 200}},
 	loc_vars = function(self,info_queue,card)
 		info_queue[#info_queue + 1] = {set="Other",key="char_txt_oc"}

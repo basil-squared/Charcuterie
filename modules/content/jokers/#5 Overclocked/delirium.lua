@@ -16,6 +16,7 @@ SMODS.Joker {
 	key = 'delirium',
 	atlas = CHAR.G.overclockedatlas.key,
 	pos = {x = 3,y=0},
+	cost = 30,
 	config = {extra = {curr_xm = 1,xm_scale = 1,}},
 	unlocked = false,
 	rarity = 'charcuterie_overclocked',

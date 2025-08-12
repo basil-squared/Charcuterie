@@ -9,6 +9,7 @@ SMODS.Joker({
 	pos = { x = 9, y = 0 },
 	soul_pos = { x = 10, y = 0 },
 	rarity = 4,
+	cost = 20,
 	loc_vars = function(self, info_queue, card)
 		return {
 			vars = { card.ability.extra.jokplus },

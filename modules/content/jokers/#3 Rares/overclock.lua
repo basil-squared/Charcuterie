@@ -1,6 +1,7 @@
 SMODS.Joker {
 	key = 'overclock',
 	rarity = 3,
+	cost = 10,
 	config = {extra = {odds = 15}},
 	loc_vars = function(self,info_queue,card)
 		return {vars = {(G.GAME.probabilities.normal or 1),card.ability.extra.odds}}

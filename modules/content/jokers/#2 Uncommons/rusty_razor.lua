@@ -37,6 +37,7 @@ SMODS.Joker {
 		}
 	end,
 	rarity = 2,
+	cost = 5,
 	atlas = CHAR.G.jokeratlas.key,
 	pos = { x = 67,y=0},
 	calculate = function(self,card,context)

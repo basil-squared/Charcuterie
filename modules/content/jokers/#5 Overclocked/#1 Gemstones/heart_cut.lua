@@ -2,6 +2,7 @@ SMODS.Joker {
 	key = 'heart_cut',
 	atlas = CHAR.G.overclockedatlas.key,
 	pos = {x = 14,y=0},
+	cost = 30,
 	config = {extra = {xmult = 3, odds = 2}},
 	loc_vars = function(self,info_queue,card)
 		info_queue[#info_queue + 1] = {set="Other",key="char_txt_oc"}

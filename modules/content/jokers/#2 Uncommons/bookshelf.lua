@@ -4,6 +4,7 @@ SMODS.Joker {
 	config = {extra = { used_tarots = {}}},
 	pos = {x=7,y=0},
 	rarity = 2,
+	cost = 5,
 	calculate = function(self,card,context) -- This hardly works, but dude i could hardly care anymore. just. report any crashes
 		if context.using_consumeable then
 			if context.consumeable.ablility.set == 'Tarot' then
