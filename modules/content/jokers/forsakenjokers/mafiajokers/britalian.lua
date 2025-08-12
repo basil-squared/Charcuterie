@@ -3,7 +3,7 @@ SMODS.Joker {
 	rarity = "charcuterie_hidden",
 	config = {extra = {money_awarded = 1,mafia = true}},
 	atlas = CHAR.G.jokeratlas.key,
-	pos = {x = 48, y=0},
+	pos = {x = 12, y=0},
 	loc_vars = function(self,info_queue,card)
 		info_queue[#info_queue + 1] = {set = "Other", key = "char_txt_mafia"}
 		return {vars = {card.ability.extra.money_awarded}}

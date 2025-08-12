@@ -1,0 +1,121 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 4
+
+
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''local last_mult = self.ability.mult'''
+position = 'after'
+match_indent = true
+payload = '''
+    if last_mult >= 25 then
+        CHAR.FUNC.overclock_proc({card=self,key="j_charcuterie_metro_lines"})
+        return {}
+    end
+'''
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''if self.ability.name == 'Castle' and
+            not context.other_card.debuff and
+            context.other_card:is_suit(G.GAME.current_round.castle_card.suit) and not context.blueprint then'''
+position = 'after'
+match_indent = true
+payload = '''
+    if self.ability.extra.chips >= 200 then
+        CHAR.FUNC.overclock_proc({card=self,key='j_charcuterie_bunker',save=true})
+        return {}
+    end
+'''
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''if (context.other_card:get_id() == 8) and (pseudorandom('8ball') < G.GAME.probabilities.normal/self.ability.extra) then'''
+position = 'after'
+match_indent = true
+payload = '''
+                if self.ability.ext_ovr and self.ability.ext_ovr.hitcounter then
+                    if self.ability.ext_ovr.hitcounter >= 5 then
+                        CHAR.FUNC.overclock_proc({card=self,key='j_charcuterie_infinite_ball'})
+                    end
+                    self.ability.ext_ovr.hitcounter = self.ability.ext_ovr.hitcounter + 1
+                end
+          '''
+
+
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''
+            G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+                        return {
+                            extra = {focus = self, message = localize('k_plus_tarot'), func = function()
+                                G.E_MANAGER:add_event(Event({
+                                    trigger = 'before',
+                                    delay = 0.0,
+                                    func = (function()
+                                            local card = create_card('Tarot',G.consumeables, nil, nil, nil, nil, nil, '8ba')
+                                            card:add_to_deck()
+                                            G.consumeables:emplace(card)
+                                            G.GAME.consumeable_buffer = 0
+                                        return true
+                                    end)}))
+                            end},
+                            colour = G.C.SECONDARY_SET.Tarot,
+                            card = self
+                        }
+                    end
+           '''
+position = 'after'
+match_indent = true
+payload = '''
+           else
+              card.ability.ext_ovr.hitcounter = 0
+              return { message = localize('k_reset')}
+          '''
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''
+if self.ability.name == 'Madness' and not context.blueprint and not context.blind.boss then
+'''
+position = 'after'
+match_indent = true
+payload = '''
+    if self.ability.x_mult >= self.ability.ext_ovr.req_xmult then
+        CHAR.FUNC.overclock_proc({card=self,key='j_charcuterie_delirium'})
+        
+    end
+'''
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''
+    if self.ability.name == 'The Idol' and
+                    context.other_card:get_id() == G.GAME.current_round.idol_card.id and 
+                    context.other_card:is_suit(G.GAME.current_round.idol_card.suit) then
+'''
+position = 'before'
+match_indent = true
+payload = '''
+    if self.ability.name == 'The Idol' and not context.other_card:get_id() == G.GAME.current_round.idol_card.id and context.other_card:is_suit(G.GAME.current_round.idol_card.suit) then
+        self.ability.ext_ovr.counter = 0
+        
+    end
+'''
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''
+    if self.ability.name == 'The Idol' and
+                    context.other_card:get_id() == G.GAME.current_round.idol_card.id and 
+                    context.other_card:is_suit(G.GAME.current_round.idol_card.suit) then
+'''
+position = 'after'
+match_indent = true
+payload = '''
+    self.ability.ext_ovr.counter = self.ability.ext_ovr.counter + 1 
+'''

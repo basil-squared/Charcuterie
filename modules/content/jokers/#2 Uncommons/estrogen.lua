@@ -6,7 +6,13 @@ SMODS.Joker({
 
 	config = {extra={ out_of = 5}},
 	loc_vars = function(self,info_queue,card)
-		return {vars={(G.GAME.probabilities.normal or 1), card.ability.extra.out_of}}
+		local new_num, new_denom = SMODS.get_probability_vars(card,1,card.ability.extra.out_of,'estrogen')
+		return {
+			vars = {
+				new_num,
+				new_denom
+			}
+		}
 	end,
 	blueprint_compat = true,
 
@@ -14,7 +20,7 @@ SMODS.Joker({
 	cost = 5,
 	calculate = function(self,card,context)
 		if context.individual and context.cardarea == G.play then
-			if pseudorandom('girlpill') < G.GAME.probabilities.normal / card.ability.extra.out_of and context.other_card.is_face() then
+			if SMODS.pseudorandom_probability(card,'fovhjwusohvnsweui',1,card.ability.extra.out_of) and context.other_card:is_face() then
 				assert(SMODS.change_base(context.other_card,nil,'Queen'))
 				return {
 					message = ":3",

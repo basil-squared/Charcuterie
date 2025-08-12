@@ -1,12 +1,12 @@
 {
     "id": "charcuterie",
     "name": "Charcuterie",
-    "author": ["basil-squared","HamIsntCool","Gelopsys"],
+    "author": ["basil-squared","HamIsntCool","Gelopsys","wevegotjamie"],
     "description": "A variety of flavor, all in one balatro mod!",
     "prefix": "charcuterie",
     "badge_colour": "fc8048",
     "dependencies": [
-            "Steamodded (>=1.0.0~ALPHA-1404b)",
+            "Steamodded (>=1.0.0~BETA-0711a)",
             "Talisman"
     ],
     "main_file": "main.lua",

@@ -8,6 +8,7 @@ SMODS.Joker {
 		return {vars={self.config.extra.xchips, card.ability.extra.totalxchips}}
 	end,
 	rarity = 2,
+	cost = 5,
 	calculate = function(self,card,context)
 		if context.unstable_proc  then
 			card.ability.extra.totalxchips = card.ability.extra.totalxchips + card.ability.extra.xchips

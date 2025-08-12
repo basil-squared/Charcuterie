@@ -1,6 +1,7 @@
 SMODS.Joker {
 	key = 'dubious_merchant',
 	rarity = 2,
+	cost = 5,
 	atlas = CHAR.G.jokeratlas.key,
 	pos = {x = 77, y = 0},
 	config = {extra ={lower_ceiling = -2, upper_ceiling = 3,curr_ceiling = 0,oc_incompatible = true }},

@@ -1,3 +1,5 @@
+-- Because the base game function wasn't good enough
+
 CHAR.FUNC.level_up_hand = function(card, hand_key, instant, amount)
   if not (instant) then
     update_hand_text({ sound = 'button', volume = 0.7, pitch = 0.8, delay = 0.3 },

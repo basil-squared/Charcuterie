@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 CHAR.WINFUNC = {}
 CHAR.WINFUNC.FOUR_CORNERS = function()
     G.E_MANAGER:add_event(Event({

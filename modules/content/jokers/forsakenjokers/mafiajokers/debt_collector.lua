@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "debt_collector",
 	atlas = CHAR.G.jokeratlas.key,
-	pos = {x=47,y=0},
+	pos = {x=12,y=0},
 	pools = { ["mafia"] = true},
 	loc_vars = function(self,info_queue,card)
 		info_queue[#info_queue+1] = {set = "Other", key = "char_txt_mafia"}

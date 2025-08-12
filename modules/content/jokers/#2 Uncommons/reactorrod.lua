@@ -3,5 +3,6 @@ SMODS.Joker {
 	atlas = CHAR.G.jokeratlas.key,
 	pos={x=20,y=0},
 	rarity = 2,
+	cost = 5,
 
 }

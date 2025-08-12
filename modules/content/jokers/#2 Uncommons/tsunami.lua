@@ -3,6 +3,7 @@ SMODS.Joker {
     atlas = CHAR.G.jokeratlas.key,
     pos = {x=12,y=0},
     rarity = 2,
+    cost = 5,
     config = {extra = {mult_gain = 0.01, curr_mult = 1.0}},
     loc_vars = function(self,info_queue,card)
         return {vars = {card.ability.extra.mult_gain, card.ability.extra.curr_mult}}

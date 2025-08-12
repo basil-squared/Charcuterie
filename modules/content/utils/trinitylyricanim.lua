@@ -1,4 +1,12 @@
 ---@diagnostic disable: undefined-global
+---
+-- yall like events? well theres like 300+ in here so hopefully you're satisfied
+--[[ this breaks when it pauses, but honestly im just gonna make it to where
+    the game makes you lose if you pause, to discourage it happening
+    only the best game design at charcuterie
+]]
+
+-- touch the rust code and i break your god damn fingers
 CHAR.G.IMAGE_SHOW = CHAR.G.MODPATH .. "resources/helps/show_image.exe"
 CHAR.FUNC.rewrite_lyr = function()
     local w,h = love.window.getDesktopDimensions()

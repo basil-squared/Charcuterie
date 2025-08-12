@@ -7,6 +7,7 @@ SMODS.Joker {
     return { vars = { card.ability.extra.xmult_increm, card.ability.extra.totalxmult } }
   end,
   rarity = 3,
+  cost = 7,
   calculate = function(self, card, context)
     if context.card_added
         and context.card.ability.set == 'Joker' then

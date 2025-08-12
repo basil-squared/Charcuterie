@@ -8,8 +8,10 @@ function get_new_boss()
   end
 
   local bl = gnb()
+
 ---@diagnostic disable-next-line: param-type-mismatch
   local bl_key = string.sub(bl, 4)
+
   local tier2blinds = {
     tooth = true,
     manacle =true,
@@ -31,8 +33,22 @@ function get_new_boss()
     window = true,
     head = true,
   }
-  if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante >= 8  then
-    if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante >= 16 then
+  if #CHAR.G.BLIND_REPEAT_QUEUE > 0 and CHAR.G.LOCKED_BOSS then
+    print("Blind repeat queue not empty! intercepting...")
+    for k,v in pairs(CHAR.G.BLIND_REPEAT_QUEUE) do
+      if type(CHAR.G.BLIND_REPEAT_QUEUE[k]) == 'number' and CHAR.G.BLIND_REPEAT_QUEUE[k] >= 1 then
+        CHAR.G.BLIND_REPEAT_QUEUE[k] = CHAR.G.BLIND_REPEAT_QUEUE[k] - 1
+        print("Decremented blind queue number by one, returning locked boss...")
+        return CHAR.G.LOCKED_BOSS
+      else
+        CHAR.G.BLIND_REPEAT_QUEUE[k] = nil
+      end
+    end
+  else
+    CHAR.G.LOCKED_BOSS = nil
+  end
+  if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante >= G.GAME.win_ante  then
+    if G and G.GAME and G.GAME.selected_back.name == "b_charcuterie_hardcore" or G and G.GAME and G.GAME.round_resets.ante >= G.GAME.win_ante * 2 then
       if tier3blinds[bl_key] then
         return "bl_charcuterie_bigger" .. bl_key
       end

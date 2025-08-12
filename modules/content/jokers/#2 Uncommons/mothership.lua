@@ -4,6 +4,8 @@ SMODS.Joker {
     pos = {x=76,y=0},
 
     rarity = 2,
+    cost = 5,
+    
     
     config = {extra = {xmult = 0.2, curr_xmult = 1.0}},
     loc_vars = function(self,info_queue,card)

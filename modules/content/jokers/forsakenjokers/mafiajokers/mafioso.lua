@@ -28,7 +28,7 @@ SMODS.Joker {
 				SMODS.add_card({set="mafia",})
 				SMODS.add_card({set="mafia",})
 			end
-			play_sound("charcuterie_mafioso_summon")
+
 			card.ability.extra.total_xmult = (card.ability.extra.bxm) + (card.ability.extra.xmult_gained * #mafiajokers)
 			return {
 				message = "Here we go.",

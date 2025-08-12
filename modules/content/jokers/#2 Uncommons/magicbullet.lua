@@ -1,6 +1,7 @@
 SMODS.Joker {
 	key = 'magic_bullet',
 	rarity = 2,
+	cost = 5,
 	atlas = CHAR.G.jokeratlas.key,
 	pos = {x = 68,y=0},
 	config = {extra = {start_mult = 3, tarot_decrem = 0.05, spectral_decrem = 0.5,currmult = 3}},

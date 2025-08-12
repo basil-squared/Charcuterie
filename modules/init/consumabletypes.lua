@@ -3,6 +3,7 @@ SMODS.ConsumableType({
 	shop_rate = 0,
 	primary_colour = HEX("140100"),
 	secondary_colour = HEX("570803"),
+	collection_rows = {7,7},
 	loc_txt = {
 		name = "Ritual Card", -- used on card type badges
 		collection = "Ritual Cards", -- label for the button to access the collection
@@ -13,16 +14,3 @@ SMODS.ConsumableType({
 	},
 })
 
-SMODS.ConsumableType({
-	key = "Element",
-	primary_colour = HEX("7dd75a"),
-	secondary_colour = HEX("436e47"),
-	loc_txt = {
-		name = "Element Card",
-		collection = "Element Cards",
-		undiscovered = {
-			name = "???",
-			text = {"An undiscovered Element Card.","Look for these scientific cards in the shop and booster packs!"}
-		}
-	}
-})

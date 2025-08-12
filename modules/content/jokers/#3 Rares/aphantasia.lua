@@ -2,7 +2,7 @@ SMODS.Joker {
 	key = 'aphantasia',
 	atlas = CHAR.G.jokeratlas.key,
 	pos = {x=58,y=0},
-	
+	cost = 7,
 	
 	rarity = 3,
     calculate = function(self,card,context)

@@ -1,7 +1,7 @@
 SMODS.Joker {
 	key = "bunny",
 	atlas = CHAR.G.jokeratlas.key,
-	pos = {x=50,y=0},
+	pos = {x=12,y=0},
 	pools = { ["mafia"] = true},
 	config = {extra = {chance = 3, produce = 2}},
 	loc_vars = function(self,info_queue,card)

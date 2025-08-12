@@ -2,7 +2,7 @@ SMODS.Consumable {
     key = "summon",
     set = 'ritual',
     atlas = CHAR.G.ritualatlas.key,
-    pos = {x =6,y=0},
+    pos = {x =1,y=1},
     loc_vars = function(self,info_queue,card)
         info_queue[#info_queue+1] = {set = 'Other', key = 'aspl_txt_risk'}
         return { vars = { tostring((1 - (G.GAME.Risk or 0) ) * 100), tostring((G.GAME.Risk or 0) * 100) } }
@@ -54,11 +54,11 @@ SMODS.Consumable {
     can_use = function(self, card)
 		local potential_victims = {}
 		for i = 1, #G.jokers.cards do
-			if G.jokers.cards[i]:can_calculate(true) and not G.jokers.cards[i].ability.eternal then
+			if G.jokers.cards[i]:can_calculate(true) and not G.jokers.cards[i].ability.eternal then -- can_calculate just checks to ensure that the joker isnt getting wiped already
 				table.insert(potential_victims, G.jokers.cards[i])
 			end
 		end
-		return #potential_victims > 2
+		return #potential_victims >= 2
 	end,
 
 
