@@ -1084,6 +1084,41 @@ return {
 				name = "Overclocked",
 				text = { "This card is an {C:attention}enhanced{} version", "of a Joker" },
 			},
+			char_txt_ochint_8_ball = {
+				name = 'Overclockable',
+				text = {"To overclock this Joker","you must get {C:attention}quite lucky{}"}
+
+			},
+			char_txt_ochint_bootstraps =  {
+				name = "Overclockable",
+				text = {"To overclock this Joker","You must hit {C:attention}rock bottom"}
+			},
+			char_txt_ochint_obviousbootstraps = {
+				name = "Overclockable",
+				text = {{"To overclock this Joker","Reach {C:red}-$20{}"}}
+			},
+			char_txt_ochint_cartomancer = {
+				name = "Overclockable",
+				text = {"To overclock this Joker","You must show it {C:spectral}true power{}.."}
+			},
+			char_txt_ochint_obviouscartomancer = {
+				name = "Overclockable",
+				text = {"To overclock this Joker","use {C:attention}10{} {C:spectral}Spectral{} cards"}
+			},
+
+			char_txt_ochint_obvious8_ball  = {
+				name = 'Overclockable',
+				text = {"To overclock this Joker","get {C:attention}5{} hits in a row"}
+			},
+			char_txt_ochint_castle = {
+				name = "Overclockable",
+				text = {"To overclock this Joker","bring it to it's {C:attention}maximum"}
+			},
+			char_txt_ochint_obviouscastle = {
+				name = "Overclockable",
+				text = {"To overclock this Joker", "Scale it to {C:chips}+200{} Chips"}
+			},
+			
 			char_txt_ochint_hinder = {
 				name = "Overclockable",
 				text = {
@@ -1146,6 +1181,15 @@ return {
 		name = 'Overclockable',
 		text = {'To overclock this Joker','play {C:attention}30{} 3OAKs'}
 	  },
+	  char_txt_ochint_burglar = {
+		name = "Overclockable",
+		text = {'To overclock this Joker','Amass a {C:attention}great fortune{}...'}
+	  },
+	  char_txt_ochint_obviousburglar = {
+		name = "Overclockable",
+		text = {'To overclock this Joker', 'Get {C:attention}$500+{}'}
+	  },
+
 
 			charcuterie_obscure_seal = {
 				name = "Obscured Seal",

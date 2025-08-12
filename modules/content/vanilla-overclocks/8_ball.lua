@@ -5,7 +5,7 @@ SMODS.Joker:take_ownership('8_ball',{
 		card.ability.ext_ovr.hitcounter = 0
 	end,
 	loc_vars = function(self,info_queue,card)
-		info_queue[#info_queue+1] = {set = 'Other'}
+		info_queue[#info_queue+1] = CHAR.FUNC.ochint_mgr('8_ball')
 	end
 },true)
 
