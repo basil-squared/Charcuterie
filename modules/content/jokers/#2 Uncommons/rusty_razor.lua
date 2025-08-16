@@ -42,8 +42,24 @@ SMODS.Joker {
 	pos = { x = 67,y=0},
 	calculate = function(self,card,context)
 		if context.setting_blind then
-			if SMODS.pseudorandom_probability(card,'wp0r9igwj8ip',1,card.ability.extra.odds) then
-				local victim = card
+            if SMODS.pseudorandom_probability(card, 'wp0r9igwj8ip', 1, card.ability.extra.odds) then
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'immediate',
+                    blockable = false,
+                    func = function()
+						SMODS.calculate_effect({message = localize('k_nope_ex')}, card)
+					end
+                }))
+				
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'after',
+                    blockable = false,
+                    delay = 1,
+                    func = function()
+						SMODS.destroy_card(card)
+					end
+				}))
+				--[[ local victim = card
 				if not victim then
 					return
 				end -- Safety check
@@ -67,7 +83,7 @@ SMODS.Joker {
 					end,
 				}))
 			else -- TODO: PLEASE PLEASE PLEASE CHANGE THIS TO THE NEW SYSTEM THIS SHIT SUCKS SO BAD
-				
+				]]
 				local comb_sell = to_big(0)
 				
 				local victim1 = G.jokers.cards[get_joker_to_left(G.jokers.cards,card)]
@@ -75,7 +91,7 @@ SMODS.Joker {
 				if victim1 then
 
 					comb_sell = comb_sell + to_big(victim1.sell_cost)
-					SMODS.destroy_cards(victim1)
+					SMODS.destroy_card(victim1)
 				end
 				if victim2 then
 					comb_sell = comb_sell + to_big(victim2.sell_cost)
