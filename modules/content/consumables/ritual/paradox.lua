@@ -18,7 +18,7 @@ SMODS.Consumable {
 
 		end
 		if not eligible[1] then
-			return nil
+			return
 		end
 		local selected_joker = pseudorandom_element(eligible,pseudoseed('blahblahblah'))
 		selected_joker.getting_sliced = true

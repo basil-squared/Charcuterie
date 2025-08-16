@@ -5,18 +5,21 @@ SMODS.Joker {
 	rarity = 1,
 	cost = 5,
 	add_to_deck = function(self, card, from_debuff)
-		for k, v in pairs(G.GAME.probabilities) do
-			G.GAME.probabilities[k] = v * 0.5
-		end
+		
 		G.GAME.RISK_RATE = 0.5
 	end,
 	remove_from_deck = function(self, card, from_debuff)
-		for k, v in pairs(G.GAME.probabilities) do
-			G.GAME.probabilities[k] = v / 0.5
-		end
+		
 		G.GAME.RISK_RATE = 1
 
-	end,
+    end,
+    calculate = function(self, card, context) -- Fixed to use new probability mod system ^w^
+		if context.mod_probability then
+            return {
+				numerator = context.numerator * 0.5
+			}
+		end
+	end
 
 
 }
