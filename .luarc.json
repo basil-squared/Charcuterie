@@ -1,4 +1,4 @@
 {
-  "Lua.workspace.library": ["~/BalatroMods/smods", "~/BalatroMods/lovely/dump"],
+  "Lua.workspace.library": ["~/BalatroMods/smods", "~/BalatroMods/lovely/dump","~/BalatroMods/Mods/smods","~/BalatroMods/Mods/lovely/dump"],
   "diagnostics.globals": ["JokerDisplay", "Partner_API", "ease_hands"]
 }
