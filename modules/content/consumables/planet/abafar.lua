@@ -3,7 +3,7 @@ SMODS.Consumable {
 	set = "Planet",
 	atlas = CHAR.G.planetatlas.key,
 	pos = {x=1,y=0},
-	config = {hand_type = 'charcuterie_graystraight'},
+	config = {hand_type = 'charcuterie_graystraight', softlock = true},
 	use = function(self,card,area,copier)
 		CHAR.FUNC.level_up_hand(card,'charcuterie_graystraight',false,1)
 	end,

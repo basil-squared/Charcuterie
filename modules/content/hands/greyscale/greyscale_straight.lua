@@ -4,6 +4,7 @@ SMODS.PokerHand {
   chips = 70,
   l_mult = 5,
   l_chips = 20,
+  visible = false,
   example = {
     { 'S_7', true, edition = "e_charcuterie_bleached" },  -- King of Spades, does not score
     { 'H_6', true, edition = "e_charcuterie_bleached" },  -- 9 of Spades, scores

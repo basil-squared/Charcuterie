@@ -21,7 +21,7 @@ SMODS.Consumable {
 			return
 		end
 		local selected_joker = pseudorandom_element(eligible,pseudoseed('blahblahblah'))
-		selected_joker.getting_sliced = true
+		        --[[selected_joker.getting_sliced = true
 		G.GAME.joker_buffer = G.GAME.joker_buffer - 1
 		G.E_MANAGER:add_event(Event({
 			trigger = 'immediate',
@@ -53,7 +53,8 @@ SMODS.Consumable {
 			}))
 
 
-		end
+		end]]
+		SMODS.destroy_card(selected_joker)
 		delay(0.5)
 		G.E_MANAGER:add_event(Event({
 			trigger = 'after',

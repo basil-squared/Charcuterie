@@ -24,7 +24,7 @@ SMODS.Joker {
 
 				}
 			end
-			for i=1, #jokers do
+			--[[ for i=1, #jokers do
 				victim = jokers[i]
 				if not victim then
 					print("none to slice")
@@ -49,8 +49,8 @@ SMODS.Joker {
 				}))
 				card.ability.extra.curr_xchip = card.ability.extra.curr_xchip + card.ability.extra.x_chip_gain
 
-			end
-
+			end ]]
+			SMODS.destroy_cards(jokers)
 			return {
 				message = "!!!",
 				colour = G.C.RED,
