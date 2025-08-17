@@ -1054,6 +1054,14 @@ return {
 					"{X:dark_edition,C:white}^#1#{} Mult when",
 					"scored hand contains a  {C:Attention}#2#{}"
 				}
+            },
+            j_charcuterie_time_piece = {
+				name = 'Time Piece',
+                text = {
+                    "When {C:attention}destroyed,{}",
+                    "resets to ante that this Joker was {C:attention}obtained{} at",
+					"{C:inactive,S:0.5}(Will reset to Ante #1#)"
+				}
 			}
 		},
 		Other = {

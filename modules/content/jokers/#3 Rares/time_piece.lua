@@ -6,6 +6,8 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.obtained_ante,  card.ability.extra.curr_ante}}
     end,
+    rarity = 3,
+    price = 10,
     add_to_deck = function(self, card, from_debuff)
         card.ability.extra.obtained_ante = G.GAME.round_resets.ante
         card.ability.extra.curr_ante = G.GAME.round_resets.ante
@@ -14,8 +16,8 @@ SMODS.Joker {
         if context.ante_change then
             card.ability.extra.curr_ante = G.GAME.round_resets.ante
         end
-        if context.joker_type_destroyed then
-            if context.other_card == card then
+        if context.joker_type_destroyed or context.selling_card then
+            if context.card == card then
                 ease_ante(-(card.ability.extra.current_ante - card.ability.extra.obtained_ante))
             end
         end

@@ -1,4 +1,4 @@
---[[ local gnb = get_new_boss
+local gnb = get_new_boss
 function get_new_boss()
   --Fix an issue with adding bosses mid-run
   for k, v in pairs(G.P_BLINDS) do
@@ -97,4 +97,3 @@ function get_new_big()
   return 'bl_big'
 end
 
-]]
