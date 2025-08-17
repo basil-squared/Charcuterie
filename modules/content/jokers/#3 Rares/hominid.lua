@@ -12,7 +12,7 @@ end
 
 
 SMODS.Joker {
-    key = 'alien_hominid',
+    key = 'hominid',
     atlas = CHAR.G.jokeratlas2.key,
     pos = { x = 1, y = 0 },
     config = { extra = { curr_mult = 1, increm = 0.1, base = 1 } },

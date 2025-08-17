@@ -1080,6 +1080,24 @@ return {
                     "resets to ante that this Joker was {C:attention}obtained{} at",
 					"{C:inactive,S:0.5}(Will reset to Ante #1#)"
 				}
+            },
+            j_charcuterie_hominid = {
+                name = 'Alien Hominid',
+                text = {
+                    "When setting blind, destroy Joker",
+                    "to the {C:attention}right{} of this card",
+                    "Gain {C:mult}+{}({X:black,C:white}X#1#{} * {C:attention}sell value{}) Mult",
+                    "{C:inactive}(multiplier dependant on number of",
+					"{C:charcuterie_galactical}Galactical Cards{}{C:inactive} in full deck)"
+				}
+            },
+            j_charcuterie_creator = {
+                name = "The Creator",
+                text = {
+                    "If this Joker is held for {C:attention}#1#{} or more Antes",
+                    "{C:attention}sell{} this Joker to {C:attention}execute one line of",
+					"{C:attention}Lua code{}"
+				}
 			}
 		},
 		Other = {
