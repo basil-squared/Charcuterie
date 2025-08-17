@@ -18,7 +18,25 @@ return {
 					"Start with {C:attention}$#1#{}",
 					"All blinds are {C:red}Tier 3{}",
 				},
-			},
+            },
+            b_charcuterie_turbo = {
+                name = "Overclocked Deck",
+                text = {
+                    "All Jokers are {C:attention}Overclocked",
+                    "Start with {C:attention}$#1#{}",
+					"{C:red}X#2#{} blind size"
+				}
+            },
+            b_charcuterie_wrong = {
+                name = "Wrong Deck",
+                text = {
+                    "{C:red}-#1#{}",
+                    "{C:blue}Hands",
+                    "{C:red}Discards",
+                    "{C:yellow} Joker and Consumable slots",
+					"{C:inactive}are you up for it?{}"
+				}
+			}
 		},
 		Blind = {
 			bl_charcuterie_bigwall = {
