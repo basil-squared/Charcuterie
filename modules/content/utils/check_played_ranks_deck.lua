@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-field, undefined-doc-name
 ---@param cards Card[]
 ---@return table <number|string,number>
 function CHAR.FUNC.check_played_rank_deck(cards)

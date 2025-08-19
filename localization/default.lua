@@ -381,6 +381,14 @@ return {
 					"{C:attention}right{} of this card {C:attention}thrice{}",
 				},
 			},
+			m_charcuterie_frostbitten = {
+				name = "Frostbitten Card",
+				text = {
+					"Reduces {C:red}Risk{}",
+					"by {C:green}#1#%{}",
+					"when scored",
+				}
+			}
 		},
 		Joker = {
 			j_charcuterie_goldencheese = {
@@ -1098,6 +1106,37 @@ return {
                     "{C:attention}sell{} this Joker to {C:attention}execute one line of",
 					"{C:attention}Lua code{}"
 				}
+			},
+			j_charcuterie_useless_collectable = {
+				name = "Useless Collectable",
+				text = {
+					"Gain {C:attention}$#1#{} in sell value when round ends",
+					"{C:attention}cannot{} be sold"
+				}
+			},
+			j_charcuterie_golf = {
+				name = "Golf",
+				text = {
+					"{C:white,X:mult}X#1#{} Mult on",
+					"{C:attention}first hand{}"
+				}
+			},
+			j_charcuterie_phantom_ruby = {
+				name = "Phantom Ruby",
+				text = {
+					"Creates Jokers of {C:attention}decending rarity",
+					"when setting blind",
+					"{C:attention}Perishable{} will be applied",
+					"to Jokers created by this card"
+				}
+			},
+			
+			j_charcuterie_fountain = {
+				name = "Dark Fountain",
+				text = {
+					"Makes scored cards into {C:enhanced}Void Cards{}",
+					"for {C:attention}#1#{} hands"
+				}
 			}
 		},
 		Other = {
@@ -1284,6 +1323,7 @@ return {
 				name = "Brilliant Seal",
 				text = { "{C:white,X:chips}X#1#{} Chips if card is {C:enhanced}Enhanced{}." },
 			},
+			
 		},
 		Planet = {
 			c_charcuterie_arrakis = {
