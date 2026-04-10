@@ -289,6 +289,13 @@ return {
 				name = "Bleached",
 				text = { "Card is {C:attention}Suitless{}" },
 			},
+			e_charcuterie_etched = {
+				name = "Etched",
+				text = {
+					"{C:attention}Cannot{} be destroyed",
+					"unless explicitly selected",
+				},
+			},
 			e_charcuterie_melty = {
 				name = "Melty",
 				text = {
@@ -1409,6 +1416,7 @@ return {
 		high_scores = {},
 		labels = {
 			charcuterie_bleached = "Bleached",
+			charcuterie_etched = "Etched",
 			charcuterie_melty = "Melty",
 			charcuterie_brilliant_seal = "Brilliant Seal",
 			charcuterie_lime_seal = "Lime Seal",
