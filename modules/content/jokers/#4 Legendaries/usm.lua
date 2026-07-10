@@ -8,5 +8,16 @@ SMODS.Joker {
 	cost = 20,
 	loc_vars = function(self,info_queue,card)
 		return {vars = {card.ability.extra.xmult_gain,card.ability.extra.curr_xmult}}
+	end,
+	calculate = function(self,card,context)
+		local mod_count = table_length(SMODS.Mods)
+		card.ability.extra.curr_xmult = card.ability.extra.base_xmult * (card.ability.extra.xmult_gain * table_length(SMODS.Mods))
+		if context.joker_main  then
+			return {
+				xmult = card.ability.extra.curr_xmult
+			}
+		end
+		
+		
 	end
 }

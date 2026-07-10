@@ -17,8 +17,14 @@ return {
 				text = {
 					"Start with {C:attention}$#1#{}",
 					"All blinds are {C:red}Tier 3{}",
-				},
+				}, -- TODO: FUCKING FIX THIS!!!
 			},
+			b_charcuterie_turbo = {
+				name = "Overclocked Deck",
+				text = {
+					"Does Something"
+				}
+			}
 		},
 		Blind = {
 			bl_charcuterie_bigwall = {
