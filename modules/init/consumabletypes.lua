@@ -14,3 +14,19 @@ SMODS.ConsumableType({
 	},
 })
 
+SMODS.ConsumableType({
+	key = 'host',
+	shop_rate = 0,
+	primary_color = HEX("ede5d1"),
+	secondary_colour = HEX("c4beaf"),
+	collection_rows = {5,5},
+	loc_txt = {
+		name = "Host Card",
+		collection = "Host Cards",
+		undiscovered = {
+			name = "???",
+			text = { "An undiscovered Host Card.", "Nothing on its own, it needs something to hold." }
+		}
+	}
+})
+
