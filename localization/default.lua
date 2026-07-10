@@ -1400,6 +1400,9 @@ return {
 				text = {"The next {C:attention}#1#{} Boss Blinds","will be a {C:attention}repeat","of the {C:attention}current one{}"}
 			}
 		},
+		host = {
+			
+		},
 
 		tooltips = {},
 	},
