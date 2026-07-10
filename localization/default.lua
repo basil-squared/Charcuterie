@@ -1409,6 +1409,22 @@ return {
 					"of its type",
 					"{S:0.6,C:inactive}(Not usable on Host cards){}"
 				}
+			},
+			c_charcuterie_polymerize = {
+				name = 'Polymerize',
+				text = {
+					"{C:attention}fuse{} #2# unique consumables",
+					"into a new one",
+					"{C:inactive,S:0.6}(YMMV)"
+				}
+			},
+			c_charcuterie_relay = {
+				name = 'Relay',
+				text = {
+					"Selected consumable gains",
+					"\"On usage, {C:green}#1# in #2#{} chance to",
+					"not be {C:red}destroyed{}\""
+				}
 			}
 		},
 
