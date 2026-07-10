@@ -1063,9 +1063,28 @@ return {
 					"{X:dark_edition,C:white}^#1#{} Mult when",
 					"scored hand contains a  {C:Attention}#2#{}"
 				}
+			},
+			-- ENTERING THE 2.0 ZONE
+			j_charcuterie_letter_black = {
+				name = "Letter to the Black World",
+				text = {
+					"{C:attention}Scored{}",
+					"{X:black,C:black}iaejfiejfwifj{}{C:dark_edition}Suitless{}",
+					"{X:black,C:black}iaej{C:dark_edition}Rankless{}{X:black,C:black}fiejfwifj{}",
+					"{X:black,C:black}iaegegerdgj{C:mult}+#1# Mult{}{X:black,C:black}fiejfwifj{}"
+
+				}
 			}
 		},
 		Other = {
+			char_txt_suitless = {
+  				name = "Suitless",
+  				text = { "This card has {C:attention}no suit{},", "and cannot be used for", "suit-based effects" }
+			},
+			char_txt_rankless = {
+  				name = "Rankless",
+  				text = { "This card has {C:attention}no rank{},", "and cannot be used for", "rank-based effects" }
+			},
 			aspl_txt_risk = {
 				name = "Risk Based",
 				text = {
