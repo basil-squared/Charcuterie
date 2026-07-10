@@ -1401,7 +1401,15 @@ return {
 			}
 		},
 		host = {
-			
+			c_charcuterie_revelation = {
+				name = 'Revelation',
+				text = {
+					"{C:red}Destroy{} selected consumable",
+					"open {C:attention}#1#{} booster packs",
+					"of its type",
+					"{S:0.6,C:inactive}(Not usable on Host cards){}"
+				}
+			}
 		},
 
 		tooltips = {},
