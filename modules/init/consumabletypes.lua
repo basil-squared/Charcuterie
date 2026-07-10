@@ -17,7 +17,7 @@ SMODS.ConsumableType({
 SMODS.ConsumableType({
 	key = 'host',
 	shop_rate = 0,
-	primary_color = HEX("ede5d1"),
+	primary_colour = HEX("ede5d1"),
 	secondary_colour = HEX("c4beaf"),
 	collection_rows = {5,5},
 	loc_txt = {
