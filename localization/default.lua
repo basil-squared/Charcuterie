@@ -476,7 +476,7 @@ return {
 			},
 			j_charcuterie_thej = {
 				name = "The J",
-				text = { "For every joker, gain {X:mult,C:white}X#1#{} Mult." },
+				text = { "Each Joker gives","an extra {X:mult,C:white}X#1#{} Mult","{S:0.6,C:inactive}(Including itself)"},
 			},
 			j_charcuterie_theusual = {
 				name = "The Usual",
@@ -505,7 +505,9 @@ return {
 			},
 			j_charcuterie_ufo = {
 				name = "U.F.O",
-				text = { "Turns any face card played into a {C:charcuterie_galactical}Galactical{} Card. " },
+				text = { "Converts any {C:attention}face card{}",
+				"played into a",
+				"{C:charcuterie_galactical}Galactical Card{}."},
 			},
 			j_charcuterie_boredjoker = {
 				name = "Bored Joker",

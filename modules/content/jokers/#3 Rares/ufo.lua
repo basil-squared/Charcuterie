@@ -5,6 +5,10 @@ SMODS.Joker({
 	atlas = CHAR.G.jokeratlas.key,
 	blueprint_compat = false,
 	pos = { x = 6, y = 0 },
+	loc_vars  =  function(self,info_queue,card)
+		info_queue[#info_queue+1] = G.P_CENTERS.m_charcuterie_galactical
+		return
+	end,
 	cost = 5,
 	discovered = true,
 	calculate = function(self, card, context)
