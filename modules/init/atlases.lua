@@ -51,7 +51,14 @@ CHAR.G.enhancementatlas = SMODS.Atlas {
 	px = 71,
 	py = 95,
 }
-
+c_charcuterie_relay = {
+				name = 'Relay',
+				text = {
+					"Selected consumable gains",
+					"\"On usage, {C:green}#1# in #2#{} chance to",
+					"not be {C:red}destroyed{}\""
+				}
+			}
 CHAR.G.deckatlas = SMODS.Atlas {
 	key = "deck_atlas",
 	path = "deckatlas.png",
@@ -94,6 +101,12 @@ CHAR.G.crossmod_partneratlas = SMODS.Atlas {
 CHAR.G.tarotatlas = SMODS.Atlas {
 	key = "tarotatlas",
 	path = "customtarotatlas.png",
+	px = 71,
+	py = 95
+}
+CHAR.G.hostatlas = SMODS.Atlas {
+	key = "hostatlas",
+	path = "hostatlas.png",
 	px = 71,
 	py = 95
 }
