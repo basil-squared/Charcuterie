@@ -7,6 +7,8 @@ function Game:start_run(args)
   G.GAME.in_run = true
   G.GAME.RISK_LOCK = false
   G.GAME.RISK_RATE = 1
+  G.GAME.card_cost_mods = {}
+  G.GAME.blind_scaling_mods = {}
   CHAR.G.current_bunker_suit = 'Diamonds'
   CHAR.G.BLIND_REPEAT_QUEUE = {}
   CHAR.G.CURR_BOSS = nil

@@ -20,10 +20,13 @@ return {
 				}, -- TODO: FUCKING FIX THIS!!!
 			},
 			b_charcuterie_turbo = {
-				name = "Overclocked Deck",
-				text = {
-					"Does Something"
-				}
+				name = "Turbo Deck",
+  				text = {
+    				"Overclocked Jokers replace",
+    				"their base forms in the shop,",
+    				"and cost {C:attention}#2#%{} less.",
+    				"Ante scaling is {C:red}#1#X{} faster."
+  				}
 			}
 		},
 		Blind = {
