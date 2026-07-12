@@ -1123,6 +1123,23 @@ return {
 					"than {C:attention}Chips{} when",
 					"a hand finishes scoring"
 				}
+			},
+			j_charcuterie_fading = {
+				name = "Fading",
+				text = {
+					"{C:green}#1# in #2#{} chance",
+					"for a card to",
+					"gain {C:dark_edition}Bleached{}"
+
+				}
+			},
+			j_charcuterie_cultist = {
+				name = "Cultist",
+				text = {
+					"Gain {C:money}$#1#",
+					"when a {C:red}Ritual Card",
+					"is used"
+				}
 			}
 		},
 		Other = {
