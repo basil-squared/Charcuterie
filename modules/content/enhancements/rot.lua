@@ -43,14 +43,20 @@ SMODS.Enhancement {
                     local selnum = pseudorandom("therotisntcoming",1,#possible_cards)
                     if not SMODS.has_enhancement(possible_cards[selnum],'m_charcuterie_rot') then
                         possible_cards[selnum]:set_ability(G.P_CENTERS['m_charcuterie_rot'], true, true)
-                        return {
-                            message = localize("k_infected_ex")
-                        }
+                        possible_cards[selnum]:juice_up(3,25)
+                        card_eval_status_text(possible_cards[selnum],'extra',nil,nil,nil,{message = localize("k_infected_ex")})
+                        
+                        
                     end
                 end
                 
             end
             -- then roll for self destruction
+            if SMODS.pseudorandom_probability(card,'glableglable',card.ability.extra.base_num,card.ability.extra.destroy_denom,'rot_enchantment') then
+                SMODS.destroy_cards(card)
+            end
+
+            
         end
     end
 
