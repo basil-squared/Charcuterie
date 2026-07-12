@@ -1,4 +1,4 @@
-SMODS.Edition {
+--[[ SMODS.Edition {
 	key = "etched",
 	shader = "etched",
 	in_shop = true,
@@ -17,4 +17,5 @@ SMODS.Edition {
 			end
 		end
 	end,
-}
+} ]]
+-- TODO: fix the fact that an etched card existing makes it FUCKING DESTROY YOUR HAND

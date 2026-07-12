@@ -371,14 +371,27 @@ return {
 			},
 			m_charcuterie_arc = {
 				name = "Arc Card",
-				text = {
+				--[[ text = {
 					"when played,",
 					"{C:green}#1# in #2#{} chance to",
 					"{C:attention}retrigger{} the",
 					"played card to the",
 					"{C:attention}right{} of this card {C:attention}thrice{}",
-				},
+				}, ]]
+				text = {
+    				"{C:green}#1# in #2#{} chance to",
+    				"{C:attention}retrigger{} the card",
+    				"to the {C:attention}right{} of",
+    				"this card {C:attention}#3#{}",
+    				"additional times when scored"
+				}
 			},
+			m_charcuterie_rot = {
+				name = "Rot Card",
+				text = {
+					""
+				}
+			}
 		},
 		Joker = {
 			j_charcuterie_goldencheese = {
@@ -1082,6 +1095,33 @@ return {
 					"{X:black,C:black}iaej{C:dark_edition}Rankless{}{X:black,C:black}fiejfwifj{}",
 					"{X:black,C:black}iaegegerdgj{C:mult}+#1# Mult{}{X:black,C:black}fiejfwifj{}"
 
+				}
+			},
+			j_charcuterie_salami = {
+				name = "Salami",
+				text = {
+					"{C:white,X:mult}X#1#{} Mult,",
+					"loses {C:white,X:mult}X#2#{} Mult when",
+					"played hand has under {C:attention}#3#{} cards"
+				}
+			},
+			j_charcuterie_onebit = {
+				name = "1-Bit",
+				text = {
+					"{C:mult}+#1#{} Mult on",
+					"{C:attention}even{} hands",
+					"{C:chips}+#2#{} Chips on",
+					"{C:attention}odd{} hands"
+				}
+			},
+			j_charcuterie_mints = {
+				name = "Box of Mints",
+				text = {
+					"{X:chips,C:white}X#1#{} Chips,",
+					"loses {X:chips,C:white}X#2#{} Chips",
+					"when {C:attention}Mult{} is greater",
+					"than {C:attention}Chips{} when",
+					"a hand finishes scoring"
 				}
 			}
 		},

@@ -1,4 +1,4 @@
-SMODS.Back {
+--[[ SMODS.Back {
 	key = "hardcore",
 	atlas = CHAR.G.deckatlas.key,
 	pos = { x =2 , y = 0},
@@ -10,4 +10,6 @@ SMODS.Back {
 		
 	end
 
-}
+} ]]
+
+-- FUCK this feature bruh
