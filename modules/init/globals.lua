@@ -25,3 +25,4 @@ CHAR.G.OVERCLOCK_MAP = {
     ['j_supernova']      = 'j_charcuterie_hypernova',
     ['j_trio']           = 'j_charcuterie_pour_deux',
 }
+

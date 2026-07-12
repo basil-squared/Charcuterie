@@ -367,7 +367,7 @@ return {
 			},
 			m_stone = {
 				name = "Stone Card",
-				text = { "{C:chips}+50{} Chips", "{C:inactive}Suitless{} and {C:attention}Rankless{}" },
+				text = { "{C:chips}+50{} chips", "{C:inactive}Suitless{} and {C:attention}Rankless{}" },
 			},
 			m_charcuterie_arc = {
 				name = "Arc Card",
@@ -387,11 +387,16 @@ return {
 				}
 			},
 			m_charcuterie_rot = {
-				name = "Rot Card",
-				text = {
-					""
-				}
-			}
+    			name = "Rot Card",
+    			text = {
+					"{C:attention}Rankless{}",
+					"{X:mult,C:white}X#4#{} Mult",
+					"{C:green}#1# in #2#{} chance to spread",
+					"to another scored card",
+					"{C:green}#1# in #3#{} chance to",
+					"{C:red}destroy{} itself"
+    			}
+}
 		},
 		Joker = {
 			j_charcuterie_goldencheese = {
@@ -492,8 +497,8 @@ return {
 			j_charcuterie_systemofmessages = {
 				name = "System of Messages",
 				text = {
-					"{X:mult,C:white}X#1#{} Mult for each {C:charcuterie_unstable}Unstable{} card in your {C:attention}full deck.{}",
-					"{S:0.5,C:inactive}(Currently {}{S:0.5,X:mult,C:white}X#2#{}{S:0.5,C:inactive}.)",
+					"{X:mult,C:white}X#1#{} Mult for each {C:charcuterie_unstable}Unstable{} card in your {C:attention}full deck{}",
+					"{S:0.5,C:inactive}(Currently {}{S:0.5,X:mult,C:white}X#2#{}{S:0.5,C:inactive})",
 				},
 			},
 			j_charcuterie_thej = {
@@ -504,25 +509,25 @@ return {
 				name = "The Usual",
 				text = {
 					"{X:mult,C:white}X#1#{} Mult when playing",
-					"Your most played hand.",
-					"{S:0.7,C:inactive}Currently #2#.{}",
+					"Your most played hand",
+					"{S:0.7,C:inactive}Currently #2#{}",
 				},
 			},
 			j_charcuterie_virtuous = {
 				name = "Virtuous Joker",
 				text = {
-					"Awards {C:attention}$1{} per {C:charcuterie_purified}Purified{} card",
-					"in your full deck at end of round.",
-					"{S:0.7,C:inactive}(currently{}{S:0.7,C:attention} $#1#{}{S:0.7,C;inactive}.)",
+					"Gain {C:attention}$1{} per {C:charcuterie_purified}Purified{} card",
+					"in your full deck at end of round",
+					"{S:0.7,C:inactive}(currently{}{S:0.7,C:attention} $#1#{}{S:0.7,C;inactive})",
 				},
 			},
 			j_charcuterie_wargames = {
 				name = "War Games",
 				text = {
 					"Gains {X:mult,C:white}X#1#{} Mult for every hand played",
-					"not containing an {C:charcuterie_unstable}Unstable{}  card.",
-					"{S:0.5,C:inactive}(deck must contain at least 5 unstable cards.){}",
-					"{S:0.5,C:inactive}(Currently {}{X:mult,C:white}X#2#{}{S:0.5,C:inactive}.)",
+					"not containing an {C:charcuterie_unstable}Unstable{} card",
+					"{S:0.5,C:inactive}(deck must contain at least 5 unstable cards){}",
+					"{S:0.5,C:inactive}(Currently {}{X:mult,C:white}X#2#{}{S:0.5,C:inactive})",
 				},
 			},
 			j_charcuterie_ufo = {
@@ -546,21 +551,22 @@ return {
 			j_charcuterie_ninetofive = {
 				name = "9 to 5",
 				text = {
-					"{C:chips}+15{} Chips for every {C:inactive}Suitless{} card",
-					"in your {C:attention}Full Deck.{}",
+					"{C:chips}+#1#{} Chips for every {C:inactive}Suitless{} card",
+					"in your {C:attention}Full Deck{}",
 				},
 			},
 			j_charcuterie_porridge = {
 				name = "Porridge",
 				text = {
 					"{C:inactive}Suitless{} cards give {X:mult,C:white}X2{} Mult",
-					"for {C:attention}#1#{} hands.",
+					"for {C:attention}#1#{} hands",
 					"{C:inactive,S:0.5}(#2# hands remaining){}",
 				},
 			},
 			j_charcuterie_aura = {
 				name = "Hype Moments and Aura",
-				text = { "Gain {C:attention}$#1#{} at end of round", "when score {C:attention}catches aflame{}" },
+				text = { "Gain {C:attention}$#1#{} at end of round", "when score {C:attention}exceeds{}","blind requirement" },
+
 			},
 			j_charcuterie_caption = {
 				name = "Caption",
@@ -781,9 +787,9 @@ return {
 			j_charcuterie_search_engine = {
 				name = "Search Engine",
 				text = {
-					"{C:chips}+#1#{} chips for each",
+					"{C:chips}+#1#{} Chips for each",
 					"{C:atttention}unique{} suit in your {C:attention}full deck{}",
-					"{C:inactive,S:0.7}(Currently {C:chips,S:0.7}+#2#{C:inactive,S:0.7} Chips.)",
+					"{C:inactive,S:0.7}(Currently {C:chips,S:0.7}+#2#{C:inactive,S:0.7} Chips)",
 				},
 			},
 			j_charcuterie_dubious_merchant = {
@@ -1091,8 +1097,8 @@ return {
 				name = "Letter to the Black World",
 				text = {
 					"{C:attention}Scored{}",
-					"{X:black,C:black}iaejfiejfwifj{}{C:dark_edition}Suitless{}",
-					"{X:black,C:black}iaej{C:dark_edition}Rankless{}{X:black,C:black}fiejfwifj{}",
+					"{X:black,C:black}iaejfiejfwifj{}{C:inactive}Suitless{}",
+					"{X:black,C:black}iaej{C:attention}Rankless{}{X:black,C:black}fiejfwifj{}",
 					"{X:black,C:black}iaegegerdgj{C:mult}+#1# Mult{}{X:black,C:black}fiejfwifj{}"
 
 				}
@@ -1128,8 +1134,8 @@ return {
 				name = "Fading",
 				text = {
 					"{C:green}#1# in #2#{} chance",
-					"for a card to",
-					"gain {C:dark_edition}Bleached{}"
+					"to apply {C:dark_edition}Bleached{}",
+					"to each discarded card"
 
 				}
 			},
@@ -1189,7 +1195,7 @@ return {
 			},
 			char_txt_ochint_obviousbootstraps = {
 				name = "Overclockable",
-				text = {{"To overclock this Joker","Reach {C:red}-$20{}"}}
+				text = {"To overclock this Joker","Reach {C:red}-$20{}"}
 			},
 			char_txt_ochint_cartomancer = {
 				name = "Overclockable",
@@ -1526,6 +1532,7 @@ return {
 			k_char_orbital_cannon_reminder_JokDisp= "NOT most played hand",
 			char_config_flavor = 'Wow, a whole charcuterie board of settings!',
 			k_reduced = 'Reduced!',
+			k_infected_ex = 'Infected!'
 		},
 		high_scores = {},
 		labels = {

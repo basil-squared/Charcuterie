@@ -1,6 +1,6 @@
 SMODS.Enhancement {
 	key = "galactical",
-
+-- TODO: go to new prob system
 	config = { extra = { odds = 5 } },
 	atlas = CHAR.G.enhancementatlas.key,
 	pos = { x = 0, y = 0 },

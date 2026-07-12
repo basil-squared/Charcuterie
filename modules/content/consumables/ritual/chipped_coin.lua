@@ -10,7 +10,7 @@ SMODS.Consumable({
     end,
 
 	use = function(self,card,area,copier)
-		if CHAR.FUNC.negative_event_proc(G.GAME.Risk or 0) == false  then
+		if not CHAR.FUNC.negative_event_proc(G.GAME.Risk or 0) then
 			ease_dollars(-to_big(G.GAME.dollars))
 
 		else
