@@ -13,3 +13,8 @@ SMODS.Gradient({
   colours = { HEX("7c2de3"), HEX("4f068f"), HEX("834dbd"), HEX("b066ff") },
   cycle = 5,
 })
+SMODS.Gradient({
+  key = "rot",
+  colours = { HEX("0a0a0a"), HEX("141a14"), HEX("0d1a0d"), HEX("000000") },
+  cycle = 5,
+})

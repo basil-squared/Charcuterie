@@ -1410,6 +1410,10 @@ return {
 				name = "The Scientist",
 				text = { "Enhances #1# selected", "card into a", "{C:charcuterie_unstable}#2#{}" },
 			},
+			c_charcuterie_pearl = {
+				name = "The Pearl",
+				text = { "Enhances #1# selected", "card into a", "{C:charcuterie_rot}#2#{}" },
+			},
 		},
 		Voucher = {
 			v_charcuterie_brimstone = {
@@ -1547,6 +1551,7 @@ return {
 			["charcuterie_grayflush"] = "Grayscale Flush",
 			["charcuterie_graystraight"] = "Grayscale Straight",
 			["charcuterie_grayhouse"] = "Grayscale House",
+			["charcuterie_undefined"] = "undefined"
 		},
 		poker_hand_descriptions = {
 			["charcuterie_grayflush"] = {
@@ -1557,8 +1562,11 @@ return {
 			},
 			["charcuterie_grayhouse"] = {
 				"a Suitless Three of a Kind",
-				"and a Suitless Pair.",
+				"and a Suitless Pair",
 			},
+			["charcuterie_undefined"] = {
+				"2 Rankless cards"
+			}
 		},
 
 		quips = {},

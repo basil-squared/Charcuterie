@@ -2,7 +2,7 @@ local smods_has_no_rank_ref = SMODS.has_no_rank
 
 ---@diagnostic disable-next-line: duplicate-set-field
 function SMODS.has_no_rank(card)
-  if card.seal and card.seal == 'charcuterie_obscure' then
+  if (card.seal and card.seal == 'charcuterie_obscure') or SMODS.has_enhancement(card,'m_charcuterie_rot') then
     return true
   end
   
