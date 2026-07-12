@@ -56,7 +56,10 @@ SMODS.Enhancement {
                 SMODS.destroy_cards(card)
             end
 
-            
+            -- finally, return mult
+            return {
+                xmult = card.ability.extra.xmult
+            }
         end
     end
 
