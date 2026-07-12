@@ -8,6 +8,7 @@ SMODS.Joker {
 	config = {extra = {mult = 5}},
 	blueprint_compat = true,
 	loc_vars = function(self,info_queue,card)
+		info_queue[#info_queue+1] = {set = "Enhanced",key='m_charcuterie_galactical'}
 		return {vars = {card.ability.extra.mult}}
 	end,
 
