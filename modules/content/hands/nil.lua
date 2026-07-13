@@ -1,16 +1,16 @@
 SMODS.PokerHand {
-    key = 'undefined',
+    key = 'nil',
+    chips = 40,
+    mult = 5,
+    l_chips =12,
+    l_mult = 2,
     visible = false,
-    mult = 2,
-    chips = 15,
-    l_chips = 5,
-    l_mult = 1,
     example = {
         {'S_7', false},
         {'D_10', true, enhancement='m_charcuterie_rot'},
         {'S_J',true,seal='charcuterie_obscure'},
-        {'H_4', false},
-        {'C_K',false}
+        {'H_4', true, enhancement='m_stone'},
+        {'C_K',true,enhancement='m_charcuterie_rot'}
     },
     evaluate = function(parts, hand)
     local rankless = {}
@@ -21,6 +21,6 @@ SMODS.PokerHand {
         rankless[#rankless + 1] = card
       end
     end
-    return #rankless >= 2 and { rankless } or {}
+    return #rankless >= 4 and { rankless } or {}
   end,
 }
