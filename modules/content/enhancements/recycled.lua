@@ -11,13 +11,26 @@ SMODS.Enhancement {
             card.ability.extra.paid_this_round = false
         end
         if context.end_of_round and context.cardarea == G.hand and not card.ability.extra.paid_this_round then
-            G.GAME.charcuterie_interest_backup = G.GAME.interest_amount
+            local backup = G.GAME.interest_amount
             G.GAME.interest_amount = 0
             card.ability.extra.paid_this_round = true
+            G.E_MANAGER:add_event(Event({
+                trigger = 'after',
+                delay = 10,
+                blocking = false,
+                func = function()
+                    -- if theres multiple recycled cards i dont want to accidentally overwrite a non zero value with a zero one
+                    if backup > G.GAME.interest_amount then
+                        G.GAME.interest_amount = backup
+                    end
+                    
+                    return true
+                end
+            }))
             return {
                 dollars = card.ability.extra.dollar_bonus,
                 card = card,
-                message = localize("k_disabled_ex")
+                
 
             }
             

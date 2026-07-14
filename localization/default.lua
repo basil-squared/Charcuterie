@@ -27,6 +27,14 @@ return {
     				"and cost {C:attention}#2#%{} less.",
     				"Ante scaling is {C:red}#1#X{} faster."
   				}
+			},
+			b_charcuterie_roulette = {
+				name = "Roulette Deck",
+				text = {
+					"Every probability",
+					"is {C:green}#1# in #2#{}",
+					"{C:inactive,S:0.6}LET IT RIDEEEEEE"
+				}
 			}
 		},
 		Blind = {
@@ -1180,6 +1188,13 @@ return {
 					"remove {C:enhanced}Recycled{}",
 					"when you play",
 					"a {C:enhanced}Recycled Card{}"
+				}
+			},
+			j_charcuterie_honey = {
+				name = "Honey",
+				text = {
+					"Gains the sell value",
+					"of Jokers you {C:attention}sell"
 				}
 			}
 		},
