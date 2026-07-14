@@ -316,10 +316,12 @@ return {
 		},
 		Enhanced = {
 			m_charcuterie_recycled = {
-				name = 'Recycled Card',
-				text = {"{C:money}$#1#{} if held in hand at end of round ",
-				        "disables interest if held in hand at end of round"
-				}
+    			name = 'Recycled Card',
+    			text = {
+        			"If held in hand at end of round,",
+        			"gives {C:money}$#1#{} and",
+        			"{C:red}disables{} interest"
+   	 			}	
 			},
 			m_charcuterie_handy = {
 				name = 'Handy Card',
@@ -1146,6 +1148,39 @@ return {
 					"when a {C:red}Ritual Card",
 					"is used"
 				}
+			},
+			j_charcuterie_censor = {
+				name = "Censor",
+				text = {
+					"{C:attention}Rankless{} cards can",
+					"fill gaps of {C:attention}#1#{}",
+					"in {C:attention}Straights{}"
+				}
+			},
+			j_charcuterie_redacted = {
+				name = "Redacted",
+				text = {
+					"{C:inactive}Suitless{} cards can",
+					"fill gaps of {C:attention}#1#{}",
+					"in {C:attention}Flushes{}"
+				}
+			},
+			j_charcuterie_shredder = {
+				name = "Shredder",
+				text = {
+					"Earn {C:money}$#1#{} when you",
+  					"discard a {C:inactive}Suitless{}",
+  					"or {C:attention}Rankless{} card"
+				}
+			},
+			j_charcuterie_mrsparkle = {
+				name = "Mr. Sparkle",
+				text = {
+					"Gain {C:money}$#1#{} and",
+					"remove {C:enhanced}Recycled{}",
+					"when you play",
+					"a {C:enhanced}Recycled Card{}"
+				}
 			}
 		},
 		Other = {
@@ -1551,7 +1586,10 @@ return {
 			["charcuterie_grayflush"] = "Grayscale Flush",
 			["charcuterie_graystraight"] = "Grayscale Straight",
 			["charcuterie_grayhouse"] = "Grayscale House",
-			["charcuterie_undefined"] = "undefined"
+			["charcuterie_undefined"] = "undefined",
+			["charcuterie_void"] = 'void',
+			["charcuterie_nil"] = "nil",
+			["charcuterie_null"] = "Null",
 		},
 		poker_hand_descriptions = {
 			["charcuterie_grayflush"] = {
@@ -1564,8 +1602,14 @@ return {
 				"a Suitless Three of a Kind",
 				"and a Suitless Pair",
 			},
-			["charcuterie_undefined"] = {
-				"2 Rankless cards"
+			["charcuterie_void"] = {
+				"3 Rankless cards"
+			},
+			["charcuterie_nil"] = {
+				"4 Rankless cards"
+			},
+			["charcuterie_null"] = {
+				"5 Rankless, Suitless cards"
 			}
 		},
 
