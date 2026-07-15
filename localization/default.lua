@@ -1196,6 +1196,16 @@ return {
 					"Gains the sell value",
 					"of Jokers you {C:attention}sell"
 				}
+			},
+			j_charcuterie_yararara = {
+				name = 'YARARARA',
+				text = {
+  				"{C:red}Destroys{} played",
+  				"{C:enhanced}Cursed{} cards",
+  				"This Joker gains",
+  				"{X:red,C:white}X#1#{} Mult when it does",
+				"{C:inactive,S:0.6}(Currently {C:white,X:red}X#2#{}{C:inactive,S:0.6} Mult)"
+				}
 			}
 		},
 		Other = {

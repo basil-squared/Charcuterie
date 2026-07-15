@@ -18,8 +18,8 @@ SMODS.Enhancement {
     pos = {x=10, y=0},
     config = {extra = {base_num = 1, replicate_denom = 8, destroy_denom = 4,xmult = 3}},
     loc_vars = function(self,info_queue,card)
-        local num, rep_denom = SMODS.get_probability_vars(card,card.ability.extra.base_num,card.ability.extra.replicate_denom,"rot_replicate")
-        local _,destroy_denom = SMODS.get_probability_vars(card,card.ability.extra.base_num,card.ability.extra.destroy_denom,"rot_destroy")
+        local num, rep_denom = SMODS.get_probability_vars(card,(card.ability.extra.base_num or 1),(card.ability.extra.replicate_denom or 8),"rot_replicate")
+        local _,destroy_denom = SMODS.get_probability_vars(card,(card.ability.extra.base_num or 1),(card.ability.extra.destroy_denom or 4),"rot_destroy")
         return {
             vars = {
                 num,
