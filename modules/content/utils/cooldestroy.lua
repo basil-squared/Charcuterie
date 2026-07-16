@@ -1,5 +1,6 @@
 function CHAR.FUNC.cool_destroy(cards, seperate_sound)
     local cardstable = {}
+---@diagnostic disable-next-line: undefined-field
     if Object.is(cards, Card) then
         cardstable[#cardstable + 1] = cards
     else

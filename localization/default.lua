@@ -1160,9 +1160,10 @@ return {
 			j_charcuterie_censor = {
 				name = "Censor",
 				text = {
-					"{C:attention}Rankless{} cards can",
-					"fill gaps of {C:attention}#1#{}",
-					"in {C:attention}Straights{}"
+				"{C:attention}Rankless{} cards can",
+				"each fill {C:attention}1{} gap in",
+				"Straights, up to",
+				"{C:attention}#1#{} gaps at once"
 				}
 			},
 			j_charcuterie_redacted = {
@@ -1205,6 +1206,14 @@ return {
   				"This Joker gains",
   				"{X:red,C:white}X#1#{} Mult when it does",
 				"{C:inactive,S:0.6}(Currently {C:white,X:red}X#2#{}{C:inactive,S:0.6} Mult)"
+				}
+			},
+			j_charcuterie_elesh_norn = {
+				name = 'Elesh Norn',
+				text = {
+					"{C:Enhanced}Rot Cards{}",
+					"no longer {C:attention}destroy{} themselves",
+					"and give {C:money}$#1#{} instead"
 				}
 			}
 		},

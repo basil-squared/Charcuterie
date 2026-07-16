@@ -53,7 +53,16 @@ SMODS.Enhancement {
             end
             -- then roll for self destruction
             if SMODS.pseudorandom_probability(card,'glableglable',card.ability.extra.base_num,card.ability.extra.destroy_denom,'rot_enchantment') then
-                SMODS.destroy_cards(card)
+                local norn = SMODS.find_card('j_charcuterie_elesh_norn') or nil
+                if norn then
+                    return {
+                        dollars = norn.ability.extra.dollars_gained
+                    }
+
+                else
+                        SMODS.destroy_cards(card)
+                end
+                
             end
 
             -- finally, return mult
