@@ -14,11 +14,12 @@ SMODS.Joker {
     calculate = function(self,card,context)
         if context.charcuterie_arc_retrigger then
             if SMODS.pseudorandom_probability(card,"Electricityy",card.ability.extra.num,card.ability.extra.denom,"MrOuch") then
+                local target_card = context.other_card or {}
                 G.E_MANAGER:add_event(Event({
                     trigger = 'after',
                     delay = 0.4, 
                     func = function()
-                        context.other_card:flip()
+                       target_card:flip()
 
                     end
 
@@ -27,8 +28,8 @@ SMODS.Joker {
                     trigger = 'after',
                     delay = 0.6, 
                     func = function()
-                        context.other_card:juice_up(1.2,25)
-                        context.other_card:set_ability("m_charcuterie_arc")
+                        target_card:juice_up(1.2,25)
+                        target_card:set_ability("m_charcuterie_arc")
                     end
 
                 }))
@@ -36,7 +37,7 @@ SMODS.Joker {
                     trigger = 'after',
                     delay = 0.8, 
                     func = function()
-                        context.other_card:flip()
+                        target_card:flip()
 
                     end
 
