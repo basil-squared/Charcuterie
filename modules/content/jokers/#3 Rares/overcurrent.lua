@@ -7,8 +7,11 @@ SMODS.Joker {
         info_queue[#info_queue+1] = G.P_CENTERS.m_charcuterie_arc
         local newnum,newdenom = SMODS.get_probability_vars(card,card.ability.extra.num,card.ability.extra.denom,"MrOuch")
         return {
-            newnum,
-            newdenom
+            vars = {
+                newnum,
+                newdenom
+            }
+            
         }
     end,
     calculate = function(self,card,context)
