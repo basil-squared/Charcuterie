@@ -21,6 +21,7 @@ SMODS.Enhancement {
 	calculate = function(self,card,context)
 		if context.cardarea == G.play and context.repetition and SMODS.pseudorandom_probability(card,'sp[fgrk9ipfwefipjifjfg',1,card.ability.extra.odds)  then
 				local _card = context.scoring_hand[get_card_to_right(context.full_hand,card)]
+				SMODS.calculate_context({charcuterie_arc_retrigger = true, other_card = _card, card = card})
 				if not _card then return  end
                 return {
                     card_eval_status_text(_card, 'extra', nil, nil, nil, {

@@ -1226,6 +1226,16 @@ return {
 					"no longer {C:attention}destroy{} themselves",
 					"and give {C:money}$#1#{} instead"
 				}
+			},
+			j_charcuterie_overcurrent = {
+				name = 'Overcurrent',
+				text = {
+					"When an {C:enhanced}Arc Card{}",
+					"retriggers, the",
+					"retriggered card has a ",
+					"{C:green}#1# in #2#{} chance to",
+					"become an {C:enhanced}Arc Card{}"
+				}
 			}
 		},
 		Other = {
