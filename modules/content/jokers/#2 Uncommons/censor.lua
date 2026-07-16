@@ -4,7 +4,9 @@ SMODS.Joker {
     config = {extra = {gap_size = 1}},
     atlas = CHAR.G.jokeratlas2.key,
     loc_vars = function(self,info_queue,card)
-        return {vars = {card.ability.extra.gap_size}}
+        local text = ""
+        if card.ability.gap_size ~= 1 then text = 'gaps' else text= 'gap' end
+        return {vars = {card.ability.extra.gap_size, text}}
     end
 }
 

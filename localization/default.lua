@@ -1163,7 +1163,7 @@ return {
 				"{C:attention}Rankless{} cards can",
 				"each fill {C:attention}1{} gap in",
 				"Straights, up to",
-				"{C:attention}#1#{} gaps at once"
+				"{C:attention}#1#{} #2# at once"
 				}
 			},
 			j_charcuterie_redacted = {
