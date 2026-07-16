@@ -1228,13 +1228,12 @@ return {
 				}
 			},
 			j_charcuterie_overcurrent = {
-				name = 'Overcurrent',
-				text = {
-					"When an {C:enhanced}Arc Card{}",
-					"retriggers, the",
-					"retriggered card has a ",
-					"{C:green}#1# in #2#{} chance to",
-					"become an {C:enhanced}Arc Card{}"
+			name = 'Overcurrent',
+			text = {
+				"Cards retriggered by an",
+				"{C:enhanced}Arc Card{} have a",
+				"{C:green}#1# in #2#{} chance to",
+				"become an {C:enhanced}Arc Card{}"
 				}
 			}
 		},

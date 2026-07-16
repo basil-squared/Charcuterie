@@ -2,6 +2,8 @@ SMODS.Joker {
     key = 'overcurrent',
     atlas = CHAR.G.jokeratlas2.key,
     pos = {x=2,y=2},
+    rarity = 3,
+    cost = 8,
     config = { extra = { num = 1, denom = 4}},
     loc_vars = function(self,info_queue,card)
         info_queue[#info_queue+1] = G.P_CENTERS.m_charcuterie_arc
@@ -23,7 +25,7 @@ SMODS.Joker {
                     delay = 0.4, 
                     func = function()
                        target_card:flip()
-
+                        return true
                     end
 
                 }))
@@ -31,8 +33,10 @@ SMODS.Joker {
                     trigger = 'after',
                     delay = 0.6, 
                     func = function()
-                        target_card:juice_up(1.2,25)
+                        target_card:juice_up(1.1,5)
+                        play_sound('generic1',1,0.65)
                         target_card:set_ability("m_charcuterie_arc")
+                        return true
                     end
 
                 }))
@@ -41,6 +45,7 @@ SMODS.Joker {
                     delay = 0.8, 
                     func = function()
                         target_card:flip()
+                        return true
 
                     end
 
