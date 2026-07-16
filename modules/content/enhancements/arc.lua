@@ -12,26 +12,36 @@ end
 
 SMODS.Enhancement {
 	key = "arc",
-	config = {extra = {odds = 3}},
+	config = {extra = {odds = 3, retriggers = 3}},
 	atlas = CHAR.G.enhancementatlas.key,
 	pos = { x = 4, y = 0 },
 	loc_vars = function(self,info_queue,card)
-		return {vars = {(G.GAME.probabilities.normal or 1), card.ability.extra.odds}}
+		local num,denom = SMODS.get_probability_vars(card,1,card.ability.extra.odds,"arcshit")
+		return {
+			vars = {
+				num,
+				denom,
+				card.ability.extra.retriggers
+			}
+		}
 	end,
 	calculate = function(self,card,context)
 		if context.cardarea == G.play and context.repetition and SMODS.pseudorandom_probability(card,'sp[fgrk9ipfwefipjifjfg',1,card.ability.extra.odds)  then
 				local _card = context.scoring_hand[get_card_to_right(context.full_hand,card)]
 				SMODS.calculate_context({charcuterie_arc_retrigger = true, other_card = _card, card = card})
 				if not _card then return  end
-                return {
-                    card_eval_status_text(_card, 'extra', nil, nil, nil, {
+                
+                    
+					for i=1,card.ability.extra.retriggers do
+						SMODS.score_card(_card, {cardarea = G.play, full_hand = context.full_hand, scoring_hand = context.scoring_hand, scoring_name = context.scoring_name, poker_hands = context.poker_hands})
+						card_eval_status_text(_card, 'extra', nil, nil, nil, {
                         message = localize('k_again_ex'),
                         colour = G.C.MONEY,
-                    }),
-                    SMODS.score_card(_card, {cardarea = G.play, full_hand = context.full_hand, scoring_hand = context.scoring_hand, scoring_name = context.scoring_name, poker_hands = context.poker_hands}),
-					SMODS.score_card(_card, {cardarea = G.play, full_hand = context.full_hand, scoring_hand = context.scoring_hand, scoring_name = context.scoring_name, poker_hands = context.poker_hands}),
-					SMODS.score_card(_card, {cardarea = G.play, full_hand = context.full_hand, scoring_hand = context.scoring_hand, scoring_name = context.scoring_name, poker_hands = context.poker_hands})
-                }
+                    	})
+						
+					end
+                    
+                
             end
         
     
