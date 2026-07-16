@@ -1072,7 +1072,7 @@ return {
 				}
 			},
 			j_charcuterie_voidstar = {
-				name = 'Void Star',
+				name = 'Omenpath',
 				text = {
 					"Converts scored {C:attention}Face cards{}",
 					"into {C:enhanced}Void Cards{}"
