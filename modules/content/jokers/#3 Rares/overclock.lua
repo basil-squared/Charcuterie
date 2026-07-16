@@ -4,7 +4,13 @@ SMODS.Joker {
 	cost = 10,
 	config = {extra = {odds = 15}},
 	loc_vars = function(self,info_queue,card)
-		return {vars = {(G.GAME.probabilities.normal or 1),card.ability.extra.odds}}
+		local num,denom = SMODS.get_probability_vars(card,1,card.ability.extra.odds,"RampUp")
+		return {
+			vars = {
+				num,
+				denom,
+			}
+		}
 	end,
 	atlas = CHAR.G.jokeratlas.key,
 	pos = {x = 59,y=0},
@@ -13,7 +19,7 @@ SMODS.Joker {
 			CHAR.FUNC.change_card_values(context.card,2,'mul',false)
 		end
 		if context.post_trigger then
-			if pseudorandom("more_power") < (G.GAME.probabilities.normal or 1) / card.ability.extra.odds then
+			if SMODS.pseudorandom_probability(card,"WRREEEEOWWWCRRSSSSHHHBOOMMM!!!",1,card.ability.extra.odds,"RampUp") then
 				local victim = context.other_card
 				if not victim or victim == card then
 					return
@@ -41,7 +47,7 @@ SMODS.Joker {
 		end
 		end,
 	add_to_deck = function(self,card,from_debuff)
-		for i=0, #G.jokers.cards do
+		for i=1, #G.jokers.cards do
 			if G.jokers.cards[i] == card then
 
 			else
@@ -52,7 +58,7 @@ SMODS.Joker {
 
 	end,
 	remove_from_deck = function(self,card,from_debuff)
-		for i=0, #G.jokers.cards do
+		for i=1, #G.jokers.cards do
 			if G.jokers.cards[i] == card then
 
 			else
