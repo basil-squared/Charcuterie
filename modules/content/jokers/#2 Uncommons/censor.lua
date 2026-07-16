@@ -1,5 +1,7 @@
 SMODS.Joker {
     key = 'censor',
+    rarity = 2,
+    cost = 5,
     pos = {x=4,y=1},
     config = {extra = {gap_size = 1}},
     atlas = CHAR.G.jokeratlas2.key,
