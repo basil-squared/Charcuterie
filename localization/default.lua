@@ -1169,9 +1169,20 @@ return {
 			j_charcuterie_redacted = {
 				name = "Redacted",
 				text = {
-					"{C:inactive}Suitless{} cards can",
-					"fill gaps of {C:attention}#1#{}",
-					"in {C:attention}Flushes{}"
+				"{C:inactive}Suitless{} cards can",
+				"each fill {C:attention}1{} gap in",
+				"Flushes, up to",
+				"{C:attention}#1#{} #2# at once"
+				}
+			},
+			j_charcuterie_qanda = {
+				name = "Q&A",
+				text = {
+					"Gain {X:mult,C:white}X#1#{} Mult when a",
+					"{C:charcuterie_ritual}Ritual{} card is used,",
+					"{C:green}#2# in #3#{} chance to",
+					"{C:red}reset{} when it does",
+					"{C:inactive,S:0.6}(Currently {X:mult,C:white}X#4#{}{C:inactive,S:0.6})"
 				}
 			},
 			j_charcuterie_shredder = {

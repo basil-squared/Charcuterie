@@ -24,5 +24,5 @@ SMODS.Joker {
     end
   end
 }
--- TODO: Give effect before next commit
+
 
